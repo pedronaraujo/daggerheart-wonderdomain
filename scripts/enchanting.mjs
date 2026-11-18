@@ -435,8 +435,12 @@ async function detonate(enchanter, state) {
 /** Called for every new chat message on the responsible client: tick the Explosion die on action rolls. */
 export async function onChatRoll(message) {
     if (!['dualityRoll', 'adversaryRoll'].includes(message.type)) return;
-    const opts = message.system?.roll?.options ?? message.rolls?.[0]?.options ?? {};
-    if (opts?.roll?.type === 'reaction' || opts?.actionType === 'reaction') return;
+    // Ability messages without a roll share these types: only real d20/duality action rolls count
+    const D20 = game.system.api?.dice?.D20Roll;
+    const roll = message.rolls?.find(r => (D20 ? r instanceof D20 : /d20|d12/.test(r.formula)) && r.dice?.length);
+    if (!roll) return;
+    const opts = roll.options ?? {};
+    if (opts.roll?.type === 'reaction' || opts.actionType === 'reaction' || message.system?.roll?.options?.roll?.type === 'reaction') return;
     const holders = game.actors.filter(a => a.getFlag(MOD, 'explosion'));
     for (const actor of holders) {
         const responsible = game.users.activeGM ?? game.users.find(u => u.active && actor.testUserPermission(u, 'OWNER'));
@@ -489,7 +493,7 @@ export class WorkshopApp extends HandlebarsApplicationMixin(ApplicationV2) {
         position: { width: 1040, height: 720 },
         actions: {
             select: WorkshopApp.#onSelect,
-            tab: WorkshopApp.#onTab,
+            tierTab: WorkshopApp.#onTab,
             target: WorkshopApp.#onTarget,
             surge: WorkshopApp.#onSurge,
             enchant: WorkshopApp.#onEnchant,
@@ -698,6 +702,10 @@ export async function appraise(actor) {
                 Object.keys(i.system.itemFeatures ?? {}).length ||
                 i.effects.size
         );
+        const creature = target.type === 'adversary' || target.type === 'environment'
+            ? target.items.filter(i => i.type === 'feature').map(i => `<li><em>${escape(i.name)}</em></li>`).join('')
+            : '';
+        const magicAttack = [...(target.system.attack?.damage?.main?.type ?? [])].includes('magical');
         const list = magical
             .map(i => {
                 const feats = Object.keys(i.system.itemFeatures ?? {}).join(', ');
@@ -708,7 +716,9 @@ export async function appraise(actor) {
         await chatCard(actor, {
             title: `Mystic Appraisal — ${escape(target.name)}`,
             img: 'icons/magic/perception/eye-ringed-glow-angry-small-teal.webp',
-            body: list ? `<ul>${list}</ul>` : `<p>${loc('Ench.NothingMagical')}</p>`
+            body: (list ? `<ul>${list}</ul>` : `<p>${loc('Ench.NothingMagical')}</p>`) +
+                (magicAttack ? `<p>✦ ${loc('Ench.MagicAttack')}</p>` : '') +
+                (creature ? `<p>${loc('Ench.CreatureFeatures')}</p><ul>${creature}</ul>` : '')
         });
     }
 }

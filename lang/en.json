@@ -107,6 +107,8 @@
       "FearlessYes": "Rolled a 6 — the GM does <strong>not</strong> gain a Fear from this roll.",
       "FearlessNo": "No 6 — the GM gains Fear as usual.",
       "AppraiseHint": "Target a token to appraise its items.",
+      "MagicAttack": "Its attacks carry magic.",
+      "CreatureFeatures": "You sense the rhythm of its powers:",
       "NothingMagical": "Nothing magical stirs.",
       "Enchanted": "enchanted",
       "Reason": {
@@ -196,6 +198,7 @@
       "GravityNoTokens": "Not enough Astral tokens.",
       "DeviceCrafted": "A new device is crafted (charged). Any previous device disappears.",
       "TokensOnCard": "Placed {n} token(s) on the card ({total} now).",
+      "WonderTouchedRecover": "You would mark your last Stress: instead you clear {n} Stress (once per long rest).",
       "GravityDone": "Pulled {name} into Melee range: one Hit Point cleared."
     }
   }

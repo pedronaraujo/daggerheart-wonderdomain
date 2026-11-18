@@ -94,6 +94,11 @@ export async function devBoot(base) {
     }
     initialize();
     await loadData();
+    // Templates of the dev build replace the installed ones in the Handlebars cache
+    for (const t of TEMPLATES) {
+        const text = await fetch(path(`templates/${t}.hbs`)).then(r => r.text());
+        Handlebars.registerPartial(`modules/${MOD}/templates/${t}.hbs`, Handlebars.compile(text));
+    }
     const lang = await fetch(path(`lang/${game.i18n.lang === 'pt-BR' ? 'pt-BR' : 'en'}.json`)).then(r => r.json());
     foundry.utils.mergeObject(game.i18n.translations, lang);
     return 'dev build loaded';
@@ -158,6 +163,7 @@ function registerHooks() {
 
     on('updateActor', (actor, changes) => {
         Stars.onActorUpdate(actor, changes).catch(report);
+        if (isResponsible(actor)) Auto.wonderTouchedLastStress(actor, changes).catch(report);
         if (foundry.utils.hasProperty(changes, `flags.${MOD}.stars`) && isResponsible(actor)) Auto.syncBinaryStar(actor).catch(report);
         if (foundry.utils.hasProperty(changes, `flags.${MOD}.enchantments`) && isResponsible(actor)) Auto.syncHarmonious(actor).catch(report);
         rerender(actor);
