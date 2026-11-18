@@ -135,7 +135,8 @@ export async function wonderTouchedLastStress(actor, changes) {
     if (used >= maxUses) return;
     const n = Math.max(1, spellcast(actor));
     await action.update({ 'uses.value': used + 1 });
-    await actor.update({ 'system.resources.stress.value': Math.max(0, value - n) });
+    // the last Stress is not marked, and Stress equal to the Spellcast trait is cleared
+    await actor.update({ 'system.resources.stress.value': Math.max(0, max - 1 - n) });
     await chatCard(actor, {
         title: 'Wonder-Touched',
         img: card.img,
@@ -355,8 +356,9 @@ export function withinRange(a, b, range) {
     const settings = canvas.scene?.rangeSettings ?? {};
     const limit = settings[range] ?? DEFAULT_RANGES[range] ?? DEFAULT_RANGES.close;
     // Measure from the documents (placeables may still be animating after a move)
+    // _source holds the final position; the live document interpolates while the token animates
     const center = t => {
-        const d = t.document;
+        const d = t.document._source ?? t.document;
         return { x: d.x + (d.width * canvas.grid.size) / 2, y: d.y + (d.height * canvas.grid.size) / 2 };
     };
     const ca = center(ta), cb = center(tb);
