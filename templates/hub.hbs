@@ -1,0 +1,55 @@
+<div class="wonder-hub-body">
+  <header class="wonder-hub-header">
+    <img src="modules/daggerheart-wonderdomain/assets/wonder.svg" alt="">
+    <div>
+      <h2>{{actor.name}}</h2>
+      <span>Tier {{tier}} · Spellcast {{spellcast}}</span>
+    </div>
+  </header>
+
+  {{#if isStargazer}}
+    <section class="wonder-hub-card stargazer {{#if stars.inForm}}active{{/if}}">
+      <h3><i class="fa-solid fa-star"></i> Stargazer</h3>
+      <p>{{#if stars.name}}<em>{{stars.name}}</em> · {{/if}}{{localize "WONDER.Hub.Stars" used=stars.used total=stars.total}}</p>
+      {{#if stars.inForm}}
+        <div class="pips">{{#each stars.pips}}<i class="fa-solid fa-star {{#if on}}on{{/if}}"></i>{{/each}}</div>
+        <p class="wonder-chip-row"><span class="wonder-chip">{{stars.stats.rangeLabel}}</span><span class="wonder-chip">{{stars.stats.display}}</span></p>
+      {{/if}}
+      <div class="wonder-row">
+        <button type="button" class="wonder-btn" data-action="open" data-fn="openStarChart"><i class="fa-solid fa-map"></i> {{localize "WONDER.Stars.OpenChart"}}</button>
+        <button type="button" class="wonder-btn {{#if stars.inForm}}ghost{{else}}gold{{/if}}" data-action="open" data-fn="toggleConstellation">
+          {{#if stars.inForm}}{{localize "WONDER.Stars.Leave"}}{{else}}{{localize "WONDER.Stars.Embody"}}{{/if}}
+        </button>
+        {{#if stars.inForm}}<button type="button" class="wonder-btn gold" data-action="open" data-fn="empyreanCall"><i class="fa-solid fa-sun"></i></button>{{/if}}
+      </div>
+    </section>
+  {{/if}}
+
+  {{#if glimpse}}
+    <section class="wonder-hub-card glimpse">
+      <h3><i class="fa-solid fa-eye"></i> Glimpse Beyond</h3>
+      <div class="mini-dice">{{#each glimpse.dice}}<span class="{{#if used}}used{{/if}}">{{value}}</span>{{else}}<em>—</em>{{/each}}</div>
+      <button type="button" class="wonder-btn" data-action="open" data-fn="openGlimpse"><i class="fa-solid fa-dice"></i> {{localize "WONDER.Glimpse.Open"}}</button>
+    </section>
+  {{/if}}
+
+  {{#if isEnchanter}}
+    <section class="wonder-hub-card enchanter">
+      <h3><i class="fa-solid fa-wand-sparkles"></i> Enchanter</h3>
+      <p>{{localize "WONDER.Hub.Enchantments" used=enchant.used slots=enchant.slots}}</p>
+      <ul>{{#each enchant.records}}<li><img src="{{img}}" alt=""> {{name}} — <em>{{objectName}}</em></li>{{/each}}</ul>
+      {{#if enchant.explosion}}<p class="boom"><i class="fa-solid fa-bomb"></i> {{enchant.explosion.value}}</p>{{/if}}
+      <div class="wonder-row">
+        <button type="button" class="wonder-btn" data-action="open" data-fn="openWorkshop"><i class="fa-solid fa-wand-sparkles"></i> {{localize "WONDER.Ench.Title"}}</button>
+        {{#if enchant.tinkering}}<button type="button" class="wonder-btn ghost" data-action="open" data-fn="openTinkering"><i class="fa-solid fa-gears"></i></button>{{/if}}
+        <button type="button" class="wonder-btn ghost" data-action="open" data-fn="appraise" data-tooltip="Mystic Appraisal"><i class="fa-solid fa-eye"></i></button>
+      </div>
+    </section>
+  {{/if}}
+
+  <section class="wonder-hub-card wonder-cards-summary">
+    <h3><img src="modules/daggerheart-wonderdomain/assets/wonder.svg" alt=""> Wonder Domain</h3>
+    <p>{{localize "WONDER.Hub.Cards" n=wonder.count}} {{#if wonder.touched}}<span class="wonder-chip gold">Wonder-Touched</span>{{/if}}</p>
+    <div class="wonder-chip-row">{{#each wonder.cards}}<span class="wonder-chip">{{level}} · {{name}}</span>{{/each}}</div>
+  </section>
+</div>

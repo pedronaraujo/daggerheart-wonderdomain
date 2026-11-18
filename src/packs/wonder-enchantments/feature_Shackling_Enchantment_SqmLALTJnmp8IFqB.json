@@ -1,0 +1,31 @@
+{
+  "_id": "SqmLALTJnmp8IFqB",
+  "name": "Shackling Enchantment",
+  "type": "feature",
+  "img": "icons/magic/control/debuff-chains-shackles-movement-blue.webp",
+  "folder": "TdVSHGEnF9alRSd2",
+  "system": {
+    "description": "<p><em>Tier 4 enchantment — Object that can be held</em></p><p>You may place this enchantment on any object that can be held. While holding the object, the user is permanently Restrained.</p>",
+    "resource": null,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "passive",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 4027,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "enchantment": "shackling",
+      "tier": 4
+    }
+  },
+  "_key": "!items!SqmLALTJnmp8IFqB"
+}

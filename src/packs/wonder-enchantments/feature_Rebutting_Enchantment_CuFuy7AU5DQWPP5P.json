@@ -1,0 +1,31 @@
+{
+  "_id": "CuFuy7AU5DQWPP5P",
+  "name": "Rebutting Enchantment",
+  "type": "feature",
+  "img": "icons/magic/sonic/explosion-shock-wave-teal.webp",
+  "folder": "KiA00THnfYFw6v9a",
+  "system": {
+    "description": "<p><em>Tier 3 enchantment — Armor without a feature</em></p><p>You may place this enchantment on an armor that doesn't already have a feature. The armor gains the Repelling feature.</p><p><strong>Repelling:</strong> When hit by an attack from a target within Melee range, push the attacker to Far range.</p>",
+    "resource": null,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "passive",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 3019,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "enchantment": "rebutting",
+      "tier": 3
+    }
+  },
+  "_key": "!items!CuFuy7AU5DQWPP5P"
+}

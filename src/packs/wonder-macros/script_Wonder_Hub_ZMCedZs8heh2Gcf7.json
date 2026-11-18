@@ -1,0 +1,16 @@
+{
+  "_id": "ZMCedZs8heh2Gcf7",
+  "name": "Wonder Hub",
+  "type": "script",
+  "img": "modules/daggerheart-wonderdomain/assets/wonder.svg",
+  "command": "game.modules.get('daggerheart-wonderdomain')?.api?.openHub(actor ?? game.user.character);",
+  "scope": "global",
+  "author": null,
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!macros!ZMCedZs8heh2Gcf7"
+}

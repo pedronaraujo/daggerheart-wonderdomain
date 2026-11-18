@@ -1,0 +1,31 @@
+{
+  "_id": "5iFsdKa1LjYEWFNV",
+  "name": "Growth Enchantment",
+  "type": "feature",
+  "img": "icons/magic/control/buff-flight-wings-runes-blue-white.webp",
+  "folder": "Y1eN8KsxedidOfbN",
+  "system": {
+    "description": "<p><em>Tier 2 enchantment — Object no larger than you, not worn by a creature</em></p><p>You may place this enchantment on any object that is no larger than you and is not being worn by a creature. The object doubles in size.<br>If the object is a one-handed primary weapon, increase its damage by your Spellcast trait. Its burden becomes two-handed and it loses any features it had previously, then gains the Powerful feature.<br><em>Powerful:</em> On a successful attack, roll an additional damage die and discard the lowest result.<br>If the object is a two-handed weapon or a secondary weapon, it becomes too big to be held and the wielder must drop it.</p>",
+    "resource": null,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "passive",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 2011,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "enchantment": "growth",
+      "tier": 2
+    }
+  },
+  "_key": "!items!5iFsdKa1LjYEWFNV"
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "lkpPeChWAAs2e1O9",
+  "name": "Credibility Enchantment",
+  "type": "feature",
+  "img": "icons/sundries/books/book-embossed-gold-red.webp",
+  "folder": "KiA00THnfYFw6v9a",
+  "system": {
+    "description": "<p><em>Tier 3 enchantment — Item or written document</em></p><p>You may place this enchantment on any item or written document. Any creature attempting to identify the object as a fake or forgery will automatically fail and consider it as an authentic copy, as long as the contents are believable within reason.</p>",
+    "resource": null,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "passive",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 3017,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "enchantment": "credibility",
+      "tier": 3
+    }
+  },
+  "_key": "!items!lkpPeChWAAs2e1O9"
+}

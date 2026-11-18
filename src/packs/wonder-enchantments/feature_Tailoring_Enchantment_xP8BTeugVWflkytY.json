@@ -1,0 +1,31 @@
+{
+  "_id": "xP8BTeugVWflkytY",
+  "name": "Tailoring Enchantment",
+  "type": "feature",
+  "img": "icons/equipment/chest/robe-layered-teal.webp",
+  "folder": "Y1eN8KsxedidOfbN",
+  "system": {
+    "description": "<p><em>Tier 2 enchantment — Piece of clothing</em></p><p>You may place this enchantment on any piece of clothing. It shifts its color, format or size as you desire, effectively changing the visual aspect of the clothing for the duration of the enchantment.</p>",
+    "resource": null,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "passive",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 2015,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "enchantment": "tailoring",
+      "tier": 2
+    }
+  },
+  "_key": "!items!xP8BTeugVWflkytY"
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "C3f6SsyE98QEdf7q",
+  "name": "Searing Enchantment",
+  "type": "feature",
+  "img": "icons/magic/fire/explosion-flame-lightning-strike.webp",
+  "folder": "Y1eN8KsxedidOfbN",
+  "system": {
+    "description": "<p><em>Tier 2 enchantment — Object made of metal</em></p><p>You may place this enchantment on any object made of metal. The object starts to heat up. If currently being held or worn by a creature, they must mark a Stress when this enchantment is placed and whenever they are spotlighted until they spend their full spotlight to get rid of the item.</p>",
+    "resource": null,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "passive",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 2012,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "enchantment": "searing",
+      "tier": 2
+    }
+  },
+  "_key": "!items!C3f6SsyE98QEdf7q"
+}

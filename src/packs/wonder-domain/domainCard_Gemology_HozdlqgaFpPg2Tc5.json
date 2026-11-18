@@ -1,0 +1,70 @@
+{
+  "_id": "HozdlqgaFpPg2Tc5",
+  "name": "Gemology",
+  "type": "domainCard",
+  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "folder": null,
+  "system": {
+    "description": "<p><strong>Spend 2 Hope</strong> during a rest to allow you or an ally sharing the rest to take an additional downtime move.</p>",
+    "domain": "wonder",
+    "recallCost": 0,
+    "level": 5,
+    "type": "spell",
+    "actions": {
+      "G6oCicyeQQg395gP": {
+        "type": "effect",
+        "_id": "G6oCicyeQQg395gP",
+        "systemPath": "actions",
+        "description": "",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [
+          {
+            "scalable": false,
+            "key": "hope",
+            "value": 2,
+            "step": null,
+            "itemId": null,
+            "consumeOnSuccess": false
+          }
+        ],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Facet the Rest",
+        "img": "icons/commodities/gems/gem-faceted-cushion-teal-black.webp",
+        "range": "",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "friendly",
+          "amount": 1
+        },
+        "effects": []
+      }
+    },
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "resource": null,
+    "inVault": false,
+    "vaultActive": false,
+    "loadoutIgnore": false,
+    "domainTouched": null
+  },
+  "sort": 500010,
+  "flags": {},
+  "_key": "!items!HozdlqgaFpPg2Tc5",
+  "effects": []
+}

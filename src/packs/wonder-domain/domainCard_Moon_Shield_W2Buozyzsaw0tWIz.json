@@ -1,0 +1,280 @@
+{
+  "_id": "W2Buozyzsaw0tWIz",
+  "name": "Moon Shield",
+  "type": "domainCard",
+  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "folder": null,
+  "system": {
+    "description": "<p><strong>Mark a Stress</strong> to create a field within Very Close range that lasts until the end of the scene or you take Severe damage. The field moves with you and, while active, you add your Spellcast trait to your damage thresholds.</p><p>When you create the field, place 2 tokens on this card. These are your <em>Lunar tokens</em>. You may also <strong>spend a Hope</strong> to place 2 Lunar tokens on this card. When an ally takes damage while within the field, spend any amount of Lunar tokens to reduce the damage taken by <strong>1d6</strong> per token spent. When the spell ends, clear all tokens on this card.</p>",
+    "domain": "wonder",
+    "recallCost": 2,
+    "level": 6,
+    "type": "spell",
+    "actions": {
+      "IbyIcTUxC0W0A855": {
+        "type": "healing",
+        "_id": "IbyIcTUxC0W0A855",
+        "systemPath": "actions",
+        "description": "",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [
+          {
+            "scalable": false,
+            "key": "stress",
+            "value": 1,
+            "step": null,
+            "itemId": null,
+            "consumeOnSuccess": false
+          }
+        ],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Create Field",
+        "img": "icons/magic/defensive/barrier-shield-dome-blue-purple.webp",
+        "range": "veryClose",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "self",
+          "amount": null
+        },
+        "damage": {
+          "main": null,
+          "resources": {
+            "resource": {
+              "value": {
+                "custom": {
+                  "enabled": true,
+                  "formula": "2"
+                },
+                "multiplier": "flat",
+                "flatMultiplier": 1,
+                "dice": "d6",
+                "bonus": null
+              },
+              "applyTo": "resource",
+              "base": false,
+              "resultBased": false,
+              "valueAlt": null,
+              "fullRestore": false,
+              "itemId": "W2Buozyzsaw0tWIz"
+            }
+          }
+        },
+        "effects": [
+          {
+            "_id": "QmyG5vuAWUmRKW6f",
+            "onSave": false
+          }
+        ],
+        "roll": {
+          "type": null,
+          "trait": null,
+          "difficulty": null,
+          "bonus": null,
+          "advState": "neutral",
+          "diceRolling": {
+            "multiplier": "prof",
+            "flatMultiplier": 1,
+            "dice": "d6",
+            "compare": null,
+            "treshold": null
+          },
+          "useDefault": false
+        }
+      },
+      "Ipnln61Vy20kCa4f": {
+        "type": "healing",
+        "_id": "Ipnln61Vy20kCa4f",
+        "systemPath": "actions",
+        "description": "",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [
+          {
+            "scalable": false,
+            "key": "hope",
+            "value": 1,
+            "step": null,
+            "itemId": null,
+            "consumeOnSuccess": false
+          }
+        ],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Add 2 Lunar Tokens",
+        "img": "icons/commodities/currency/coin-engraved-moon-silver.webp",
+        "range": "",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "self",
+          "amount": null
+        },
+        "damage": {
+          "main": null,
+          "resources": {
+            "resource": {
+              "value": {
+                "custom": {
+                  "enabled": true,
+                  "formula": "2"
+                },
+                "multiplier": "flat",
+                "flatMultiplier": 1,
+                "dice": "d6",
+                "bonus": null
+              },
+              "applyTo": "resource",
+              "base": false,
+              "resultBased": false,
+              "valueAlt": null,
+              "fullRestore": false,
+              "itemId": "W2Buozyzsaw0tWIz"
+            }
+          }
+        },
+        "effects": [],
+        "roll": {
+          "type": null,
+          "trait": null,
+          "difficulty": null,
+          "bonus": null,
+          "advState": "neutral",
+          "diceRolling": {
+            "multiplier": "prof",
+            "flatMultiplier": 1,
+            "dice": "d6",
+            "compare": null,
+            "treshold": null
+          },
+          "useDefault": false
+        }
+      },
+      "wndMoonShieldRed": {
+        "type": "effect",
+        "_id": "wndMoonShieldRed",
+        "systemPath": "actions",
+        "description": "<p>Choose how many Lunar tokens to spend; roll 1d6 per token to reduce the damage an ally takes.</p>",
+        "chatDisplay": true,
+        "actionType": "reaction",
+        "cost": [],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Spend Lunar Tokens",
+        "img": "icons/creatures/birds/raptor-owl-flying-moon.webp",
+        "range": "",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "friendly",
+          "amount": 1
+        },
+        "effects": []
+      }
+    },
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "resource": {
+      "type": "simple",
+      "value": 0,
+      "max": null,
+      "icon": "fa-solid fa-moon",
+      "recovery": null,
+      "progression": "increasing",
+      "diceStates": {},
+      "dieFaces": "d4"
+    },
+    "inVault": false,
+    "vaultActive": false,
+    "loadoutIgnore": false,
+    "domainTouched": null
+  },
+  "sort": 600011,
+  "flags": {},
+  "_key": "!items!W2Buozyzsaw0tWIz",
+  "effects": [
+    {
+      "_id": "QmyG5vuAWUmRKW6f",
+      "name": "Moon Shield Field",
+      "img": "icons/magic/defensive/barrier-shield-dome-blue-purple.webp",
+      "description": "<p>You add your Spellcast trait to your damage thresholds.</p>",
+      "type": "base",
+      "disabled": false,
+      "transfer": false,
+      "statuses": [],
+      "system": {
+        "changes": [
+          {
+            "key": "system.damageThresholds.major",
+            "type": "add",
+            "value": "@cast",
+            "priority": null,
+            "phase": "initial"
+          },
+          {
+            "key": "system.damageThresholds.severe",
+            "type": "add",
+            "value": "@cast",
+            "priority": null,
+            "phase": "initial"
+          }
+        ],
+        "duration": {
+          "description": "",
+          "type": "scene"
+        },
+        "rangeDependence": null,
+        "stacking": null,
+        "targetDispositions": [],
+        "conditionals": []
+      },
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null
+      },
+      "_key": "!items.effects!W2Buozyzsaw0tWIz.QmyG5vuAWUmRKW6f"
+    }
+  ]
+}

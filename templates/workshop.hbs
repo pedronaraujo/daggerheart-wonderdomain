@@ -1,0 +1,127 @@
+<div class="wonder-workshop-body">
+  <aside class="wonder-bench">
+    <div class="wonder-stat-row">
+      <div class="stat"><span class="v">{{tier}}</span><span class="k">Tier</span></div>
+      <div class="stat"><span class="v">{{spellcast}}</span><span class="k">Spellcast</span></div>
+      <div class="stat"><span class="v">{{hope}}</span><span class="k">Hope</span></div>
+      <div class="stat"><span class="v">{{stress.value}}/{{stress.max}}</span><span class="k">Stress</span></div>
+    </div>
+
+    <div class="wonder-slots">
+      <span class="label">{{localize "WONDER.Ench.Active"}}</span>
+      <span class="pips">{{#each slotsPips}}<i class="fa-solid fa-gem {{#if on}}on{{/if}}"></i>{{/each}}</span>
+      {{#if expanded}}<span class="wonder-chip">Expanded Stock</span>{{/if}}
+    </div>
+
+    <ol class="wonder-active-list">
+      {{#each records}}
+        <li class="{{#if surge}}surge{{/if}}">
+          <img src="{{img}}" alt="">
+          <div class="info">
+            <strong>{{name}}</strong>
+            {{#if combineNames}}<small>{{combineNames}}</small>{{/if}}
+            <span>{{objectName}}</span>
+            {{#if surge}}<span class="wonder-chip gold">Ingenious Surge</span>{{/if}}
+          </div>
+          <button type="button" data-action="end" data-id="{{id}}" data-tooltip="{{localize 'WONDER.Ench.End'}}"><i class="fa-solid fa-xmark"></i></button>
+        </li>
+      {{else}}
+        <li class="empty">{{localize "WONDER.Ench.None"}}</li>
+      {{/each}}
+    </ol>
+    {{#if records.length}}
+      <button type="button" class="wonder-btn ghost small" data-action="endAll"><i class="fa-solid fa-clapperboard"></i> {{localize "WONDER.Ench.EndScene"}}</button>
+    {{/if}}
+
+    {{#if explosion}}
+      <div class="wonder-explosion">
+        <div class="title"><i class="fa-solid fa-bomb"></i> {{localize "WONDER.Ench.ExplosionDie"}} — {{explosion.object}}</div>
+        <div class="d8">{{explosion.value}}</div>
+        <div class="faces">{{#each explosionFaces}}<span class="{{#if on}}on{{/if}}"></span>{{/each}}</div>
+        <div class="buttons">
+          <button type="button" data-action="boom" data-delta="-1">−1</button>
+          <button type="button" data-action="boom" data-delta="-2" data-hope="true" data-tooltip="Spend a Hope">−2 <i class="fa-solid fa-hands-holding"></i></button>
+          <button type="button" data-action="boom" data-delta="2" data-hope="true" data-tooltip="Spend a Hope">+2 <i class="fa-solid fa-hands-holding"></i></button>
+        </div>
+      </div>
+    {{/if}}
+  </aside>
+
+  <section class="wonder-catalog">
+    <nav class="wonder-tabs">
+      {{#each tabs}}
+        <button type="button" class="{{#if active}}active{{/if}} {{#if locked}}locked{{/if}}" data-action="tab" data-tier="{{n}}">
+          Tier {{n}} {{#if locked}}<i class="fa-solid fa-lock"></i>{{/if}}
+        </button>
+      {{/each}}
+    </nav>
+    <div class="wonder-cards">
+      {{#each cards}}
+        <article class="wonder-ench-card tier-{{tier}} {{#if selected}}selected{{/if}} {{#if locked}}locked{{/if}}" data-action="select" data-key="{{key}}">
+          <header><img src="{{img}}" alt=""><h4>{{name}}</h4></header>
+          <div class="target"><i class="fa-solid fa-crosshairs"></i> {{targetLabel}}</div>
+          {{#if featureName}}<div class="feature">{{featureName}}</div>{{/if}}
+          <p>{{{text}}}</p>
+        </article>
+      {{/each}}
+    </div>
+  </section>
+
+  <aside class="wonder-target-panel">
+    {{#if def}}
+      <h3><img src="{{def.img}}" alt=""> {{def.name}}</h3>
+      <p class="req"><i class="fa-solid fa-crosshairs"></i> {{defTargetLabel}}</p>
+
+      {{#if isCombining}}
+        <div class="wonder-combine">
+          <label>1. <select name="combine0" data-index="0"><option value="">—</option>{{#each combineOptions}}<option value="{{key}}" {{#if (wonderEq key ../combine.[0])}}selected{{/if}}>{{name}}</option>{{/each}}</select></label>
+          <label>2. <select name="combine1" data-index="1"><option value="">—</option>{{#each combineOptions}}<option value="{{key}}" {{#if (wonderEq key ../combine.[1])}}selected{{/if}}>{{name}}</option>{{/each}}</select></label>
+        </div>
+      {{/if}}
+
+      <div class="title">{{localize "WONDER.Ench.ChooseObject"}}</div>
+      <ul class="wonder-targets">
+        {{#each targets}}
+          <li class="{{#if valid}}valid{{else}}invalid{{/if}} {{#if selected}}selected{{/if}}" {{#if valid}}data-action="target" data-uuid="{{uuid}}"{{/if}} {{#unless valid}}data-tooltip="{{reason}}"{{/unless}}>
+            <img src="{{img}}" alt="">
+            <div class="info">
+              <strong>{{name}}</strong>
+              <small>{{type}}{{#unless own}} · {{owner}}{{/unless}}{{#if features}} · {{features}}{{/if}}</small>
+            </div>
+            {{#unless valid}}<i class="fa-solid fa-ban"></i>{{/unless}}
+          </li>
+        {{/each}}
+        {{#if freeAllowed}}
+          <li class="valid free {{#if freeSelected}}selected{{/if}}" data-action="target" data-uuid="free">
+            <i class="fa-solid fa-feather-pointed"></i>
+            <div class="info"><strong>{{localize "WONDER.Ench.OtherObject"}}</strong><small>{{localize "WONDER.Ench.OtherObjectHint"}}</small></div>
+          </li>
+        {{/if}}
+      </ul>
+      {{#if freeSelected}}
+        <input type="text" name="objectName" value="{{objectName}}" placeholder="{{localize 'WONDER.Ench.ObjectName'}}">
+        <p class="wonder-hint"><i class="fa-solid fa-bullseye"></i>
+          {{#if bearerName}}{{localize "WONDER.Ench.Bearer" name=bearerName}}{{else}}{{localize "WONDER.Ench.BearerHint"}}{{/if}}</p>
+      {{/if}}
+
+      <label class="wonder-toggle"><input type="checkbox" name="adversary" {{#if adversary}}checked{{/if}}> {{localize "WONDER.Ench.Adversary"}}</label>
+      {{#if hasMagicWeapons}}
+        <label class="wonder-toggle"><input type="checkbox" name="useSpellcast" {{#if useSpellcast}}checked{{/if}}> Magic Weapons — {{localize "WONDER.Ench.UseSpellcast"}}</label>
+      {{/if}}
+
+      <div class="wonder-cost-choice">
+        <button type="button" class="{{#unless surge}}active{{/unless}}" data-action="surge" data-value="false"><i class="fa-solid fa-bolt"></i> 1 Stress</button>
+        <button type="button" class="{{#if surge}}active{{/if}}" data-action="surge" data-value="true" {{#unless canSurge}}disabled{{/unless}}><i class="fa-solid fa-hands-holding"></i> 3 Hope <small>Ingenious Surge</small></button>
+      </div>
+
+      <button type="button" class="wonder-btn hero" data-action="enchant" {{#unless canEnchant}}disabled{{/unless}}>
+        <i class="fa-solid fa-wand-sparkles"></i> {{localize "WONDER.Ench.Enchant"}}
+      </button>
+    {{else}}
+      <div class="wonder-empty-target">
+        <i class="fa-solid fa-hand-pointer"></i>
+        <p>{{localize "WONDER.Ench.PickCard"}}</p>
+      </div>
+    {{/if}}
+  </aside>
+</div>

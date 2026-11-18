@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffe9a8"/>
+      <stop offset="1" stop-color="#e2a93f"/>
+    </linearGradient>
+  </defs>
+  <g fill="url(#g)">
+    <!-- open arc: the horizon of "what if" -->
+    <path d="M128 22a106 106 0 1 0 106 106h-16a90 90 0 1 1-90-90z"/>
+    <!-- great sparkle -->
+    <path d="M128 52c6 40 20 60 60 76-40 16-54 36-60 76-6-40-20-60-60-76 40-16 54-36 60-76z"/>
+    <!-- small sparkles -->
+    <path d="M200 30c2.6 14 7.4 20 22 26-14.6 6-19.4 12-22 26-2.6-14-7.4-20-22-26 14.6-6 19.4-12 22-26z"/>
+    <path d="M214 96c1.6 8 4.4 11.6 12 14.6-7.6 3-10.4 6.6-12 14.6-1.6-8-4.4-11.6-12-14.6 7.6-3 10.4-6.6 12-14.6z"/>
+    <circle cx="128" cy="128" r="9" fill="#0e1626"/>
+  </g>
+</svg>

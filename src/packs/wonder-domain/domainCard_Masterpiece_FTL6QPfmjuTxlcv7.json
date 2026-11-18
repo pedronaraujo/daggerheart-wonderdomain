@@ -1,0 +1,70 @@
+{
+  "_id": "FTL6QPfmjuTxlcv7",
+  "name": "Masterpiece",
+  "type": "domainCard",
+  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "folder": null,
+  "system": {
+    "description": "<p>When you <em>Work on a Project</em>, you may choose to work on a Masterpiece. Your Masterpiece has an initial value of <strong>0</strong> and when you take this downtime move, roll a <strong>d10</strong>. Add the result to its total value as handfuls of gold, then <strong>gain a Hope</strong>. When the Masterpiece's value reaches that of a chest, it is finished. You then choose a trait to gain a <strong>+1</strong> bonus and must place this card in your vault permanently. You may also sell your Masterpiece for its current value, at which point you lose its trait bonus and can start to create a new one.</p><p><em>The token counter on this card tracks the Masterpiece's value in handfuls (a chest = 100 handfuls).</em></p>",
+    "domain": "wonder",
+    "recallCost": 0,
+    "level": 3,
+    "type": "ability",
+    "actions": {
+      "wndMasterpieceWk": {
+        "type": "effect",
+        "_id": "wndMasterpieceWk",
+        "systemPath": "actions",
+        "description": "<p>Roll a d10, add it to the Masterpiece's value and gain a Hope.</p>",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Work on the Masterpiece",
+        "img": "icons/commodities/treasure/crown-gold-satin-gems-red.webp",
+        "range": "",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "self",
+          "amount": null
+        },
+        "effects": []
+      }
+    },
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "resource": {
+      "type": "simple",
+      "value": 0,
+      "max": "100",
+      "icon": "fa-solid fa-gem",
+      "recovery": null,
+      "progression": "increasing",
+      "diceStates": {},
+      "dieFaces": "d4"
+    },
+    "inVault": false,
+    "vaultActive": false,
+    "loadoutIgnore": false,
+    "domainTouched": null
+  },
+  "sort": 300006,
+  "flags": {},
+  "_key": "!items!FTL6QPfmjuTxlcv7",
+  "effects": []
+}

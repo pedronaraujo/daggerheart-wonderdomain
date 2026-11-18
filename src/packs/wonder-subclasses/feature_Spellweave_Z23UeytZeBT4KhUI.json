@@ -1,0 +1,89 @@
+{
+  "_id": "Z23UeytZeBT4KhUI",
+  "name": "Spellweave",
+  "type": "feature",
+  "img": "icons/magic/symbols/runes-triangle-magenta.webp",
+  "folder": "Vacru5iDk3BvcCbq",
+  "system": {
+    "description": "<p>Once per rest, <strong>mark a Stress</strong> to choose two of your spells that require a Spellcast Roll against a single target. You may cast a combined spell by making a single Spellcast Roll against the same target, which must be within range of the two spells. You must spend any additional resources for each spell. When rolling for damage with your Spellweave, combine the initial damage of both spells into a single damage roll.</p>",
+    "resource": null,
+    "actions": {
+      "wndSpellweave000": {
+        "type": "attack",
+        "_id": "wndSpellweave000",
+        "systemPath": "actions",
+        "description": "",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [
+          {
+            "scalable": false,
+            "key": "stress",
+            "value": 1,
+            "step": null,
+            "itemId": null,
+            "consumeOnSuccess": false
+          }
+        ],
+        "uses": {
+          "value": null,
+          "max": "1",
+          "recovery": "shortRest",
+          "consumeOnSuccess": false
+        },
+        "name": "Weave Spells",
+        "img": "icons/magic/symbols/runes-triangle-magenta.webp",
+        "range": "",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "any",
+          "amount": 1
+        },
+        "damage": {
+          "main": null,
+          "resources": {}
+        },
+        "effects": [],
+        "roll": {
+          "type": "spellcast",
+          "trait": null,
+          "difficulty": null,
+          "bonus": null,
+          "advState": "neutral",
+          "diceRolling": {
+            "multiplier": "prof",
+            "flatMultiplier": 1,
+            "dice": "d6",
+            "compare": null,
+            "treshold": null
+          },
+          "useDefault": false
+        },
+        "save": {
+          "trait": null,
+          "difficulty": null,
+          "damageMod": "none"
+        }
+      }
+    },
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "action",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 0,
+  "flags": {},
+  "_key": "!items!Z23UeytZeBT4KhUI"
+}

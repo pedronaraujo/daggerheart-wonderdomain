@@ -1,0 +1,56 @@
+{
+  "_id": "PEKezrDv1CNSmSef",
+  "name": "Creative Tinkering",
+  "type": "feature",
+  "img": "icons/commodities/tech/cog-brass.webp",
+  "folder": "Vacru5iDk3BvcCbq",
+  "system": {
+    "description": "<p>You may <em>Work on a Project</em> to create a magical trinket. When you do so, spend any number of handfuls of gold up to your Tier, then roll a <strong>d8</strong> for each one spent. Choose an item or consumable from the Loot tables with number equal to or lower than the total result of your roll. You create a temporary copy of the chosen loot and it remains active until your next long rest (or until used, if it is a consumable). Any creature can make a <strong>Reaction Roll (10)</strong> to identify the created loot as a temporary copy.</p>",
+    "resource": null,
+    "actions": {
+      "wndTinkeringBnch": {
+        "type": "effect",
+        "_id": "wndTinkeringBnch",
+        "systemPath": "actions",
+        "description": "",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Tinkering Bench",
+        "img": "icons/commodities/tech/cog-brass.webp",
+        "range": "",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "self",
+          "amount": null
+        },
+        "effects": []
+      }
+    },
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "action",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 0,
+  "flags": {},
+  "_key": "!items!PEKezrDv1CNSmSef"
+}

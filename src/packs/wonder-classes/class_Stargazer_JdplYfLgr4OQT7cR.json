@@ -1,0 +1,90 @@
+{
+  "_id": "JdplYfLgr4OQT7cR",
+  "name": "Stargazer",
+  "type": "class",
+  "img": "icons/magic/symbols/runes-star-pentagon-blue.webp",
+  "folder": "ROUT3ivDaKVieiUG",
+  "system": {
+    "description": "<p>Stargazers are mystics who study the stars to unlock their cosmic power, blending astronomy, astrology, and arcane insight. They read celestial patterns in the stars and assume the form of Constellations to aid allies in battle. They are known to channel the intricate energies of the cosmos, bridging the mundane world and the skies above.</p>",
+    "domains": [
+      "wonder",
+      "splendor"
+    ],
+    "classItems": [],
+    "hitPoints": 6,
+    "evasion": 10,
+    "features": [
+      {
+        "type": "hope",
+        "item": "Compendium.daggerheart-wonderdomain.wonder-classes.Item.ZOdFX0Odj045h6nN"
+      },
+      {
+        "type": "class",
+        "item": "Compendium.daggerheart-wonderdomain.wonder-classes.Item.HQ8Wv2deZVsASchx"
+      },
+      {
+        "type": "class",
+        "item": "Compendium.daggerheart-wonderdomain.wonder-classes.Item.NI1Y2KbuIbJaVHmv"
+      }
+    ],
+    "inventory": {
+      "take": [
+        "Compendium.daggerheart.classes.Item.zqeXrJTd1geX73Pw",
+        "Compendium.daggerheart.classes.Item.hMST9iizQP1yz0MG",
+        "Compendium.daggerheart.classes.Item.uoG5iq09mxJPXfmk"
+      ],
+      "choiceA": [
+        "Compendium.daggerheart.consumables.Item.tPfKtKRRjv8qdSqy",
+        "Compendium.daggerheart.consumables.Item.b6vGSPFWOlzZZDLO"
+      ],
+      "choiceB": [
+        "Compendium.daggerheart-wonderdomain.wonder-classes.Item.8haU5IS1fb2tCIk6",
+        "Compendium.daggerheart-wonderdomain.wonder-classes.Item.uhZRKFtzIfXTN7pM"
+      ]
+    },
+    "characterGuide": {
+      "suggestedTraits": {
+        "agility": 0,
+        "strength": -1,
+        "finesse": 1,
+        "instinct": 1,
+        "presence": 0,
+        "knowledge": 2
+      },
+      "suggestedPrimaryWeapon": "Compendium.daggerheart.weapons.Item.3whiedn0jBMNRdIb",
+      "suggestedSecondaryWeapon": "Compendium.daggerheart.weapons.Item.mxwWKDujgsRcZWPT",
+      "suggestedArmor": "Compendium.daggerheart.armors.Item.yJFp1bfpecDcStVK"
+    },
+    "isMulticlass": false,
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "backgroundQuestions": [
+      "You once received a vision from the stars that still haunts you to this day. What did the stars show you?",
+      "You were born under a special celestial event. What was it and what prophecy was spoken at your birth?",
+      "What is the most beautiful thing you've ever seen in the sky?"
+    ],
+    "connections": [
+      "What did I predict about you that you promised would never happen?",
+      "What do I always say you're destined for, and why do you hate hearing it?",
+      "Who do you know from my life before we met, and why have you not told me yet?"
+    ],
+    "gmNotes": "",
+    "levelupOptionTiers": {
+      "2": {},
+      "3": {},
+      "4": {}
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "wonderClass": "stargazer"
+    }
+  },
+  "_key": "!items!JdplYfLgr4OQT7cR"
+}

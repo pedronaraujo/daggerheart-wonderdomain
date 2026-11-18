@@ -1,0 +1,175 @@
+{
+  "WONDER": {
+    "Domain": {
+      "label": "Wonder",
+      "description": "The Wonder domain embodies the spark of imagination, the excitement of discovery, and the power of creativity. Those who draw from Wonder see the world as it could be: brighter, different, interesting and beautiful."
+    },
+    "Settings": {
+      "autoAstral": {
+        "name": "Spend Astral tokens automatically",
+        "hint": "Each action roll made in Constellation form spends an Astral token (with an undo button in chat)."
+      },
+      "autoExplosion": {
+        "name": "Tick the Explosion die automatically",
+        "hint": "Reduce the Exploding Enchantment countdown die whenever an action roll is posted to chat."
+      },
+      "sheetButton": {
+        "name": "Wonder button on character sheets",
+        "hint": "Adds a ✦ Wonder button to the header of characters with a Wonder class or cards."
+      }
+    },
+    "Notify": {
+      "NoActor": "Select a token or assign a character first.",
+      "NeedGM": "A GM must be connected to change documents you do not own.",
+      "NotEnoughHope": "Not enough Hope ({have}/{need}).",
+      "WonderTouchedSwap": "Wonder-Touched: mark {n} Stress instead of the missing Hope?"
+    },
+    "Hub": {
+      "Title": "Wonder Hub",
+      "Stars": "{used}/{total} stars marked",
+      "Enchantments": "Active enchantments: {used}/{slots}",
+      "Cards": "{n} Wonder cards in loadout."
+    },
+    "Stars": {
+      "Title": "Star Chart",
+      "OpenChart": "Star Chart",
+      "DefaultName": "Constellation",
+      "ConstellationName": "Constellation name",
+      "ClickHint": "Click a glowing star connected to your Constellation to mark it · Right-click a marked star to unmark it.",
+      "Marked": "stars marked",
+      "BudgetDetail": "Level {level} + Blessings {blessings} + Extra {extra}",
+      "StandardAttack": "Standard Attack",
+      "Range": "Range",
+      "Damage": "Damage",
+      "RollAttack": "Roll standard attack",
+      "Astral": "Astral tokens",
+      "Embody": "Embody Constellation",
+      "EmbodyCost": "Mark 1 Stress · start with {n} Astral tokens",
+      "Leave": "Leave Constellation form",
+      "Abilities": "Constellation abilities",
+      "AbilitiesHint": "Use them from the ✦ Constellation feature on your sheet — they spend Astral tokens.",
+      "Choose": "choose",
+      "CosmicHelp": "next Empyrean Call costs 1 less Hope",
+      "WouldDisconnect": "That star holds other stars to your Constellation. Unmark the outer stars first.",
+      "NotConnected": "You can only mark a star connected to one you already have.",
+      "NoBudget": "You can mark {n} stars right now (level + blessings). Ask the GM for extra stars.",
+      "FormEffect": "Constellation Form: {name}",
+      "FormEffectHint": "Bonuses from your Star Chart while you embody your Constellation.",
+      "AstralHint": "Action rolls in this form spend an Astral token. You leave the form with no tokens left or when you mark your last Hit Point.",
+      "EnterTitle": "{name} rises",
+      "EnterBody": "Marked 1 Stress and embodied the Constellation with <strong>{n}</strong> Astral tokens.",
+      "LeaveTitle": "The Constellation fades",
+      "LeaveBody": "Left Constellation form.",
+      "OutOfTokens": "No Astral tokens left — the Constellation fades.",
+      "LastHitPoint": "Marked the last Hit Point — dropped out of Constellation form.",
+      "NeedForm": "You must be in Constellation form.",
+      "EmpyreanBody": "Spent {cost} Hope and rolled <strong>{roll}</strong>: Astral tokens {before} → {after} (max 6).",
+      "TokenSpentTitle": "Astral token spent",
+      "TokenSpent": "Action roll in Constellation form — <strong>{n}</strong> Astral tokens left.",
+      "Refund": "Undo",
+      "BinaryRefund": "Binary Star in range (refund)",
+      "AgainstOdds": "Failure with Hope — the Astral token returns.",
+      "BinaryTitle": "Binary Star",
+      "BinaryHint": "Choose an ally within Far range to be your Binary Star."
+    },
+    "Ench": {
+      "Title": "Enchanting Workshop",
+      "Active": "Active",
+      "None": "No active enchantments.",
+      "End": "End enchantment",
+      "EndScene": "End of scene",
+      "ExplosionDie": "Explosion die",
+      "ChooseObject": "Choose the object",
+      "OtherObject": "Another object…",
+      "OtherObjectHint": "Anything not on a sheet (target a token if someone holds it)",
+      "ObjectName": "Describe the object",
+      "Bearer": "Held/worn by {name} (targeted).",
+      "BearerHint": "Target a token if a creature holds or wears it.",
+      "Adversary": "Held or worn by an adversary (Spellcast Roll)",
+      "UseSpellcast": "attack with your Spellcast trait",
+      "Enchant": "Enchant",
+      "PickCard": "Pick an enchantment card to begin.",
+      "SomeObject": "an object",
+      "Placed": "Enchanted <strong>{object}</strong>.",
+      "PaidStress": "Marked 1 Stress.",
+      "PaidSurge": "Ingenious Surge: spent 3 Hope (does not count towards the limit).",
+      "Ended": "Previous enchantment ended: {list}.",
+      "EndTitle": "{name} ends",
+      "EndBody": "The enchantment on <strong>{object}</strong> fades.",
+      "EndAllTitle": "Enchantments end",
+      "EndAllBody": "All scene enchantments fade.",
+      "EndAllConfirm": "End all active enchantments?",
+      "RollSpellcast": "Make a Spellcast Roll against the adversary.",
+      "BoomTitle": "Explosion!",
+      "BoomBody": "<strong>{object}</strong> explodes: creatures within Close range make a Reaction Roll (13). Failure: <strong>{total}</strong> magic damage; success: <strong>{half}</strong>. The object is destroyed.",
+      "FearlessYes": "Rolled a 6 — the GM does <strong>not</strong> gain a Fear from this roll.",
+      "FearlessNo": "No 6 — the GM gains Fear as usual.",
+      "AppraiseHint": "Target a token to appraise its items.",
+      "NothingMagical": "Nothing magical stirs.",
+      "Enchanted": "enchanted",
+      "Reason": {
+        "Tier": "Requires Tier {tier}.",
+        "Kind": "Needs: {kind}.",
+        "AlreadyEnchanted": "Already enchanted (one enchantment per object).",
+        "NeedsFeature": "The item must have a feature.",
+        "HasFeature": "The item already has a feature.",
+        "CombineTwo": "Choose two different enchantments to combine."
+      },
+      "Note": {
+        "FeaturesIgnored": "The item's features are ignored while enchanted.",
+        "Searing": "{name} marks a Stress from the heat.",
+        "TooBig": "{name} becomes too big to be held and is dropped (unequipped).",
+        "TooSmall": "{name} becomes too small to be used as a weapon (unequipped).",
+        "Grown": "Two-handed, +{n} damage, features replaced by Powerful.",
+        "Shrunk": "One-handed, features replaced by Unreliable (−2 attack and damage).",
+        "Explosion": "Explosion die set to 8.",
+        "MagicWeapons": "Magic Weapons: this weapon attacks with your Spellcast trait.",
+        "SmallAppreciation": "Small Appreciation: +{n} damage.",
+        "CreativeFlow": "Creative Flow: Spellweave is ready again."
+      }
+    },
+    "Tinker": {
+      "Title": "Tinkering Bench",
+      "Intro": "Spend handfuls of gold up to your Tier and roll a d8 for each. Pick loot numbered at or below the total — it is a temporary copy until your next long rest.",
+      "Handfuls": "handfuls",
+      "Available": "handfuls available",
+      "Roll": "Spend gold & roll",
+      "Rolled": "Spent {gold} handful(s) of gold — total <strong>{total}</strong>.",
+      "NoGold": "You need {n} handful(s) of gold.",
+      "Nothing": "No loot at or below this number.",
+      "CopyNote": "Temporary copy (Creative Tinkering) — lasts until your next long rest or until used. Reaction Roll (10) identifies it as a copy.",
+      "Crafted": "Trinket crafted",
+      "CraftedBody": "Created a temporary copy of <strong>{name}</strong>.",
+      "Temps": "Temporary copies",
+      "LongRest": "Long rest: remove copies"
+    },
+    "Glimpse": {
+      "Intro": "When a target makes an action roll, spend a Glimpse die to raise or lower the final result by its value.",
+      "Empty": "Roll {count}{faces} at the beginning of the session.",
+      "Roll": "Roll {count}{faces}",
+      "Rolled": "Glimpse dice: <strong>{dice}</strong>",
+      "Rerolled": "Rerolled remaining Glimpse dice: <strong>{dice}</strong>",
+      "Raise": "Raise the result",
+      "Lower": "Lower the result",
+      "Raised": "The stars favor {target}: <strong>+{n}</strong> to the final result.",
+      "Lowered": "The stars turn against {target}: <strong>−{n}</strong> to the final result.",
+      "TheRoll": "the roll",
+      "Target": "Target: {name}",
+      "NoTarget": "No target — the chat message will refer to the last roll.",
+      "Discard": "Discard (end of session)",
+      "NoFeature": "This character doesn't have Glimpse Beyond.",
+      "Open": "Glimpse dice"
+    },
+    "Moon": {
+      "Title": "Moon Shield",
+      "Prompt": "Spend how many Lunar tokens? (you have {n})",
+      "NoTokens": "No Lunar tokens on Moon Shield.",
+      "Reduced": "Spent {n} Lunar token(s): reduce the damage by <strong>{total}</strong>."
+    },
+    "Masterpiece": {
+      "Progress": "Rolled {roll}: the Masterpiece is worth <strong>{value}</strong> handfuls (a chest = 100). Gained a Hope.",
+      "Done": "The Masterpiece is finished!",
+      "ChooseTrait": "Choose a trait to gain +1 (the card goes to your vault permanently)."
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "9WmMTEnmcNbPQdtr",
+  "name": "Gravity Pull",
+  "type": "feature",
+  "img": "icons/magic/sonic/projectile-sound-rings-wave.webp",
+  "folder": "3glvHbPWSupgxxaw",
+  "system": {
+    "description": "<p>When your Binary Star would mark any number of Hit Points, you may spend 2 Astral tokens to pull them within your Melee range and reduce the number of Hit Points they mark by 1.</p>",
+    "resource": null,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "reaction",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 0,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "gravityPull": true
+    }
+  },
+  "_key": "!items!9WmMTEnmcNbPQdtr"
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "aOEY0FbLzKb5I7rP",
+  "name": "Combining Enchantment",
+  "type": "feature",
+  "img": "icons/magic/symbols/circle-ouroboros.webp",
+  "folder": "TdVSHGEnF9alRSd2",
+  "system": {
+    "description": "<p><em>Tier 4 enchantment — Any object</em></p><p>Choose two other enchantments of Tier 3 or lower. You may place both enchantments on the same object. This counts as a single enchantment and you can choose the order at which the enchantments take place. For example, you can place a Clearing Enchantment on a weapon with a feature first, so that it is eligible to receive a Swift Enchantment.</p>",
+    "resource": null,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "passive",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 4023,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "enchantment": "combining",
+      "tier": 4
+    }
+  },
+  "_key": "!items!aOEY0FbLzKb5I7rP"
+}

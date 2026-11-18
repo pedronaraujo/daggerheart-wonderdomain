@@ -1,0 +1,51 @@
+{
+  "_id": "G7dGAkK3SMWnxwHw",
+  "name": "Appraiser",
+  "type": "subclass",
+  "img": "icons/commodities/gems/gem-faceted-diamond-blue.webp",
+  "folder": "Vacru5iDk3BvcCbq",
+  "system": {
+    "description": "<p>Play the Appraiser if you want to craft items to aid your allies in and outside of battle.</p>",
+    "spellcastingTrait": "finesse",
+    "features": [
+      {
+        "type": "foundation",
+        "item": "Compendium.daggerheart-wonderdomain.wonder-subclasses.Item.1hCBcnoo2dta9RsE"
+      },
+      {
+        "type": "foundation",
+        "item": "Compendium.daggerheart-wonderdomain.wonder-subclasses.Item.PEKezrDv1CNSmSef"
+      },
+      {
+        "type": "specialization",
+        "item": "Compendium.daggerheart-wonderdomain.wonder-subclasses.Item.6hlfeqWFqJB0hzs9"
+      },
+      {
+        "type": "specialization",
+        "item": "Compendium.daggerheart-wonderdomain.wonder-subclasses.Item.8O1qfXiT7W2c4fwH"
+      },
+      {
+        "type": "mastery",
+        "item": "Compendium.daggerheart-wonderdomain.wonder-subclasses.Item.xFNJyyCnUOabVmNu"
+      },
+      {
+        "type": "mastery",
+        "item": "Compendium.daggerheart-wonderdomain.wonder-subclasses.Item.vrJIiC8Eb9eoGh5B"
+      }
+    ],
+    "featureState": 1,
+    "isMulticlass": false,
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "linkedClass": "Compendium.daggerheart-wonderdomain.wonder-classes.Item.50he8UCJEgHJFiL3",
+    "gmNotes": ""
+  },
+  "effects": [],
+  "sort": 0,
+  "flags": {},
+  "_key": "!items!G7dGAkK3SMWnxwHw"
+}

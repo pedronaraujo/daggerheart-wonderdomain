@@ -1,0 +1,23 @@
+{
+  "_id": "uhZRKFtzIfXTN7pM",
+  "name": "Sextant That Doesn't Seem to Work",
+  "type": "loot",
+  "img": "icons/commodities/treasure/brooch-gold-eye-green.webp",
+  "folder": "SmR8oM6DPLw3xmsx",
+  "system": {
+    "description": "<p>A sextant that doesn't seem to work.</p>",
+    "quantity": 1,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": ""
+  },
+  "effects": [],
+  "sort": 0,
+  "flags": {},
+  "_key": "!items!uhZRKFtzIfXTN7pM"
+}

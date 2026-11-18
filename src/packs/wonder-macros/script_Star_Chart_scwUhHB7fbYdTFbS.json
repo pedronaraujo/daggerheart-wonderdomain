@@ -1,0 +1,16 @@
+{
+  "_id": "scwUhHB7fbYdTFbS",
+  "name": "Star Chart",
+  "type": "script",
+  "img": "icons/magic/symbols/runes-star-pentagon-blue.webp",
+  "command": "game.modules.get('daggerheart-wonderdomain')?.api?.openStarChart(actor ?? game.user.character);",
+  "scope": "global",
+  "author": null,
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!macros!scwUhHB7fbYdTFbS"
+}

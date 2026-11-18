@@ -1,0 +1,30 @@
+{
+  "_id": "jijM03thWEuvwnIw",
+  "name": "Radiant Blessing",
+  "type": "feature",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "folder": "3glvHbPWSupgxxaw",
+  "system": {
+    "description": "<p>Choose an additional star to mark in your Star Chart.</p>",
+    "resource": null,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "passive",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 0,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "extraStars": 1
+    }
+  },
+  "_key": "!items!jijM03thWEuvwnIw"
+}

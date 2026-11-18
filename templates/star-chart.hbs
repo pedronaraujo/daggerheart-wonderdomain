@@ -1,0 +1,129 @@
+<div class="wonder-starchart-body {{#if inForm}}is-form{{/if}}">
+  <section class="wonder-sky">
+    <svg class="wonder-chart" viewBox="-40 -24 520 640" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="wonder-glow-{{actor.id}}">
+          <stop offset="0%" stop-color="#fff6c8" stop-opacity="1"/>
+          <stop offset="45%" stop-color="#f3c969" stop-opacity="0.65"/>
+          <stop offset="100%" stop-color="#f3c969" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <g class="wonder-dust">
+        <circle cx="30" cy="40" r="1"/><circle cx="420" cy="20" r="1.2"/><circle cx="460" cy="300" r="0.8"/>
+        <circle cx="10" cy="480" r="1"/><circle cx="300" cy="600" r="1.1"/><circle cx="180" cy="230" r="0.7"/>
+        <circle cx="350" cy="250" r="0.9"/><circle cx="90" cy="380" r="0.8"/><circle cx="250" cy="420" r="0.6"/>
+        <circle cx="440" cy="470" r="1"/><circle cx="60" cy="600" r="0.7"/><circle cx="330" cy="120" r="0.6"/>
+      </g>
+      {{#each edges}}
+        <line class="wonder-edge {{state}}" x1="{{x1}}" y1="{{y1}}" x2="{{x2}}" y2="{{y2}}"/>
+      {{/each}}
+      {{#each nodes}}
+        <g class="wonder-star {{state}}" data-action="star" data-id="{{id}}" data-tooltip="{{text}}" transform="translate({{x}} {{y}})">
+          {{#if (wonderEq state "marked")}}<circle class="halo" r="22" fill="url(#wonder-glow-{{@root.actor.id}})"/>{{/if}}
+          {{#if (wonderEq state "start")}}<circle class="halo" r="20" fill="url(#wonder-glow-{{@root.actor.id}})"/>{{/if}}
+          <circle class="hit" r="15"/>
+          {{#if (wonderEq state "marked")}}
+            <path class="core" d="M0,-10 L2.6,-3.2 L9.5,-3.1 L4,1.4 L6,8.6 L0,4.4 L-6,8.6 L-4,1.4 L-9.5,-3.1 L-2.6,-3.2 Z"/>
+          {{else}}
+            <circle class="core" r="{{#if (wonderEq state "start")}}8{{else}}6.5{{/if}}"/>
+          {{/if}}
+          {{#unless (wonderEq state "start")}}
+            <text class="label" x="{{#if (wonderEq anchor "end")}}-14{{else}}14{{/if}}" y="4" text-anchor="{{anchor}}">{{short}}</text>
+          {{else}}
+            <text class="label start" y="-16" text-anchor="middle">START</text>
+          {{/unless}}
+        </g>
+      {{/each}}
+    </svg>
+    <p class="wonder-hint"><i class="fa-solid fa-computer-mouse"></i> {{localize "WONDER.Stars.ClickHint"}}</p>
+  </section>
+
+  <aside class="wonder-panel">
+    <header class="wonder-constellation-name">
+      <label>{{localize "WONDER.Stars.ConstellationName"}}</label>
+      <input type="text" name="constellationName" value="{{st.name}}" placeholder="{{localize 'WONDER.Stars.DefaultName'}}" {{#unless editable}}disabled{{/unless}}>
+    </header>
+
+    <div class="wonder-budget {{#if over}}over{{/if}}">
+      <span class="big">{{used}}<small>/{{budget.total}}</small></span>
+      <span class="what">{{localize "WONDER.Stars.Marked"}}</span>
+      <span class="detail">{{localize "WONDER.Stars.BudgetDetail" level=budget.level blessings=budget.blessings extra=budget.extra}}</span>
+      {{#if isGM}}
+        <span class="gm-adjust">
+          <button type="button" data-action="extra" data-delta="-1" data-tooltip="GM"><i class="fa-solid fa-minus"></i></button>
+          <button type="button" data-action="extra" data-delta="1" data-tooltip="GM"><i class="fa-solid fa-plus"></i></button>
+        </span>
+      {{/if}}
+    </div>
+
+    <div class="wonder-attack-card">
+      <div class="title"><i class="fa-solid fa-star-of-life"></i> {{localize "WONDER.Stars.StandardAttack"}}</div>
+      <div class="stats">
+        <div><span class="k">{{localize "WONDER.Stars.Range"}}</span><span class="v">{{stats.rangeLabel}}</span></div>
+        <div><span class="k">{{localize "WONDER.Stars.Damage"}}</span><span class="v">{{stats.display}} <small>mag</small></span></div>
+        <div><span class="k">Trait</span><span class="v">Spellcast ({{spellcast}})</span></div>
+      </div>
+      <div class="chips">
+        {{#if stats.reliable}}<span class="wonder-chip">Reliable +1</span>{{/if}}
+        {{#if stats.evasion}}<span class="wonder-chip">+{{stats.evasion}} Evasion</span>{{/if}}
+        {{#if stats.armor}}<span class="wonder-chip">+{{stats.armor}} Armor</span>{{/if}}
+        {{#if stats.hope}}<span class="wonder-chip">+{{stats.hope}} Hope slot</span>{{/if}}
+        {{#if stats.fly}}<span class="wonder-chip">Flight</span>{{/if}}
+        {{#if stats.magicRes}}<span class="wonder-chip">Magic Resist.</span>{{/if}}
+      </div>
+      {{#if inForm}}
+        <button type="button" class="wonder-btn ghost" data-action="attack"><i class="fa-solid fa-dice-d20"></i> {{localize "WONDER.Stars.RollAttack"}}</button>
+      {{/if}}
+    </div>
+
+    <div class="wonder-form-block">
+      {{#if inForm}}
+        <div class="wonder-astral">
+          <span class="label">{{localize "WONDER.Stars.Astral"}}</span>
+          <div class="pips">
+            {{#each pips}}<span class="pip {{#if on}}on{{/if}}"><i class="fa-solid fa-star"></i></span>{{/each}}
+          </div>
+          {{#if editable}}
+          <div class="adjust">
+            <button type="button" data-action="astral" data-delta="-1"><i class="fa-solid fa-minus"></i></button>
+            <button type="button" data-action="astral" data-delta="1"><i class="fa-solid fa-plus"></i></button>
+          </div>
+          {{/if}}
+        </div>
+        <button type="button" class="wonder-btn gold" data-action="empyrean">
+          <i class="fa-solid fa-sun"></i> Empyrean Call <small>({{empyreanCost}} Hope → 1d4)</small>
+        </button>
+        <button type="button" class="wonder-btn ghost" data-action="form"><i class="fa-solid fa-moon"></i> {{localize "WONDER.Stars.Leave"}}</button>
+      {{else}}
+        <button type="button" class="wonder-btn hero" data-action="form" {{#unless editable}}disabled{{/unless}}>
+          <i class="fa-solid fa-star"></i> {{localize "WONDER.Stars.Embody"}}
+          <small>{{localize "WONDER.Stars.EmbodyCost" n=startTokens}}</small>
+        </button>
+      {{/if}}
+    </div>
+
+    {{#if abilities.length}}
+      <div class="wonder-abilities">
+        <div class="title">{{localize "WONDER.Stars.Abilities"}}</div>
+        {{#each abilities}}
+          <div class="ability" data-tooltip="{{text}}"><i class="{{icon}}"></i> {{short}} <span class="cost">{{cost}} ✦</span></div>
+        {{/each}}
+        <p class="wonder-hint">{{localize "WONDER.Stars.AbilitiesHint"}}</p>
+      </div>
+    {{/if}}
+
+    {{#if hasBinary}}
+      <div class="wonder-binary">
+        <i class="fa-solid fa-circle-nodes"></i> Binary Star:
+        <strong>{{#if binaryName}}{{binaryName}}{{else}}—{{/if}}</strong>
+        <button type="button" data-action="binary" class="wonder-link">{{localize "WONDER.Stars.Choose"}}</button>
+      </div>
+    {{/if}}
+    {{#if hasCosmicHelp}}
+      <label class="wonder-toggle">
+        <input type="checkbox" data-action="cosmic" {{#if st.cosmicHelp}}checked{{/if}}>
+        Cosmic Help — {{localize "WONDER.Stars.CosmicHelp"}}
+      </label>
+    {{/if}}
+  </aside>
+</div>

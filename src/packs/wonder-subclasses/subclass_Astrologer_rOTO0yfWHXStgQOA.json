@@ -1,0 +1,51 @@
+{
+  "_id": "rOTO0yfWHXStgQOA",
+  "name": "Astrologer",
+  "type": "subclass",
+  "img": "icons/magic/symbols/star-yellow.webp",
+  "folder": "3glvHbPWSupgxxaw",
+  "system": {
+    "description": "<p>Play the Astrologer if you want to support a chosen ally while channeling the cosmic forces within yourself.</p>",
+    "spellcastingTrait": "knowledge",
+    "features": [
+      {
+        "type": "foundation",
+        "item": "Compendium.daggerheart-wonderdomain.wonder-subclasses.Item.iU5STIk3UfbmlSS9"
+      },
+      {
+        "type": "foundation",
+        "item": "Compendium.daggerheart-wonderdomain.wonder-subclasses.Item.VP4jZ3Hffk0ji6oS"
+      },
+      {
+        "type": "specialization",
+        "item": "Compendium.daggerheart-wonderdomain.wonder-subclasses.Item.jijM03thWEuvwnIw"
+      },
+      {
+        "type": "specialization",
+        "item": "Compendium.daggerheart-wonderdomain.wonder-subclasses.Item.9WmMTEnmcNbPQdtr"
+      },
+      {
+        "type": "mastery",
+        "item": "Compendium.daggerheart-wonderdomain.wonder-subclasses.Item.pMEgk05GWAaQHXx5"
+      },
+      {
+        "type": "mastery",
+        "item": "Compendium.daggerheart-wonderdomain.wonder-subclasses.Item.Z1O6LiehuCJtXmM6"
+      }
+    ],
+    "featureState": 1,
+    "isMulticlass": false,
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "linkedClass": "Compendium.daggerheart-wonderdomain.wonder-classes.Item.JdplYfLgr4OQT7cR",
+    "gmNotes": ""
+  },
+  "effects": [],
+  "sort": 0,
+  "flags": {},
+  "_key": "!items!rOTO0yfWHXStgQOA"
+}

@@ -1,0 +1,61 @@
+{
+  "_id": "IZ6u0aSv5CtOKa4k",
+  "name": "Paradox Flux",
+  "type": "domainCard",
+  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "folder": null,
+  "system": {
+    "description": "<p>Once per long rest, you may enter a state of entropic energy that lasts until the end of the scene. While in this state, you may spend the GM's Fear as if spending Hope, up to 3 per spotlight. In similar fashion, the GM may spend your Hope as if spending Fear when using adversaries' features, but only once per adversary spotlight.</p><p>The spell ends earlier if the GM has no Fear or if you have no Hope.</p>",
+    "domain": "wonder",
+    "recallCost": 1,
+    "level": 10,
+    "type": "spell",
+    "actions": {
+      "xPGSSF0dyRY3hsWm": {
+        "type": "effect",
+        "_id": "xPGSSF0dyRY3hsWm",
+        "systemPath": "actions",
+        "description": "",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [],
+        "uses": {
+          "value": null,
+          "max": "1",
+          "recovery": "longRest",
+          "consumeOnSuccess": false
+        },
+        "name": "Enter Paradox",
+        "img": "icons/magic/time/arrows-circling-pink.webp",
+        "range": "",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "self",
+          "amount": null
+        },
+        "effects": []
+      }
+    },
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "resource": null,
+    "inVault": false,
+    "vaultActive": false,
+    "loadoutIgnore": false,
+    "domainTouched": null
+  },
+  "sort": 1000020,
+  "flags": {},
+  "_key": "!items!IZ6u0aSv5CtOKa4k",
+  "effects": []
+}

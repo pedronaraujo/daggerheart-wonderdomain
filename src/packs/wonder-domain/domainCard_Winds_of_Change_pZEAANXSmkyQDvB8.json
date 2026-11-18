@@ -1,0 +1,108 @@
+{
+  "_id": "pZEAANXSmkyQDvB8",
+  "name": "Winds of Change",
+  "type": "domainCard",
+  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "folder": null,
+  "system": {
+    "description": "<p>When an ally within Close range rolls a Failure with Fear, describe how you bolster their confidence. You may <strong>spend a Hope</strong> to allow them to <strong>gain a Hope</strong>.</p>",
+    "domain": "wonder",
+    "recallCost": 0,
+    "level": 2,
+    "type": "ability",
+    "actions": {
+      "zAOHKgKhrzrjd2nD": {
+        "type": "healing",
+        "_id": "zAOHKgKhrzrjd2nD",
+        "systemPath": "actions",
+        "description": "",
+        "chatDisplay": true,
+        "actionType": "reaction",
+        "cost": [
+          {
+            "scalable": false,
+            "key": "hope",
+            "value": 1,
+            "step": null,
+            "itemId": null,
+            "consumeOnSuccess": false
+          }
+        ],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Bolster",
+        "img": "icons/magic/air/wind-vortex-swirl-purple.webp",
+        "range": "close",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "friendly",
+          "amount": 1
+        },
+        "damage": {
+          "main": null,
+          "resources": {
+            "hope": {
+              "value": {
+                "custom": {
+                  "enabled": true,
+                  "formula": "1"
+                },
+                "multiplier": "flat",
+                "flatMultiplier": 1,
+                "dice": "d6",
+                "bonus": null
+              },
+              "applyTo": "hope",
+              "base": false,
+              "resultBased": false,
+              "valueAlt": null,
+              "fullRestore": false,
+              "itemId": null
+            }
+          }
+        },
+        "effects": [],
+        "roll": {
+          "type": null,
+          "trait": null,
+          "difficulty": null,
+          "bonus": null,
+          "advState": "neutral",
+          "diceRolling": {
+            "multiplier": "prof",
+            "flatMultiplier": 1,
+            "dice": "d6",
+            "compare": null,
+            "treshold": null
+          },
+          "useDefault": false
+        }
+      }
+    },
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "resource": null,
+    "inVault": false,
+    "vaultActive": false,
+    "loadoutIgnore": false,
+    "domainTouched": null
+  },
+  "sort": 200004,
+  "flags": {},
+  "_key": "!items!pZEAANXSmkyQDvB8",
+  "effects": []
+}

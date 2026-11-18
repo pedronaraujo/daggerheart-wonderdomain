@@ -1,0 +1,172 @@
+{
+  "targets": {
+    "any": { "label": "Any object", "kinds": ["weapon", "armor", "loot", "consumable", "other"] },
+    "weaponOrArmorWithFeature": { "label": "Weapon or armor with a feature", "kinds": ["weapon", "armor"], "requiresFeature": true },
+    "armorNoFeature": { "label": "Armor without a feature", "kinds": ["armor"], "noFeature": true },
+    "weaponNoFeature": { "label": "Weapon without a feature", "kinds": ["weapon"], "noFeature": true },
+    "primaryNoFeature": { "label": "Primary weapon without a feature", "kinds": ["primary"], "noFeature": true },
+    "footwear": { "label": "Footwear", "kinds": ["loot", "armor", "other"] },
+    "shieldOrArmor": { "label": "Shield or armor", "kinds": ["shield", "armor"] },
+    "smallUnworn": { "label": "Object no larger than you, not worn by a creature", "kinds": ["weapon", "loot", "consumable", "other"] },
+    "metal": { "label": "Object made of metal", "kinds": ["weapon", "armor", "loot", "other"] },
+    "clothing": { "label": "Piece of clothing", "kinds": ["loot", "armor", "other"] },
+    "weapon": { "label": "Any weapon", "kinds": ["weapon"] },
+    "document": { "label": "Item or written document", "kinds": ["weapon", "armor", "loot", "consumable", "other"] },
+    "magicWeaponNoFeature": { "label": "Magic weapon without a feature", "kinds": ["magicWeapon"], "noFeature": true },
+    "armorNoFeatureRebut": { "label": "Armor without a feature", "kinds": ["armor"], "noFeature": true },
+    "wearable": { "label": "Wearable object", "kinds": ["armor", "loot", "other"] },
+    "held": { "label": "Object that can be held", "kinds": ["weapon", "loot", "consumable", "other"] }
+  },
+  "enchantments": [
+    {
+      "key": "bright", "name": "Bright Enchantment", "tier": 1, "target": "any",
+      "img": "icons/magic/light/light-lantern-lit-white.webp",
+      "text": "You may place this enchantment on any object. The object emits bright light within Close range.",
+      "mechanic": "light"
+    },
+    {
+      "key": "clearing", "name": "Clearing Enchantment", "tier": 1, "target": "weaponOrArmorWithFeature",
+      "img": "icons/magic/symbols/ring-circle-smoke-blue.webp",
+      "text": "You may place this enchantment on any weapon or armor with a feature. The weapon's feature is ignored for the duration of the enchantment.",
+      "mechanic": "disableFeatures"
+    },
+    {
+      "key": "defensive", "name": "Defensive Enchantment", "tier": 1, "target": "armorNoFeature",
+      "img": "icons/magic/defensive/shield-barrier-glowing-blue.webp",
+      "text": "You may place this enchantment on an armor that doesn't already have a feature. The armor gains the Protective feature.",
+      "feature": { "name": "Protective", "text": "+1 to Armor Score." },
+      "mechanic": "armorBonus"
+    },
+    {
+      "key": "daring", "name": "Daring Enchantment", "tier": 1, "target": "weaponNoFeature",
+      "img": "icons/magic/fire/flame-burning-eye.webp",
+      "text": "You may place this enchantment on a weapon that doesn't already have a feature. The weapon gains the Fearless feature.",
+      "feature": { "name": "Fearless", "text": "On a successful attack with Fear, roll 1d6. On a result of 6, the GM does not gain a Fear." },
+      "mechanic": "fearless"
+    },
+    {
+      "key": "empowering", "name": "Empowering Enchantment", "tier": 1, "target": "primaryNoFeature",
+      "img": "icons/magic/fire/dagger-rune-enchant-flame-strong-blue.webp",
+      "text": "You may place this enchantment on a primary weapon that doesn't already have a feature. The weapon gains the Reliable feature.",
+      "feature": { "name": "Reliable", "text": "+1 to attack rolls." },
+      "mechanic": "nativeFeature", "nativeFeature": "reliable"
+    },
+    {
+      "key": "reversal", "name": "Reversal Enchantment", "tier": 1, "target": "footwear",
+      "img": "icons/equipment/feet/boots-collared-simple-leather.webp",
+      "text": "You may place this enchantment on any footwear. Any tracks created by the object appear to go the opposite direction. Any attempts to track the wearer have disadvantage.",
+      "mechanic": "narrative"
+    },
+    {
+      "key": "bulwark", "name": "Bulwark Enchantment", "tier": 2, "target": "shieldOrArmor",
+      "img": "icons/magic/defensive/shield-barrier-flaming-diamond-teal.webp",
+      "text": "You may place this enchantment on a shield or armor. Any creature wielding or wearing the enchanted object increases their damage thresholds by your Spellcast trait.",
+      "mechanic": "thresholds"
+    },
+    {
+      "key": "growth", "name": "Growth Enchantment", "tier": 2, "target": "smallUnworn",
+      "img": "icons/magic/control/buff-flight-wings-runes-blue-white.webp",
+      "text": "You may place this enchantment on any object that is no larger than you and is not being worn by a creature. The object doubles in size.<br>If the object is a one-handed primary weapon, increase its damage by your Spellcast trait. Its burden becomes two-handed and it loses any features it had previously, then gains the Powerful feature.<br><em>Powerful:</em> On a successful attack, roll an additional damage die and discard the lowest result.<br>If the object is a two-handed weapon or a secondary weapon, it becomes too big to be held and the wielder must drop it.",
+      "mechanic": "growth"
+    },
+    {
+      "key": "searing", "name": "Searing Enchantment", "tier": 2, "target": "metal",
+      "img": "icons/magic/fire/explosion-flame-lightning-strike.webp",
+      "text": "You may place this enchantment on any object made of metal. The object starts to heat up. If currently being held or worn by a creature, they must mark a Stress when this enchantment is placed and whenever they are spotlighted until they spend their full spotlight to get rid of the item.",
+      "mechanic": "searing"
+    },
+    {
+      "key": "shrinking", "name": "Shrinking Enchantment", "tier": 2, "target": "smallUnworn",
+      "img": "icons/magic/control/sleep-bubble-purple.webp",
+      "text": "You may place this enchantment on any object that is no larger than you and is not being worn by a creature. The object size is halved.<br>If the object is a two-handed weapon, its burden becomes one-handed and it loses any features it had previously, then gains the Unreliable feature.<br><em>Unreliable:</em> -2 to attack and damage rolls.<br>If the object is a one-handed primary weapon or a secondary weapon, it becomes too small to be used as a weapon.",
+      "mechanic": "shrinking"
+    },
+    {
+      "key": "swift", "name": "Swift Enchantment", "tier": 2, "target": "weaponNoFeature",
+      "img": "icons/magic/air/wind-vortex-swirl-blue-purple.webp",
+      "text": "You may place this enchantment on a weapon that doesn't already have a feature. The weapon gains the Quick feature.",
+      "feature": { "name": "Quick", "text": "When you make an attack, you can mark a Stress to target another creature within range." },
+      "mechanic": "nativeFeature", "nativeFeature": "quick"
+    },
+    {
+      "key": "tailoring", "name": "Tailoring Enchantment", "tier": 2, "target": "clothing",
+      "img": "icons/equipment/chest/robe-layered-teal.webp",
+      "text": "You may place this enchantment on any piece of clothing. It shifts its color, format or size as you desire, effectively changing the visual aspect of the clothing for the duration of the enchantment.",
+      "mechanic": "narrative"
+    },
+    {
+      "key": "animating", "name": "Animating Enchantment", "tier": 3, "target": "weapon",
+      "img": "icons/magic/symbols/runes-etched-steel-blade.webp",
+      "text": "You may place this enchantment on any weapon. The weapon becomes sentient and no longer needs to be held. It floats around you or its original wielder and retains all of its features and properties. You may command the weapon to move within its Close range and attack a target within its attacking range.",
+      "mechanic": "narrative"
+    },
+    {
+      "key": "credibility", "name": "Credibility Enchantment", "tier": 3, "target": "document",
+      "img": "icons/sundries/books/book-embossed-gold-red.webp",
+      "text": "You may place this enchantment on any item or written document. Any creature attempting to identify the object as a fake or forgery will automatically fail and consider it as an authentic copy, as long as the contents are believable within reason.",
+      "mechanic": "narrative"
+    },
+    {
+      "key": "focusing", "name": "Focusing Enchantment", "tier": 3, "target": "magicWeaponNoFeature",
+      "img": "icons/magic/symbols/rune-sigil-horned-blue.webp",
+      "text": "You may place this enchantment on a magic weapon that doesn't already have a feature. The weapon gains the Channeling feature.",
+      "feature": { "name": "Channeling", "text": "+1 to Spellcast Rolls." },
+      "mechanic": "channeling"
+    },
+    {
+      "key": "rebutting", "name": "Rebutting Enchantment", "tier": 3, "target": "armorNoFeatureRebut",
+      "img": "icons/magic/sonic/explosion-shock-wave-teal.webp",
+      "text": "You may place this enchantment on an armor that doesn't already have a feature. The armor gains the Repelling feature.",
+      "feature": { "name": "Repelling", "text": "When hit by an attack from a target within Melee range, push the attacker to Far range." },
+      "mechanic": "repelling"
+    },
+    {
+      "key": "vanishing", "name": "Vanishing Enchantment", "tier": 3, "target": "wearable",
+      "img": "icons/magic/perception/silhouette-stealth-shadow.webp",
+      "text": "You may place this enchantment on any wearable object. When a creature has the object on themselves, they may spend a Hope to become Cloaked. While Cloaked, they remain unseen if they are stationary when an adversary moves to where they would normally see them. The effect ends when they end a move within line of sight of an adversary or when they make an attack, unless they spend an additional Hope to remain Cloaked.",
+      "mechanic": "vanishing"
+    },
+    {
+      "key": "weightsome", "name": "Weightsome Enchantment", "tier": 3, "target": "any",
+      "img": "icons/magic/earth/strike-fist-stone-light.webp",
+      "text": "You may place this enchantment on any object. The object's weight is greatly increased. If used on an object being held or worn, the target has their Difficulty (or Evasion) reduced by 2 while in possession of the item.",
+      "mechanic": "evasionPenalty"
+    },
+    {
+      "key": "avoidance", "name": "Avoidance Enchantment", "tier": 4, "target": "held",
+      "img": "icons/magic/defensive/barrier-shield-dome-deflect-teal.webp",
+      "text": "You may place this enchantment on any object that can be held. While holding the object, the user ignores the effects of the Vulnerable condition.",
+      "mechanic": "ignoreVulnerable"
+    },
+    {
+      "key": "combining", "name": "Combining Enchantment", "tier": 4, "target": "any",
+      "img": "icons/magic/symbols/circle-ouroboros.webp",
+      "text": "Choose two other enchantments of Tier 3 or lower. You may place both enchantments on the same object. This counts as a single enchantment and you can choose the order at which the enchantments take place. For example, you can place a Clearing Enchantment on a weapon with a feature first, so that it is eligible to receive a Swift Enchantment.",
+      "mechanic": "combining"
+    },
+    {
+      "key": "exploding", "name": "Exploding Enchantment", "tier": 4, "target": "smallUnworn",
+      "img": "icons/magic/fire/explosion-fireball-large-red-orange.webp",
+      "text": "You may place this enchantment on any object no larger than you, then place a d8 next to your character sheet with the 8 side up. This is your Explosion countdown die.<br>When any creature makes an action roll, reduce the number on your Explosion die by 1. You may also spend a Hope to either increase or reduce the number by 2.<br>When your Explosion die would reach 0 or lower, remove it instead and the object explodes, dealing 3d10+6 magic damage to all creatures within Close range of it who fail a Reaction Roll (13), or half as much on a success. The object is destroyed with the explosion.",
+      "mechanic": "exploding"
+    },
+    {
+      "key": "nerveRacking", "name": "Nerve-Racking Enchantment", "tier": 4, "target": "weapon",
+      "img": "icons/magic/control/hypnosis-mesmerism-eye.webp",
+      "text": "You may place this enchantment on any weapon. On a successful attack with the weapon, the target must mark Stress instead of Hit Points. Use damage thresholds and resistances as normal.",
+      "mechanic": "stressDamage"
+    },
+    {
+      "key": "punishing", "name": "Punishing Enchantment", "tier": 4, "target": "held",
+      "img": "icons/magic/death/skull-energy-light-purple.webp",
+      "text": "You may place this enchantment on any object that can be held. While holding the object, the user must succeed on a Reaction Roll (15) when it is spotlighted or be forced to mark a Hit Point.",
+      "mechanic": "narrative"
+    },
+    {
+      "key": "shackling", "name": "Shackling Enchantment", "tier": 4, "target": "held",
+      "img": "icons/magic/control/debuff-chains-shackles-movement-blue.webp",
+      "text": "You may place this enchantment on any object that can be held. While holding the object, the user is permanently Restrained.",
+      "mechanic": "restrained"
+    }
+  ]
+}

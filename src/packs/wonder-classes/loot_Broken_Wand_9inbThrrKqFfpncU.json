@@ -1,0 +1,23 @@
+{
+  "_id": "9inbThrrKqFfpncU",
+  "name": "Broken Wand",
+  "type": "loot",
+  "img": "icons/commodities/treasure/token-runed-spiral-grey.webp",
+  "folder": "tAHAsv0frKtnnYHf",
+  "system": {
+    "description": "<p>A broken wand that belonged to a powerful magician.</p>",
+    "quantity": 1,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": ""
+  },
+  "effects": [],
+  "sort": 0,
+  "flags": {},
+  "_key": "!items!9inbThrrKqFfpncU"
+}
