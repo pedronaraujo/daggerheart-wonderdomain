@@ -50,7 +50,7 @@
   <section class="wonder-catalog">
     <nav class="wonder-tabs">
       {{#each tabs}}
-        <button type="button" class="{{#if active}}active{{/if}} {{#if locked}}locked{{/if}}" data-action="tab" data-tier="{{n}}">
+        <button type="button" class="{{#if active}}active{{/if}} {{#if locked}}locked{{/if}}" data-action="tierTab" data-tier="{{n}}">
           Tier {{n}} {{#if locked}}<i class="fa-solid fa-lock"></i>{{/if}}
         </button>
       {{/each}}

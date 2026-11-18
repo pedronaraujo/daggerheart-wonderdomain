@@ -493,7 +493,7 @@ export class WorkshopApp extends HandlebarsApplicationMixin(ApplicationV2) {
         position: { width: 1040, height: 720 },
         actions: {
             select: WorkshopApp.#onSelect,
-            tab: WorkshopApp.#onTab,
+            tierTab: WorkshopApp.#onTab,
             target: WorkshopApp.#onTarget,
             surge: WorkshopApp.#onSurge,
             enchant: WorkshopApp.#onEnchant,
