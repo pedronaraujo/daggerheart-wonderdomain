@@ -189,6 +189,10 @@ SPECIAL = {
     "breakthrough": "wndBreakthrough0",
     "sharedDreams": "wndSharedDreams0",
     "gemology": "wndGemology00000",
+    "craftDevice": "wndCraftDevice00",
+    "rechargeDevice": "wndRechargeDevic",
+    "moonCreate": "wndMoonShieldNew",
+    "moonAdd": "wndMoonShieldAdd",
 }
 
 # ---------------------------------------------------------------------------
@@ -253,18 +257,18 @@ def domain_cards():
            "while touching the device to recharge it."),
          res=resource(0, "1", "fa-solid fa-gears"),
          actions=[
-             action("craftsmanship.craft", "Craft Device", "healing", img="icons/commodities/tech/cog-brass.webp",
+             action("craftsmanship.craft", "Craft Device", "effect", _id=SPECIAL["craftDevice"],
+                    img="icons/commodities/tech/cog-brass.webp",
                     desc=p("Downtime move: craft (or replace) your device. It starts charged."),
-                    target={"type": "self", "amount": None}, roll_=roll(None),
-                    resources={"resource": res_heal("resource", "1", cid)}),
+                    target={"type": "self", "amount": None}),
              action("craftsmanship.use", "Use Device (+2)", "effect", _id=SPECIAL["useDevice"],
                     img="icons/commodities/tech/cog-brass.webp",
                     desc=p("The carrier gains +2 on their next roll related to the device's purpose. The device is depleted."),
                     costs=[cost("resource", 1, item_id=cid)], target={"type": "any", "amount": 1}),
-             action("craftsmanship.recharge", "Recharge Device", "healing", img="icons/commodities/tech/cog-brass.webp",
+             action("craftsmanship.recharge", "Recharge Device", "effect", _id=SPECIAL["rechargeDevice"],
+                    img="icons/commodities/tech/cog-brass.webp",
                     desc=p("Spend a Hope while touching the device to recharge it."),
-                    costs=[cost("hope", 1)], target={"type": "self", "amount": None},
-                    roll_=roll(None), resources={"resource": res_heal("resource", "1", cid)}),
+                    costs=[cost("hope", 1)], target={"type": "self", "amount": None}),
          ])
 
     rid_inscribed = "effect:runicshot.inscribed"
@@ -437,13 +441,14 @@ def domain_cards():
            "spent. When the spell ends, clear all tokens on this card."),
          res=resource(0, None, "fa-solid fa-moon"),
          actions=[
-             action("moon.create", "Create Field", "healing", img="icons/magic/defensive/barrier-shield-dome-blue-purple.webp",
+             action("moon.create", "Create Field", "effect", _id=SPECIAL["moonCreate"],
+                    img="icons/magic/defensive/barrier-shield-dome-blue-purple.webp",
+                    desc=p("Creates the field (your Spellcast trait is added to your damage thresholds) and places 2 Lunar tokens on this card."),
                     costs=[cost("stress", 1)], rng="veryClose", target={"type": "self", "amount": None},
-                    roll_=roll(None), resources={"resource": res_heal("resource", "2", ms_id)},
                     effects=[rid(ms_field)]),
-             action("moon.tokens", "Add 2 Lunar Tokens", "healing", img="icons/commodities/currency/coin-engraved-moon-silver.webp",
-                    costs=[cost("hope", 1)], target={"type": "self", "amount": None}, roll_=roll(None),
-                    resources={"resource": res_heal("resource", "2", ms_id)}),
+             action("moon.tokens", "Add 2 Lunar Tokens", "effect", _id=SPECIAL["moonAdd"],
+                    img="icons/commodities/currency/coin-engraved-moon-silver.webp",
+                    costs=[cost("hope", 1)], target={"type": "self", "amount": None}),
              action("moon.reduce", "Spend Lunar Tokens", "effect", _id=SPECIAL["moonReduce"],
                     img="icons/creatures/birds/raptor-owl-flying-moon.webp", action_type="reaction",
                     desc=p("Choose how many Lunar tokens to spend; roll 1d6 per token to reduce the damage an ally takes."),

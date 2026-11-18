@@ -106,7 +106,7 @@
       <div class="wonder-abilities">
         <div class="title">{{localize "WONDER.Stars.Abilities"}}</div>
         {{#each abilities}}
-          <div class="ability" data-tooltip="{{text}}"><i class="{{icon}}"></i> {{short}} <span class="cost">{{cost}} ✦</span></div>
+          <button type="button" class="ability" data-action="ability" data-id="{{id}}" data-tooltip="{{text}}" {{#unless ../inForm}}disabled{{/unless}}><i class="{{icon}}"></i> {{short}} <span class="cost">{{cost}} ✦</span></button>
         {{/each}}
         <p class="wonder-hint">{{localize "WONDER.Stars.AbilitiesHint"}}</p>
       </div>

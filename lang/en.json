@@ -194,6 +194,8 @@
       "GravityOffer": "Your Binary Star {name} marked {n} Hit Point(s). Spend 2 Astral tokens to pull them to you and reduce it by 1?",
       "GravityButton": "Gravity Pull (2 Astral tokens)",
       "GravityNoTokens": "Not enough Astral tokens.",
+      "DeviceCrafted": "A new device is crafted (charged). Any previous device disappears.",
+      "TokensOnCard": "Placed {n} token(s) on the card ({total} now).",
       "GravityDone": "Pulled {name} into Melee range: one Hit Point cleared."
     }
   }

@@ -27,7 +27,10 @@ export const SPECIAL = {
     imaginarium: 'wndImaginarium00',
     breakthrough: 'wndBreakthrough0',
     sharedDreams: 'wndSharedDreams0',
-    gemology: 'wndGemology00000'
+    gemology: 'wndGemology00000',
+    rechargeDevice: 'wndRechargeDevic',
+    moonCreate: 'wndMoonShieldNew',
+    moonAdd: 'wndMoonShieldAdd'
 };
 
 export const RANGE_LABELS = {

@@ -167,6 +167,8 @@ T = {
  "Auto.GravityOffer": ("Your Binary Star {name} marked {n} Hit Point(s). Spend 2 Astral tokens to pull them to you and reduce it by 1?", "Sua Binary Star {name} marcou {n} Hit Point(s). Gastar 2 Astral tokens para puxá-la e reduzir em 1?"),
  "Auto.GravityButton": ("Gravity Pull (2 Astral tokens)", "Gravity Pull (2 Astral tokens)"),
  "Auto.GravityNoTokens": ("Not enough Astral tokens.", "Astral tokens insuficientes."),
+ "Auto.DeviceCrafted": ("A new device is crafted (charged). Any previous device disappears.", "Um novo dispositivo foi criado (carregado). O anterior desaparece."),
+ "Auto.TokensOnCard": ("Placed {n} token(s) on the card ({total} now).", "Colocou {n} token(s) na carta (agora {total})."),
  "Auto.GravityDone": ("Pulled {name} into Melee range: one Hit Point cleared.", "Puxou {name} para alcance Melee: um Hit Point limpo."),
 }
 for lang, idx in (("en", 0), ("pt-BR", 1)):

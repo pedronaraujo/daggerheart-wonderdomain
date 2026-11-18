@@ -11,9 +11,9 @@
     "level": 1,
     "type": "ability",
     "actions": {
-      "l1fgHJFk7xFlJjcq": {
-        "type": "healing",
-        "_id": "l1fgHJFk7xFlJjcq",
+      "wndCraftDevice00": {
+        "type": "effect",
+        "_id": "wndCraftDevice00",
         "systemPath": "actions",
         "description": "<p>Downtime move: craft (or replace) your device. It starts charged.</p>",
         "chatDisplay": true,
@@ -38,45 +38,7 @@
           "type": "self",
           "amount": null
         },
-        "damage": {
-          "main": null,
-          "resources": {
-            "resource": {
-              "value": {
-                "custom": {
-                  "enabled": true,
-                  "formula": "1"
-                },
-                "multiplier": "flat",
-                "flatMultiplier": 1,
-                "dice": "d6",
-                "bonus": null
-              },
-              "applyTo": "resource",
-              "base": false,
-              "resultBased": false,
-              "valueAlt": null,
-              "fullRestore": false,
-              "itemId": "k5JwJ727r7YgrjzL"
-            }
-          }
-        },
-        "effects": [],
-        "roll": {
-          "type": null,
-          "trait": null,
-          "difficulty": null,
-          "bonus": null,
-          "advState": "neutral",
-          "diceRolling": {
-            "multiplier": "prof",
-            "flatMultiplier": 1,
-            "dice": "d6",
-            "compare": null,
-            "treshold": null
-          },
-          "useDefault": false
-        }
+        "effects": []
       },
       "wndUseDevice0000": {
         "type": "effect",
@@ -116,9 +78,9 @@
         },
         "effects": []
       },
-      "zo0dWrdmrFSv7vEy": {
-        "type": "healing",
-        "_id": "zo0dWrdmrFSv7vEy",
+      "wndRechargeDevic": {
+        "type": "effect",
+        "_id": "wndRechargeDevic",
         "systemPath": "actions",
         "description": "<p>Spend a Hope while touching the device to recharge it.</p>",
         "chatDisplay": true,
@@ -152,45 +114,7 @@
           "type": "self",
           "amount": null
         },
-        "damage": {
-          "main": null,
-          "resources": {
-            "resource": {
-              "value": {
-                "custom": {
-                  "enabled": true,
-                  "formula": "1"
-                },
-                "multiplier": "flat",
-                "flatMultiplier": 1,
-                "dice": "d6",
-                "bonus": null
-              },
-              "applyTo": "resource",
-              "base": false,
-              "resultBased": false,
-              "valueAlt": null,
-              "fullRestore": false,
-              "itemId": "k5JwJ727r7YgrjzL"
-            }
-          }
-        },
-        "effects": [],
-        "roll": {
-          "type": null,
-          "trait": null,
-          "difficulty": null,
-          "bonus": null,
-          "advState": "neutral",
-          "diceRolling": {
-            "multiplier": "prof",
-            "flatMultiplier": 1,
-            "dice": "d6",
-            "compare": null,
-            "treshold": null
-          },
-          "useDefault": false
-        }
+        "effects": []
       }
     },
     "attribution": {

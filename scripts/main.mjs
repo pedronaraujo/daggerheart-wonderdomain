@@ -94,6 +94,8 @@ export async function devBoot(base) {
     }
     initialize();
     await loadData();
+    const lang = await fetch(path(`lang/${game.i18n.lang === 'pt-BR' ? 'pt-BR' : 'en'}.json`)).then(r => r.json());
+    foundry.utils.mergeObject(game.i18n.translations, lang);
     return 'dev build loaded';
 }
 

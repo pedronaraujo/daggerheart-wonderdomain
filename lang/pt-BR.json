@@ -194,6 +194,8 @@
       "GravityOffer": "Sua Binary Star {name} marcou {n} Hit Point(s). Gastar 2 Astral tokens para puxá-la e reduzir em 1?",
       "GravityButton": "Gravity Pull (2 Astral tokens)",
       "GravityNoTokens": "Astral tokens insuficientes.",
+      "DeviceCrafted": "Um novo dispositivo foi criado (carregado). O anterior desaparece.",
+      "TokensOnCard": "Colocou {n} token(s) na carta (agora {total}).",
       "GravityDone": "Puxou {name} para alcance Melee: um Hit Point limpo."
     }
   }

@@ -11,11 +11,11 @@
     "level": 6,
     "type": "spell",
     "actions": {
-      "IbyIcTUxC0W0A855": {
-        "type": "healing",
-        "_id": "IbyIcTUxC0W0A855",
+      "wndMoonShieldNew": {
+        "type": "effect",
+        "_id": "wndMoonShieldNew",
         "systemPath": "actions",
-        "description": "",
+        "description": "<p>Creates the field (your Spellcast trait is added to your damage thresholds) and places 2 Lunar tokens on this card.</p>",
         "chatDisplay": true,
         "actionType": "action",
         "cost": [
@@ -47,54 +47,16 @@
           "type": "self",
           "amount": null
         },
-        "damage": {
-          "main": null,
-          "resources": {
-            "resource": {
-              "value": {
-                "custom": {
-                  "enabled": true,
-                  "formula": "2"
-                },
-                "multiplier": "flat",
-                "flatMultiplier": 1,
-                "dice": "d6",
-                "bonus": null
-              },
-              "applyTo": "resource",
-              "base": false,
-              "resultBased": false,
-              "valueAlt": null,
-              "fullRestore": false,
-              "itemId": "W2Buozyzsaw0tWIz"
-            }
-          }
-        },
         "effects": [
           {
             "_id": "QmyG5vuAWUmRKW6f",
             "onSave": false
           }
-        ],
-        "roll": {
-          "type": null,
-          "trait": null,
-          "difficulty": null,
-          "bonus": null,
-          "advState": "neutral",
-          "diceRolling": {
-            "multiplier": "prof",
-            "flatMultiplier": 1,
-            "dice": "d6",
-            "compare": null,
-            "treshold": null
-          },
-          "useDefault": false
-        }
+        ]
       },
-      "Ipnln61Vy20kCa4f": {
-        "type": "healing",
-        "_id": "Ipnln61Vy20kCa4f",
+      "wndMoonShieldAdd": {
+        "type": "effect",
+        "_id": "wndMoonShieldAdd",
         "systemPath": "actions",
         "description": "",
         "chatDisplay": true,
@@ -128,45 +90,7 @@
           "type": "self",
           "amount": null
         },
-        "damage": {
-          "main": null,
-          "resources": {
-            "resource": {
-              "value": {
-                "custom": {
-                  "enabled": true,
-                  "formula": "2"
-                },
-                "multiplier": "flat",
-                "flatMultiplier": 1,
-                "dice": "d6",
-                "bonus": null
-              },
-              "applyTo": "resource",
-              "base": false,
-              "resultBased": false,
-              "valueAlt": null,
-              "fullRestore": false,
-              "itemId": "W2Buozyzsaw0tWIz"
-            }
-          }
-        },
-        "effects": [],
-        "roll": {
-          "type": null,
-          "trait": null,
-          "difficulty": null,
-          "bonus": null,
-          "advState": "neutral",
-          "diceRolling": {
-            "multiplier": "prof",
-            "flatMultiplier": 1,
-            "dice": "d6",
-            "compare": null,
-            "treshold": null
-          },
-          "useDefault": false
-        }
+        "effects": []
       },
       "wndMoonShieldRed": {
         "type": "effect",

@@ -198,10 +198,14 @@ async function applyMechanic(def, ctx) {
                 notes.push(loc('Ench.Note.Grown', { n }));
             } else {
                 await asOwner(weapon, 'update', { data: { 'system.burden': 'oneHanded' } });
-                await reminder({
+                const data = effectData(record, 'Unreliable (Shrinking Enchantment)', {
+                    img: def.img,
+                    description: '<p>−2 to attack and damage rolls.</p>',
                     changes: [chg('system.bonuses.roll.bonus', -2), chg('system.bonuses.damage.bonus', -2)],
                     conditionals: SAME_WEAPON_ATTACK
                 });
+                record.effectHosts.push(weapon.uuid);
+                await asOwner(weapon, 'create', { type: 'ActiveEffect', data: [data], options: { keepId: true } });
                 notes.push(loc('Ench.Note.Shrunk'));
             }
             break;

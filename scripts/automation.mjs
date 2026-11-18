@@ -224,6 +224,23 @@ const POST = {
         });
     },
 
+    async [SPECIAL.moonCreate](action) {
+        await addCardTokens(action.item, 2);
+    },
+
+    async [SPECIAL.moonAdd](action) {
+        await addCardTokens(action.item, 2);
+    },
+
+    async [SPECIAL.craftDevice](action) {
+        await action.item.update({ 'system.resource.value': 1 });
+        await chatCard(action.actor, { title: 'Craftsmanship', img: action.item.img, body: `<p>${loc('Auto.DeviceCrafted')}</p>` });
+    },
+
+    async [SPECIAL.rechargeDevice](action) {
+        await action.item.update({ 'system.resource.value': 1 });
+    },
+
     async [SPECIAL.moonEnd](action) {
         const card = action.item;
         await card.update({ 'system.resource.value': 0 });
@@ -239,6 +256,33 @@ const POST = {
         });
     }
 };
+
+async function addCardTokens(item, n) {
+    const value = (item.system.resource?.value ?? 0) + n;
+    await item.update({ 'system.resource.value': value });
+    await chatCard(item.actor, { title: item.name, img: item.img, body: `<p>${loc('Auto.TokensOnCard', { n, total: value })}</p>` });
+}
+
+const isWonderItem = item =>
+    Boolean(item) && (item._stats?.compendiumSource?.includes(MOD) || item.system?.domain === 'wonder' || Object.keys(item.flags?.[MOD] ?? {}).length > 0);
+
+/** Self-targeted effects of Wonder items are applied right away (same origin the system uses, so no duplicates). */
+async function applySelfEffects(action) {
+    const actor = action.actor;
+    const item = action.item;
+    if (!actor || !isWonderItem(item) || action.target?.type !== 'self') return;
+    const ids = (action.effects ?? []).map(e => e._id);
+    const toCreate = [];
+    for (const id of ids) {
+        const effect = item.effects.get(id);
+        if (!effect || actor.effects.some(e => e.origin === effect.uuid)) continue;
+        const data = effect.toObject();
+        delete data._id;
+        Object.assign(data, { origin: effect.uuid, transfer: false, disabled: false });
+        toCreate.push(data);
+    }
+    if (toCreate.length) await actor.createEmbeddedDocuments('ActiveEffect', toCreate);
+}
 
 /** Fidgety Bolt leaps: read the Hope and Fear dice of the cast. */
 async function fidgetyLeaps(action, config) {
@@ -262,6 +306,7 @@ async function fidgetyLeaps(action, config) {
 }
 
 export async function afterAction(action, config) {
+    await applySelfEffects(action);
     const id = action?.id ?? action?._id;
     const handler = POST[id];
     if (handler) return handler(action, config);
@@ -287,8 +332,16 @@ export function withinRange(a, b, range) {
     if (!ta || !tb) return null;
     const settings = canvas.scene?.rangeSettings ?? {};
     const limit = settings[range] ?? DEFAULT_RANGES[range] ?? DEFAULT_RANGES.close;
-    const d = ta.distanceTo ? ta.distanceTo(tb, { exact: Boolean(settings.enabled) }) : canvas.grid.measurePath([ta.center, tb.center]).distance;
-    return d <= limit;
+    // Measure from the documents (placeables may still be animating after a move)
+    const center = t => {
+        const d = t.document;
+        return { x: d.x + (d.width * canvas.grid.size) / 2, y: d.y + (d.height * canvas.grid.size) / 2 };
+    };
+    const ca = center(ta), cb = center(tb);
+    const raw = canvas.grid.measurePath([ca, cb]).distance;
+    // edge-to-edge for larger tokens
+    const pad = ((Math.max(ta.document.width, ta.document.height) - 1) + (Math.max(tb.document.width, tb.document.height) - 1)) * canvas.grid.distance / 2;
+    return Math.max(0, raw - pad) <= limit;
 }
 
 /* -------------------------------------------- */

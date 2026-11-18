@@ -314,7 +314,7 @@ export async function enterForm(actor) {
                ${stats.fly ? '<span class="wonder-chip">Flight</span>' : ''}
                ${stats.magicRes ? '<span class="wonder-chip">Magic Resistance</span>' : ''}</p>`
     });
-    if (hasFlag(actor, 'binaryStars')) await chooseBinaryStar(actor);
+    if (hasFlag(actor, 'binaryStars') && !chartState(actor).binary) await chooseBinaryStar(actor);
 }
 
 export async function leaveForm(actor, reason = '') {
@@ -474,7 +474,8 @@ export class StarChartApp extends HandlebarsApplicationMixin(ApplicationV2) {
             attack: StarChartApp.#onAttack,
             binary: StarChartApp.#onBinary,
             cosmic: StarChartApp.#onCosmic,
-            extra: StarChartApp.#onExtra
+            extra: StarChartApp.#onExtra,
+            ability: StarChartApp.#onAbility
         }
     };
 
@@ -537,10 +538,10 @@ export class StarChartApp extends HandlebarsApplicationMixin(ApplicationV2) {
             hasCosmicHelp: hasFlag(actor, 'cosmicHelp'),
             empyreanCost: st.cosmicHelp ? 2 : 3,
             abilities: [
-                stats.healAlly && { id: 'healAlly', ...DATA.starChart.types.healAlly, cost: 2 },
-                stats.teleport && { id: 'teleport', ...DATA.starChart.types.teleport, cost: 1 },
-                stats.extraTarget && { id: 'extraTarget', ...DATA.starChart.types.extraTarget, cost: 1 },
-                stats.vulnerable && { id: 'vulnerable', ...DATA.starChart.types.vulnerable, cost: 1 }
+                stats.healAlly && { id: 'wndFormAstrlMend', ...DATA.starChart.types.healAlly, cost: 2 },
+                stats.teleport && { id: 'wndFormStarStep1', ...DATA.starChart.types.teleport, cost: 1 },
+                stats.extraTarget && { id: 'wndFormTwinStrik', ...DATA.starChart.types.extraTarget, cost: 1 },
+                stats.vulnerable && { id: 'wndFormStarbreak', ...DATA.starChart.types.vulnerable, cost: 1 }
             ].filter(Boolean)
         };
     }
@@ -592,6 +593,12 @@ export class StarChartApp extends HandlebarsApplicationMixin(ApplicationV2) {
 
     static async #onCosmic() {
         await setChartField(this.actor, 'cosmicHelp', !chartState(this.actor).cosmicHelp);
+    }
+
+    static async #onAbility(event, target) {
+        const action = formItem(this.actor)?.system.actions.get(target.dataset.id);
+        if (!action) return ui.notifications.warn(loc('Stars.NeedForm'));
+        await action.use(event);
     }
 
     static async #onExtra(_event, target) {
