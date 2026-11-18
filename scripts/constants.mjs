@@ -15,7 +15,19 @@ export const SPECIAL = {
     moonReduce: 'wndMoonShieldRed',
     masterpiece: 'wndMasterpieceWk',
     appraisal: 'wndAppraisal0000',
-    spellweave: 'wndSpellweave000'
+    spellweave: 'wndSpellweave000',
+    dreamSignal: 'wndDreamSignal00',
+    twinnedMinds: 'wndTwinnedMinds0',
+    cosmicInspire: 'wndCosmicInspir0',
+    archive: 'wndArchiveOpen00',
+    moonEnd: 'wndMoonShieldEnd',
+    craftDevice: 'wndCraftDevice00',
+    useDevice: 'wndUseDevice0000',
+    paradox: 'wndParadoxFlux00',
+    imaginarium: 'wndImaginarium00',
+    breakthrough: 'wndBreakthrough0',
+    sharedDreams: 'wndSharedDreams0',
+    gemology: 'wndGemology00000'
 };
 
 export const RANGE_LABELS = {
@@ -32,6 +44,12 @@ export const LOOT_TABLES = [
     'Compendium.daggerheart.rolltables.RollTable.tF04P02yVN1YDVel'
 ];
 
-export const path = p => `modules/${MOD}/${p}`;
+/** Folder (in the Foundry user data) that holds the card art extracted from your own copy of the PDFs. */
+export const ART = 'wonder-domain-art';
+
+/** Base URL of the module files (overridable for development builds). */
+export const BASE = { url: `modules/${MOD}` };
+export const path = p => `${BASE.url}/${p}`;
+export const art = file => `${ART}/${file}`;
 export const loc = (key, data) =>
     data ? game.i18n.format(`WONDER.${key}`, data) : game.i18n.localize(`WONDER.${key}`);

@@ -2,7 +2,7 @@
   "_id": "mawKqGFHaBgtxyjK",
   "name": "Archive of Possibilities",
   "type": "domainCard",
-  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "img": "wonder-domain-art/card-archiveOfPossibilities.webp",
   "folder": null,
   "system": {
     "description": "<p>Place this card in your vault to open a shimmering rift to an imagined archive of ideas. You and all allies within Far range may recall a card from their vault without paying its Recall Cost.</p><p>This card can only be recalled into your loadout during a rest.</p>",
@@ -11,9 +11,9 @@
     "level": 8,
     "type": "spell",
     "actions": {
-      "64N1b89bhq7DID7b": {
+      "wndArchiveOpen00": {
         "type": "effect",
-        "_id": "64N1b89bhq7DID7b",
+        "_id": "wndArchiveOpen00",
         "systemPath": "actions",
         "description": "",
         "chatDisplay": true,

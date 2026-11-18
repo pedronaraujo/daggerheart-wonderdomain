@@ -2,7 +2,7 @@
   "_id": "qfnmQuYcOjs2wdqo",
   "name": "Wonder-Touched",
   "type": "domainCard",
-  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "img": "wonder-domain-art/card-wonderTouched.webp",
   "folder": null,
   "system": {
     "description": "<p>When 4 or more of the domain cards in your loadout are from the Wonder domain, gain the following benefits:</p><ul><li>You can mark a Stress instead of spending a Hope.</li><li>Once per long rest, when you would mark your last Stress, clear Stress equal to your Spellcast trait instead. You must still mark any remaining Stress.</li></ul>",

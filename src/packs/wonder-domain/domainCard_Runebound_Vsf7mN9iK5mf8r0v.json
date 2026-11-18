@@ -2,7 +2,7 @@
   "_id": "Vsf7mN9iK5mf8r0v",
   "name": "Runebound",
   "type": "domainCard",
-  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "img": "wonder-domain-art/card-runebound.webp",
   "folder": null,
   "system": {
     "description": "<p><strong>Spend a Hope</strong> to touch a surface or object and create a flickering magical ripple no larger than your Melee range. When a creature interacts with or moves through the ripple, they must make a <strong>Reaction Roll (13)</strong>. On a failure, they suffer <strong>d6+6</strong> magic damage using your Proficiency and are temporarily <em>Restrained</em>. The ripple lasts until triggered or until your next rest.</p>",

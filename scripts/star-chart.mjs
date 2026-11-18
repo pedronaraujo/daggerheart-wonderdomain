@@ -395,18 +395,24 @@ async function chooseBinaryStar(actor) {
 /* -------------------------------------------- */
 
 /** Spend an Astral token for each action roll made in Constellation form. */
-export async function onDualityRoll(config) {
+export async function onDualityRoll(config, { binaryFree = false } = {}) {
     const actor = config?.actor;
     if (!actor?.isOwner || !inForm(actor)) return;
     if (config.actionType === 'reaction' || config.roll?.type === 'reaction') return;
 
     const roll = config.evaluated ?? config.roll;
-    const failed = config.roll?.success === false;
+    const failed = config.roll?.success === false || (config.targets?.length && !config.targets.some(t => t.hitResult?.success));
     const withHope = Boolean(roll?.withHope);
-    const againstOdds = failed && withHope && hasFlag(actor, 'againstTheOdds');
-    const isStandardAttack = config.action?.id === '000BASEATTACK000' || config.action?.systemPath === 'attack' && config.action?.item === actor;
 
-    if (againstOdds) {
+    if (binaryFree) {
+        await chatCard(actor, {
+            title: 'Binary Stars',
+            img: 'icons/magic/light/projectiles-star-purple.webp',
+            body: `<p>${loc('Stars.BinaryFree')}</p>`
+        });
+        return;
+    }
+    if (failed && withHope && hasFlag(actor, 'againstTheOdds')) {
         await chatCard(actor, {
             title: 'Against the Odds',
             img: 'icons/magic/symbols/question-stone-yellow.webp',
@@ -415,20 +421,13 @@ export async function onDualityRoll(config) {
         return;
     }
     const left = await adjustAstral(actor, -1);
-    const binary = chartState(actor).binary;
-    const footer =
-        isStandardAttack && binary
-            ? `<button type="button" data-wonder-action="refundAstral" data-actor="${actor.uuid}">
-                 <i class="fa-solid fa-rotate-left"></i> ${loc('Stars.BinaryRefund')}</button>`
-            : `<button type="button" data-wonder-action="refundAstral" data-actor="${actor.uuid}">
-                 <i class="fa-solid fa-rotate-left"></i> ${loc('Stars.Refund')}</button>`;
-    if (left > 0 || inForm(actor))
-        await chatCard(actor, {
-            title: loc('Stars.TokenSpentTitle'),
-            img: 'icons/magic/symbols/star-yellow.webp',
-            body: `<p>${loc('Stars.TokenSpent', { n: left })}</p>`,
-            footer
-        });
+    await chatCard(actor, {
+        title: loc('Stars.TokenSpentTitle'),
+        img: 'icons/magic/symbols/star-yellow.webp',
+        body: `<p>${loc('Stars.TokenSpent', { n: left })}</p>`,
+        footer: `<button type="button" data-wonder-action="refundAstral" data-actor="${actor.uuid}">
+                 <i class="fa-solid fa-rotate-left"></i> ${loc('Stars.Refund')}</button>`
+    });
 }
 
 /** Leave the form when the Astral tokens run out (however they were spent). */

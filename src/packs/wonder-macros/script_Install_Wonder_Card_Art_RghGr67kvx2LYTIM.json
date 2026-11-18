@@ -1,0 +1,16 @@
+{
+  "_id": "RghGr67kvx2LYTIM",
+  "name": "Install Wonder Card Art",
+  "type": "script",
+  "img": "icons/sundries/books/book-embossed-gold-red.webp",
+  "command": "game.modules.get('daggerheart-wonderdomain')?.api?.installArt();",
+  "scope": "global",
+  "author": null,
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!macros!RghGr67kvx2LYTIM"
+}

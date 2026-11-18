@@ -2,7 +2,7 @@
   "_id": "eGoQMW7309NoL6uO",
   "name": "Breakthrough",
   "type": "domainCard",
-  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "img": "wonder-domain-art/card-breakthrough.webp",
   "folder": null,
   "system": {
     "description": "<p>Make a <strong>Spellcast Roll (16)</strong>. On a success, you inspire a breakthrough discovery for you and every ally within Far range.</p><p>Every target may select a card of level 4 or lower from a domain they have access to and mark Stress equal to the card's Recall Cost. The chosen card is then placed in their loadout until the end of the scene or this spell is cast again. The selected card do not count towards the maximum number of cards in their loadout and cannot be exchanged for a card in their vault.</p><p>After you successfully use this spell, place this card in your vault.</p>",
@@ -11,9 +11,9 @@
     "level": 8,
     "type": "spell",
     "actions": {
-      "t5o9wfVO71tFqUiF": {
+      "wndBreakthrough0": {
         "type": "attack",
-        "_id": "t5o9wfVO71tFqUiF",
+        "_id": "wndBreakthrough0",
         "systemPath": "actions",
         "description": "",
         "chatDisplay": true,

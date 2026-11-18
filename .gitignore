@@ -4,3 +4,5 @@ dist/
 .DS_Store
 packs/*/LOCK
 packs/*/LOG*
+assets/art/
+assets/wonder-emblem.png

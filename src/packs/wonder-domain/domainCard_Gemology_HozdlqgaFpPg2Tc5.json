@@ -2,7 +2,7 @@
   "_id": "HozdlqgaFpPg2Tc5",
   "name": "Gemology",
   "type": "domainCard",
-  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "img": "wonder-domain-art/card-gemology.webp",
   "folder": null,
   "system": {
     "description": "<p><strong>Spend 2 Hope</strong> during a rest to allow you or an ally sharing the rest to take an additional downtime move.</p>",
@@ -11,9 +11,9 @@
     "level": 5,
     "type": "spell",
     "actions": {
-      "G6oCicyeQQg395gP": {
+      "wndGemology00000": {
         "type": "effect",
-        "_id": "G6oCicyeQQg395gP",
+        "_id": "wndGemology00000",
         "systemPath": "actions",
         "description": "",
         "chatDisplay": true,
@@ -47,7 +47,12 @@
           "type": "friendly",
           "amount": 1
         },
-        "effects": []
+        "effects": [
+          {
+            "_id": "1xX3pizQiq9RgzSU",
+            "onSave": false
+          }
+        ]
       }
     },
     "attribution": {
@@ -66,5 +71,58 @@
   "sort": 500010,
   "flags": {},
   "_key": "!items!HozdlqgaFpPg2Tc5",
-  "effects": []
+  "effects": [
+    {
+      "_id": "1xX3pizQiq9RgzSU",
+      "name": "Gemology (+1 downtime move)",
+      "img": "icons/commodities/gems/gem-faceted-cushion-teal-black.webp",
+      "description": "<p>Take one additional downtime move during this rest.</p>",
+      "type": "base",
+      "disabled": false,
+      "transfer": false,
+      "statuses": [],
+      "system": {
+        "changes": [
+          {
+            "key": "system.bonuses.rest.shortRest.shortMoves",
+            "type": "add",
+            "value": 1,
+            "priority": null,
+            "phase": "initial"
+          },
+          {
+            "key": "system.bonuses.rest.longRest.longMoves",
+            "type": "add",
+            "value": 1,
+            "priority": null,
+            "phase": "initial"
+          }
+        ],
+        "duration": {
+          "description": "",
+          "type": "longRest"
+        },
+        "rangeDependence": null,
+        "stacking": null,
+        "targetDispositions": [],
+        "conditionals": []
+      },
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null
+      },
+      "_key": "!items.effects!HozdlqgaFpPg2Tc5.1xX3pizQiq9RgzSU"
+    }
+  ]
 }

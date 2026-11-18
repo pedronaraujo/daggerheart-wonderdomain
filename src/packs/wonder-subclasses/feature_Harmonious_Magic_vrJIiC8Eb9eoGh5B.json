@@ -24,7 +24,7 @@
       "_id": "BSIAbL1Q0OTaQpwH",
       "name": "Harmonious Magic",
       "img": "icons/magic/symbols/ring-circle-smoke-blue.webp",
-      "description": "<p>Toggle on while within Close range of an object you enchanted.</p>",
+      "description": "<p>Turned on automatically while you are within Close range of a creature holding an object you enchanted.</p>",
       "type": "base",
       "disabled": true,
       "transfer": true,
@@ -67,6 +67,10 @@
     }
   ],
   "sort": 0,
-  "flags": {},
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "harmonious": true
+    }
+  },
   "_key": "!items!vrJIiC8Eb9eoGh5B"
 }

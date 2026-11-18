@@ -2,7 +2,7 @@
   "_id": "OPkkO5aCwjtBHxPs",
   "name": "Diverging Lens",
   "type": "domainCard",
-  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "img": "wonder-domain-art/card-divergingLens.webp",
   "folder": null,
   "system": {
     "description": "<p><strong>Mark a Stress</strong> to conjure a magical object within Far range. It remains in place until the end of the scene or you take Severe damage. When an ally within Close range of the object is hit by a creature in their Melee range, the attacker must make a <strong>Reaction Roll (14)</strong>. On a failure, they take <strong>2d4+4</strong> magic damage and are pushed just outside Close range of the ally they attacked. A creature may only be targeted by one object per attack, prioritizing the closest one.</p>",

@@ -2,7 +2,7 @@
   "_id": "plpth3lghDePczsA",
   "name": "Imaginarium",
   "type": "domainCard",
-  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "img": "wonder-domain-art/card-imaginarium.webp",
   "folder": null,
   "system": {
     "description": "<p>Make a <strong>Spellcast Roll (18)</strong>. On a success, you create an Imaginarium that extends within Very Far range and lasts until the end of the scene or this spell is cast again. Choose two domains. Pick up to 5 cards of level 5 or lower from those domains and <strong>mark a Stress</strong> for each card chosen. They become the Imaginarium's loadout.</p><p>While in the area, all allies may use a card from the Imaginarium's loadout as if it was in their own loadout, spending any other resources that are normally required when using the card. If a card requires a Spellcast Roll, it uses your Spellcast trait.</p><p>The GM may spend a Fear to force you to remove a card of your choice from the loadout. If this GM move removes the last card from the loadout, the spell ends.</p>",

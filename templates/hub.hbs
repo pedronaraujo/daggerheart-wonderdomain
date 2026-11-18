@@ -1,6 +1,6 @@
 <div class="wonder-hub-body">
   <header class="wonder-hub-header">
-    <img src="modules/daggerheart-wonderdomain/assets/wonder.svg" alt="">
+    <img src="{{emblem}}" alt="">
     <div>
       <h2>{{actor.name}}</h2>
       <span>Tier {{tier}} · Spellcast {{spellcast}}</span>
@@ -48,7 +48,7 @@
   {{/if}}
 
   <section class="wonder-hub-card wonder-cards-summary">
-    <h3><img src="modules/daggerheart-wonderdomain/assets/wonder.svg" alt=""> Wonder Domain</h3>
+    <h3><img src="{{emblem}}" alt=""> Wonder Domain</h3>
     <p>{{localize "WONDER.Hub.Cards" n=wonder.count}} {{#if wonder.touched}}<span class="wonder-chip gold">Wonder-Touched</span>{{/if}}</p>
     <div class="wonder-chip-row">{{#each wonder.cards}}<span class="wonder-chip">{{level}} · {{name}}</span>{{/each}}</div>
   </section>

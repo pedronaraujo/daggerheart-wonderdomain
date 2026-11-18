@@ -2,7 +2,7 @@
   "_id": "pZEAANXSmkyQDvB8",
   "name": "Winds of Change",
   "type": "domainCard",
-  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "img": "wonder-domain-art/card-windsOfChange.webp",
   "folder": null,
   "system": {
     "description": "<p>When an ally within Close range rolls a Failure with Fear, describe how you bolster their confidence. You may <strong>spend a Hope</strong> to allow them to <strong>gain a Hope</strong>.</p>",

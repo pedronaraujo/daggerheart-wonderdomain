@@ -2,7 +2,7 @@
   "_id": "Q9DVstcQh8PcTPzD",
   "name": "Runic Shot",
   "type": "domainCard",
-  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "img": "wonder-domain-art/card-runicShot.webp",
   "folder": null,
   "system": {
     "description": "<p>Make a <strong>Spellcast Roll</strong> against a target within Far range. On a success, deal <strong>d6</strong> magic damage using your Proficiency and you may <strong>spend a Hope</strong> to make the target temporarily <em>Inscribed</em>. While <em>Inscribed</em>, the target cannot benefit from advantage.</p><p>If you use this spell as part of a Tag Team Roll, you instead deal <strong>d10</strong> magic damage using your Proficiency.</p>",

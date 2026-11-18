@@ -1,4 +1,4 @@
-import { MOD, LOOT_TABLES, path, loc } from './constants.mjs';
+import { MOD, LOOT_TABLES, ART, path, loc } from './constants.mjs';
 import {
     flagValues, hasFlag, tier, pay, gain, chatCard, roll, resolveActor, escape, availableItems
 } from './util.mjs';
@@ -349,4 +349,37 @@ export function openHub(actor) {
     if (!actor) return ui.notifications.warn(loc('Notify.NoActor'));
     const app = foundry.applications.instances.get(`wonder-hub-${actor.id}`) ?? new HubApp(actor);
     return app.render({ force: true });
+}
+
+/* ============================================ */
+/*  Card art installer                           */
+/* ============================================ */
+
+/**
+ * Ask the GM to pick the extracted art files and upload them to the user data folder used by the compendiums.
+ * The art is not shipped with the module: it comes from your own copy of the PDFs (see tools/build_art.py).
+ */
+export async function installArt() {
+    if (!game.user.isGM) return ui.notifications.warn('Only the GM can install the card art.');
+    const FP = foundry.applications.apps.FilePicker.implementation;
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.multiple = true;
+    input.accept = 'image/webp,image/png,image/jpeg';
+    const files = await new Promise(resolve => {
+        input.addEventListener('change', () => resolve([...input.files]));
+        input.click();
+    });
+    if (!files.length) return;
+    try {
+        await FP.createDirectory('data', ART);
+    } catch (_e) {
+        /* already exists */
+    }
+    let n = 0;
+    for (const file of files) {
+        await FP.upload('data', ART, file, {}, { notify: false });
+        n++;
+    }
+    ui.notifications.info(`Wonder Domain: ${n} image(s) installed in ${ART}/`);
 }

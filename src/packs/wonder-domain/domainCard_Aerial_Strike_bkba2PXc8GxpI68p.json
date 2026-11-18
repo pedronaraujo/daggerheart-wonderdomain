@@ -2,7 +2,7 @@
   "_id": "bkba2PXc8GxpI68p",
   "name": "Aerial Strike",
   "type": "domainCard",
-  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "img": "wonder-domain-art/card-aerialStrike.webp",
   "folder": null,
   "system": {
     "description": "<p>You conjure a magical pattern within Far range that floats above the ground. It lasts until the end of the scene or you conjure another pattern. While it is active, you may <strong>mark a Stress</strong> to move it within its Close range and make a <strong>Spellcast Roll</strong>. Each adversary within Very Close range of the pattern you succeed against takes <strong>1d10+10</strong> magic damage.</p>",

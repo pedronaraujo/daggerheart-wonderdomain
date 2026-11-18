@@ -22,7 +22,8 @@
       "NoActor": "Select a token or assign a character first.",
       "NeedGM": "A GM must be connected to change documents you do not own.",
       "NotEnoughHope": "Not enough Hope ({have}/{need}).",
-      "WonderTouchedSwap": "Wonder-Touched: mark {n} Stress instead of the missing Hope?"
+      "WonderTouchedSwap": "Wonder-Touched: mark {n} Stress instead of the missing Hope?",
+      "NotYours": "Only the owner of that character can use this."
     },
     "Hub": {
       "Title": "Wonder Hub",
@@ -70,7 +71,8 @@
       "BinaryRefund": "Binary Star in range (refund)",
       "AgainstOdds": "Failure with Hope — the Astral token returns.",
       "BinaryTitle": "Binary Star",
-      "BinaryHint": "Choose an ally within Far range to be your Binary Star."
+      "BinaryHint": "Choose an ally within Far range to be your Binary Star.",
+      "BinaryFree": "Standard attack within range of your Binary Star — no Astral token spent."
     },
     "Ench": {
       "Title": "Enchanting Workshop",
@@ -170,6 +172,29 @@
       "Progress": "Rolled {roll}: the Masterpiece is worth <strong>{value}</strong> handfuls (a chest = 100). Gained a Hope.",
       "Done": "The Masterpiece is finished!",
       "ChooseTrait": "Choose a trait to gain +1 (the card goes to your vault permanently)."
+    },
+    "Auto": {
+      "NextRollHint": "Applies to the next action roll, then ends.",
+      "DreamClarity": "{name} rolled with Hope: clarity — cleared a Stress.",
+      "DreamDisturbing": "{name} rolled with Fear: a disturbing vision — the GM gains 1 Fear.",
+      "WonderTouchedSwapped": "Wonder-Touched: {n} Stress marked instead of missing Hope.",
+      "NeedAllyTarget": "Target the ally first.",
+      "TwinnedHint": "{a} and {b} share access to level 3 or lower cards from either loadout (Spellcast Rolls use the caster's trait). Tag Team Rolls between them cost 2 Hope. Once, on a critical success, both gain a Hope and clear a Stress.",
+      "TwinnedBody": "{a} and {b} each marked a Stress and synchronized their thoughts until the end of the scene.",
+      "CosmicBody": "{name} may reroll using a d20 as their Hope Die.",
+      "SharedDreamHint": "When you Help an Ally you shared a dream with ({names}), roll two advantage dice and take the highest.",
+      "ArchiveBody": "The card goes to the vault: you and all allies within Far range may recall a card from their vault without paying its Recall Cost. It can only return to your loadout during a rest.",
+      "BreakthroughBody": "Success! Each ally within Far range may add a card of level 4 or lower (marking Stress equal to its Recall Cost) until the end of the scene. Breakthrough moved to your vault.",
+      "DeviceUsed": "{name} uses the device: +2 on the next roll. The device is depleted.",
+      "GemologyBody": "{names} may take an additional downtime move during this rest.",
+      "FidgetyHope": "Hope die {n}: the bolt leaps to a second creature of your choice within Close range.",
+      "FidgetyFear": "Fear die {n}: the GM chooses another creature within Close range to be hit.",
+      "FidgetyHalf": "Leap damage roll {total} → each additional target takes <strong>{half}</strong> magic damage.",
+      "BinaryHint": "+1 Evasion while within {range} range of {name} in Constellation form.",
+      "GravityOffer": "Your Binary Star {name} marked {n} Hit Point(s). Spend 2 Astral tokens to pull them to you and reduce it by 1?",
+      "GravityButton": "Gravity Pull (2 Astral tokens)",
+      "GravityNoTokens": "Not enough Astral tokens.",
+      "GravityDone": "Pulled {name} into Melee range: one Hit Point cleared."
     }
   }
 }

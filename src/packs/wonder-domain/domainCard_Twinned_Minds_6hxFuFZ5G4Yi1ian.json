@@ -2,7 +2,7 @@
   "_id": "6hxFuFZ5G4Yi1ian",
   "name": "Twinned Minds",
   "type": "domainCard",
-  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "img": "wonder-domain-art/card-twinnedMinds.webp",
   "folder": null,
   "system": {
     "description": "<p>Once per rest, you and an ally in Far range may both <strong>mark a Stress</strong> to synchronize your thoughts. Until the end of the scene or one of you mark their last Hit Point, you two gain the following benefits:</p><ul><li>You and the ally gain access to level 3 or lower domain cards from either loadout. If a card requires a Spellcast Roll, it uses your Spellcast trait.</li><li>It costs 2 Hope to initiate a Tag Team Roll with each other.</li><li>Once for the duration of the spell, when one rolls a critical success, you may both gain a Hope and clear a Stress.</li></ul>",
@@ -11,11 +11,11 @@
     "level": 6,
     "type": "spell",
     "actions": {
-      "syRUEMV8DBR0Z9ye": {
+      "wndTwinnedMinds0": {
         "type": "effect",
-        "_id": "syRUEMV8DBR0Z9ye",
+        "_id": "wndTwinnedMinds0",
         "systemPath": "actions",
-        "description": "",
+        "description": "<p>You and the targeted ally each mark a Stress and gain Twinned Minds until the end of the scene.</p>",
         "chatDisplay": true,
         "actionType": "action",
         "cost": [

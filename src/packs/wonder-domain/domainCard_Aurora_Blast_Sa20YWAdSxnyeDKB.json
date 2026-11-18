@@ -2,7 +2,7 @@
   "_id": "Sa20YWAdSxnyeDKB",
   "name": "Aurora Blast",
   "type": "domainCard",
-  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "img": "wonder-domain-art/card-auroraBlast.webp",
   "folder": null,
   "system": {
     "description": "<p>Make a <strong>Spellcast Roll</strong> against a target in Far range. On a success, spend up to <strong>3 Hope</strong>. The effects are cumulative per Hope you spend.</p><ul><li><strong>1 Hope:</strong> The target takes <strong>d6+6</strong> magic damage using your Proficiency.</li><li><strong>2 Hope:</strong> The target is temporarily <em>Dazzled</em>. While <em>Dazzled</em>, they are <em>Vulnerable</em> and all their rolls have disadvantage.</li><li><strong>3 Hope:</strong> The spell refracts to two other targets of your choice within Close range of the first target that can also be hit, dealing half the damage and making them temporarily <em>Dazzled</em>.</li></ul>",
