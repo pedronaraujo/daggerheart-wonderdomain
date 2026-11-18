@@ -73,7 +73,7 @@
 .wonder-hint { color: var(--wonder-muted); font-size: .82em; margin: 6px 0; }
 .wonder-intro { color: var(--wonder-muted); font-style: italic; margin: 0 0 10px; }
 .wonder-row { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
-.wonder-row .wonder-btn { flex: 1; }
+.wonder-row .wonder-btn { flex: 1; height: auto; white-space: normal; }
 .wonder-toggle { display: flex; align-items: center; gap: 6px; font-size: .88em; margin: 6px 0; color: var(--wonder-ink); }
 
 /* ==========================================================================
@@ -150,9 +150,12 @@
 .wonder-astral .adjust { display: flex; gap: 2px; }
 .wonder-abilities .title { font-size: .8em; text-transform: uppercase; letter-spacing: .1em; color: var(--wonder-muted); margin-bottom: 4px; }
 .wonder-abilities .ability {
+  width: 100%; color: var(--wonder-ink); cursor: pointer; text-align: left; border-top: none; border-right: none; border-bottom: none;
   display: flex; gap: 8px; align-items: center; padding: 5px 8px; margin-bottom: 4px;
   background: rgba(255,255,255,.04); border-left: 3px solid var(--wonder-teal); border-radius: 6px;
 }
+.wonder-abilities .ability:hover:not(:disabled) { background: rgba(42,161,152,.18); }
+.wonder-abilities .ability:disabled { opacity: .5; cursor: default; }
 .wonder-abilities .ability .cost { margin-left: auto; color: var(--wonder-gold); font-weight: 700; }
 .wonder-binary { font-size: .88em; }
 .wonder-starchart-body.is-form .wonder-sky { box-shadow: inset 0 0 60px rgba(243, 201, 105, .18); border-color: rgba(243, 201, 105, .45); }
@@ -245,10 +248,12 @@
 .wonder-combine select { width: 100%; }
 .wonder-cost-choice { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
 .wonder-cost-choice button {
-  display: flex; flex-direction: column; align-items: center; padding: 6px; border-radius: 8px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  height: auto; min-height: 54px; line-height: 1.15; white-space: normal; padding: 6px 4px; border-radius: 8px;
   background: rgba(255,255,255,.04); color: var(--wonder-muted); border: 1px solid var(--wonder-line);
 }
-.wonder-cost-choice button small { font-size: .7em; }
+.wonder-cost-choice button small { font-size: .7em; line-height: 1.1; }
+.wonder-cost-choice button i { margin: 0; }
 .wonder-cost-choice button.active { color: var(--wonder-gold); border-color: var(--wonder-gold); background: rgba(243,201,105,.12); }
 .wonder-empty-target { margin: auto; text-align: center; color: var(--wonder-muted); }
 .wonder-empty-target i { font-size: 2.4em; color: rgba(243,201,105,.6); }

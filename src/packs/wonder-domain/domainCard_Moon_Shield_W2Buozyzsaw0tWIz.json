@@ -2,7 +2,7 @@
   "_id": "W2Buozyzsaw0tWIz",
   "name": "Moon Shield",
   "type": "domainCard",
-  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "img": "wonder-domain-art/card-moonShield.webp",
   "folder": null,
   "system": {
     "description": "<p><strong>Mark a Stress</strong> to create a field within Very Close range that lasts until the end of the scene or you take Severe damage. The field moves with you and, while active, you add your Spellcast trait to your damage thresholds.</p><p>When you create the field, place 2 tokens on this card. These are your <em>Lunar tokens</em>. You may also <strong>spend a Hope</strong> to place 2 Lunar tokens on this card. When an ally takes damage while within the field, spend any amount of Lunar tokens to reduce the damage taken by <strong>1d6</strong> per token spent. When the spell ends, clear all tokens on this card.</p>",
@@ -11,11 +11,11 @@
     "level": 6,
     "type": "spell",
     "actions": {
-      "IbyIcTUxC0W0A855": {
-        "type": "healing",
-        "_id": "IbyIcTUxC0W0A855",
+      "wndMoonShieldNew": {
+        "type": "effect",
+        "_id": "wndMoonShieldNew",
         "systemPath": "actions",
-        "description": "",
+        "description": "<p>Creates the field (your Spellcast trait is added to your damage thresholds) and places 2 Lunar tokens on this card.</p>",
         "chatDisplay": true,
         "actionType": "action",
         "cost": [
@@ -47,54 +47,16 @@
           "type": "self",
           "amount": null
         },
-        "damage": {
-          "main": null,
-          "resources": {
-            "resource": {
-              "value": {
-                "custom": {
-                  "enabled": true,
-                  "formula": "2"
-                },
-                "multiplier": "flat",
-                "flatMultiplier": 1,
-                "dice": "d6",
-                "bonus": null
-              },
-              "applyTo": "resource",
-              "base": false,
-              "resultBased": false,
-              "valueAlt": null,
-              "fullRestore": false,
-              "itemId": "W2Buozyzsaw0tWIz"
-            }
-          }
-        },
         "effects": [
           {
             "_id": "QmyG5vuAWUmRKW6f",
             "onSave": false
           }
-        ],
-        "roll": {
-          "type": null,
-          "trait": null,
-          "difficulty": null,
-          "bonus": null,
-          "advState": "neutral",
-          "diceRolling": {
-            "multiplier": "prof",
-            "flatMultiplier": 1,
-            "dice": "d6",
-            "compare": null,
-            "treshold": null
-          },
-          "useDefault": false
-        }
+        ]
       },
-      "Ipnln61Vy20kCa4f": {
-        "type": "healing",
-        "_id": "Ipnln61Vy20kCa4f",
+      "wndMoonShieldAdd": {
+        "type": "effect",
+        "_id": "wndMoonShieldAdd",
         "systemPath": "actions",
         "description": "",
         "chatDisplay": true,
@@ -128,45 +90,7 @@
           "type": "self",
           "amount": null
         },
-        "damage": {
-          "main": null,
-          "resources": {
-            "resource": {
-              "value": {
-                "custom": {
-                  "enabled": true,
-                  "formula": "2"
-                },
-                "multiplier": "flat",
-                "flatMultiplier": 1,
-                "dice": "d6",
-                "bonus": null
-              },
-              "applyTo": "resource",
-              "base": false,
-              "resultBased": false,
-              "valueAlt": null,
-              "fullRestore": false,
-              "itemId": "W2Buozyzsaw0tWIz"
-            }
-          }
-        },
-        "effects": [],
-        "roll": {
-          "type": null,
-          "trait": null,
-          "difficulty": null,
-          "bonus": null,
-          "advState": "neutral",
-          "diceRolling": {
-            "multiplier": "prof",
-            "flatMultiplier": 1,
-            "dice": "d6",
-            "compare": null,
-            "treshold": null
-          },
-          "useDefault": false
-        }
+        "effects": []
       },
       "wndMoonShieldRed": {
         "type": "effect",
@@ -194,6 +118,35 @@
         "target": {
           "type": "friendly",
           "amount": 1
+        },
+        "effects": []
+      },
+      "wndMoonShieldEnd": {
+        "type": "effect",
+        "_id": "wndMoonShieldEnd",
+        "systemPath": "actions",
+        "description": "<p>The field ends (end of scene or Severe damage): clear all Lunar tokens.</p>",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "End Field",
+        "img": "icons/magic/defensive/barrier-shield-dome-pink.webp",
+        "range": "",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "self",
+          "amount": null
         },
         "effects": []
       }

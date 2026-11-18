@@ -2,7 +2,7 @@
   "_id": "rLf2gIoisAVIoHBj",
   "name": "Shared Dreams",
   "type": "domainCard",
-  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "img": "wonder-domain-art/card-sharedDreams.webp",
   "folder": null,
   "system": {
     "description": "<p>You and any number of allies may share a dream during a long rest as a downtime move. Work together to describe what happens in the dream. All creatures that shared the dream <strong>gain a Hope</strong>.</p><p>Until your next long rest, when someone Helps an Ally they shared a dream with, the one helping may roll two advantage dice and take the highest result.</p>",
@@ -11,9 +11,9 @@
     "level": 1,
     "type": "ability",
     "actions": {
-      "ZHJkKD39UbvLjXZ9": {
+      "wndSharedDreams0": {
         "type": "healing",
-        "_id": "ZHJkKD39UbvLjXZ9",
+        "_id": "wndSharedDreams0",
         "systemPath": "actions",
         "description": "<p>Downtime move: everyone who shared the dream gains a Hope.</p>",
         "chatDisplay": true,

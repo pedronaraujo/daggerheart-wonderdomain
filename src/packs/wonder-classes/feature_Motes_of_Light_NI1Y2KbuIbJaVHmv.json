@@ -7,7 +7,42 @@
   "system": {
     "description": "<p>You can conjure star-like motes of light that hover in your hand or around a point of your choice within Far range. They stay active while you remain within Far range of them.</p>",
     "resource": null,
-    "actions": {},
+    "actions": {
+      "3s6mjsPvQUJ3ldeP": {
+        "type": "effect",
+        "_id": "3s6mjsPvQUJ3ldeP",
+        "systemPath": "actions",
+        "description": "",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Conjure Motes",
+        "img": "icons/magic/light/orbs-firefly-hand-yellow.webp",
+        "range": "far",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "self",
+          "amount": null
+        },
+        "effects": [
+          {
+            "_id": "kBYvB4jw5CDELrtN",
+            "onSave": false
+          }
+        ]
+      }
+    },
     "attribution": {
       "source": "Wonder Domain (Reno Reizakki) — DPCGL",
       "page": null,
@@ -16,7 +51,7 @@
     },
     "gmNotes": "",
     "granter": null,
-    "featureForm": "passive",
+    "featureForm": "action",
     "actorResources": []
   },
   "effects": [
@@ -24,10 +59,10 @@
       "_id": "kBYvB4jw5CDELrtN",
       "name": "Motes of Light",
       "img": "icons/magic/light/orbs-firefly-hand-yellow.webp",
-      "description": "<p>Toggle on to make your token shed starlight.</p>",
+      "description": "<p>Star-like motes of light hover around you.</p>",
       "type": "base",
-      "disabled": true,
-      "transfer": true,
+      "disabled": false,
+      "transfer": false,
       "statuses": [],
       "system": {
         "changes": [
@@ -55,7 +90,7 @@
         ],
         "duration": {
           "description": "",
-          "type": ""
+          "type": "scene"
         },
         "rangeDependence": null,
         "stacking": null,

@@ -2,7 +2,7 @@
   "_id": "irXgC040tK2Aaclf",
   "name": "Fidgety Bolt",
   "type": "domainCard",
-  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "img": "wonder-domain-art/card-fidgetyBolt.webp",
   "folder": null,
   "system": {
     "description": "<p>Make a <strong>Spellcast Roll</strong> against a target within Far range. On a success, <strong>mark a Stress</strong> to send a magic bolt that deals <strong>d8+8</strong> magic damage using your Proficiency.</p><p>If your Hope die rolls <strong>8 or more</strong>, the bolt leaps to a second creature of your choice within Close range of the first. If your Fear die rolls <strong>8 or more</strong>, the GM chooses yet another new creature within Close range of the first to also be affected by the spell. In both cases, each additional target takes half the original damage.</p>",
@@ -165,7 +165,11 @@
     "domainTouched": null
   },
   "sort": 400008,
-  "flags": {},
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "fidgety": true
+    }
+  },
   "_key": "!items!irXgC040tK2Aaclf",
   "effects": []
 }

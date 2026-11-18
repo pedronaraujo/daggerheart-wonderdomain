@@ -314,7 +314,7 @@ export async function enterForm(actor) {
                ${stats.fly ? '<span class="wonder-chip">Flight</span>' : ''}
                ${stats.magicRes ? '<span class="wonder-chip">Magic Resistance</span>' : ''}</p>`
     });
-    if (hasFlag(actor, 'binaryStars')) await chooseBinaryStar(actor);
+    if (hasFlag(actor, 'binaryStars') && !chartState(actor).binary) await chooseBinaryStar(actor);
 }
 
 export async function leaveForm(actor, reason = '') {
@@ -395,18 +395,24 @@ async function chooseBinaryStar(actor) {
 /* -------------------------------------------- */
 
 /** Spend an Astral token for each action roll made in Constellation form. */
-export async function onDualityRoll(config) {
+export async function onDualityRoll(config, { binaryFree = false } = {}) {
     const actor = config?.actor;
     if (!actor?.isOwner || !inForm(actor)) return;
     if (config.actionType === 'reaction' || config.roll?.type === 'reaction') return;
 
     const roll = config.evaluated ?? config.roll;
-    const failed = config.roll?.success === false;
+    const failed = config.roll?.success === false || (config.targets?.length && !config.targets.some(t => t.hitResult?.success));
     const withHope = Boolean(roll?.withHope);
-    const againstOdds = failed && withHope && hasFlag(actor, 'againstTheOdds');
-    const isStandardAttack = config.action?.id === '000BASEATTACK000' || config.action?.systemPath === 'attack' && config.action?.item === actor;
 
-    if (againstOdds) {
+    if (binaryFree) {
+        await chatCard(actor, {
+            title: 'Binary Stars',
+            img: 'icons/magic/light/projectiles-star-purple.webp',
+            body: `<p>${loc('Stars.BinaryFree')}</p>`
+        });
+        return;
+    }
+    if (failed && withHope && hasFlag(actor, 'againstTheOdds')) {
         await chatCard(actor, {
             title: 'Against the Odds',
             img: 'icons/magic/symbols/question-stone-yellow.webp',
@@ -415,20 +421,13 @@ export async function onDualityRoll(config) {
         return;
     }
     const left = await adjustAstral(actor, -1);
-    const binary = chartState(actor).binary;
-    const footer =
-        isStandardAttack && binary
-            ? `<button type="button" data-wonder-action="refundAstral" data-actor="${actor.uuid}">
-                 <i class="fa-solid fa-rotate-left"></i> ${loc('Stars.BinaryRefund')}</button>`
-            : `<button type="button" data-wonder-action="refundAstral" data-actor="${actor.uuid}">
-                 <i class="fa-solid fa-rotate-left"></i> ${loc('Stars.Refund')}</button>`;
-    if (left > 0 || inForm(actor))
-        await chatCard(actor, {
-            title: loc('Stars.TokenSpentTitle'),
-            img: 'icons/magic/symbols/star-yellow.webp',
-            body: `<p>${loc('Stars.TokenSpent', { n: left })}</p>`,
-            footer
-        });
+    await chatCard(actor, {
+        title: loc('Stars.TokenSpentTitle'),
+        img: 'icons/magic/symbols/star-yellow.webp',
+        body: `<p>${loc('Stars.TokenSpent', { n: left })}</p>`,
+        footer: `<button type="button" data-wonder-action="refundAstral" data-actor="${actor.uuid}">
+                 <i class="fa-solid fa-rotate-left"></i> ${loc('Stars.Refund')}</button>`
+    });
 }
 
 /** Leave the form when the Astral tokens run out (however they were spent). */
@@ -475,7 +474,8 @@ export class StarChartApp extends HandlebarsApplicationMixin(ApplicationV2) {
             attack: StarChartApp.#onAttack,
             binary: StarChartApp.#onBinary,
             cosmic: StarChartApp.#onCosmic,
-            extra: StarChartApp.#onExtra
+            extra: StarChartApp.#onExtra,
+            ability: StarChartApp.#onAbility
         }
     };
 
@@ -538,10 +538,10 @@ export class StarChartApp extends HandlebarsApplicationMixin(ApplicationV2) {
             hasCosmicHelp: hasFlag(actor, 'cosmicHelp'),
             empyreanCost: st.cosmicHelp ? 2 : 3,
             abilities: [
-                stats.healAlly && { id: 'healAlly', ...DATA.starChart.types.healAlly, cost: 2 },
-                stats.teleport && { id: 'teleport', ...DATA.starChart.types.teleport, cost: 1 },
-                stats.extraTarget && { id: 'extraTarget', ...DATA.starChart.types.extraTarget, cost: 1 },
-                stats.vulnerable && { id: 'vulnerable', ...DATA.starChart.types.vulnerable, cost: 1 }
+                stats.healAlly && { id: 'wndFormAstrlMend', ...DATA.starChart.types.healAlly, cost: 2 },
+                stats.teleport && { id: 'wndFormStarStep1', ...DATA.starChart.types.teleport, cost: 1 },
+                stats.extraTarget && { id: 'wndFormTwinStrik', ...DATA.starChart.types.extraTarget, cost: 1 },
+                stats.vulnerable && { id: 'wndFormStarbreak', ...DATA.starChart.types.vulnerable, cost: 1 }
             ].filter(Boolean)
         };
     }
@@ -593,6 +593,12 @@ export class StarChartApp extends HandlebarsApplicationMixin(ApplicationV2) {
 
     static async #onCosmic() {
         await setChartField(this.actor, 'cosmicHelp', !chartState(this.actor).cosmicHelp);
+    }
+
+    static async #onAbility(event, target) {
+        const action = formItem(this.actor)?.system.actions.get(target.dataset.id);
+        if (!action) return ui.notifications.warn(loc('Stars.NeedForm'));
+        await action.use(event);
     }
 
     static async #onExtra(_event, target) {

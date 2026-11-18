@@ -18,7 +18,13 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MOD = "daggerheart-wonderdomain"
 SRC = os.path.join(ROOT, "src", "packs")
 ATTR = {"source": "Wonder Domain (Reno Reizakki) — DPCGL", "page": None, "artist": "", "srd": False}
-CARD_IMG = f"modules/{MOD}/assets/wonder-card.svg"
+ART = "wonder-domain-art"  # folder in the Foundry user data (see tools/build_art.py)
+
+
+def art(name):
+    return f"{ART}/{name}.webp"
+
+
 DOMAIN_ICON = f"modules/{MOD}/assets/wonder.svg"
 
 VALID_ICONS = set()
@@ -29,7 +35,7 @@ if os.path.exists(_icons_file):
 
 def ic(path):
     """Guard against typos in core icon paths."""
-    if path.startswith("modules/") or path.startswith("systems/") or not VALID_ICONS:
+    if path.startswith(("modules/", "systems/", "wonder-domain-art/")) or not VALID_ICONS:
         return path
     if path not in VALID_ICONS:
         print(f"  ! unknown icon {path}", file=sys.stderr)
@@ -174,6 +180,19 @@ SPECIAL = {
     "moonReduce": "wndMoonShieldRed",
     "masterpiece": "wndMasterpieceWk",
     "appraisal": "wndAppraisal0000",
+    "dreamSignal": "wndDreamSignal00",
+    "twinnedMinds": "wndTwinnedMinds0",
+    "cosmicInspire": "wndCosmicInspir0",
+    "archive": "wndArchiveOpen00",
+    "moonEnd": "wndMoonShieldEnd",
+    "useDevice": "wndUseDevice0000",
+    "breakthrough": "wndBreakthrough0",
+    "sharedDreams": "wndSharedDreams0",
+    "gemology": "wndGemology00000",
+    "craftDevice": "wndCraftDevice00",
+    "rechargeDevice": "wndRechargeDevic",
+    "moonCreate": "wndMoonShieldNew",
+    "moonAdd": "wndMoonShieldAdd",
 }
 
 # ---------------------------------------------------------------------------
@@ -220,7 +239,7 @@ def domain_cards():
                 "actions": {a["_id"]: a for a in actions}, "attribution": ATTR, "gmNotes": "",
                 "resource": res, "inVault": False, "vaultActive": False, "loadoutIgnore": False,
                 "domainTouched": None}
-        it = {"_id": _id, "name": name, "type": "domainCard", "img": CARD_IMG, "folder": None,
+        it = {"_id": _id, "name": name, "type": "domainCard", "img": art("card-" + key), "folder": None,
               "system": sysd, "sort": level * 100000 + len(cards), "flags": flags or {},
               "_key": f"!items!{_id}",
               "effects": [dict(e, _key=f"!items.effects!{_id}.{e['_id']}") for e in effects]}
@@ -236,12 +255,20 @@ def domain_cards():
            "When anyone carrying the device performs an action related to its designed purpose, they may gain a "
            "<strong>+2</strong> bonus to the roll and the device is depleted. You may <strong>spend a Hope</strong> "
            "while touching the device to recharge it."),
-         res=resource(1, "1", "fa-solid fa-gears"),
+         res=resource(0, "1", "fa-solid fa-gears"),
          actions=[
-             action("craftsmanship.recharge", "Recharge Device", "healing", img="icons/commodities/tech/cog-brass.webp",
+             action("craftsmanship.craft", "Craft Device", "effect", _id=SPECIAL["craftDevice"],
+                    img="icons/commodities/tech/cog-brass.webp",
+                    desc=p("Downtime move: craft (or replace) your device. It starts charged."),
+                    target={"type": "self", "amount": None}),
+             action("craftsmanship.use", "Use Device (+2)", "effect", _id=SPECIAL["useDevice"],
+                    img="icons/commodities/tech/cog-brass.webp",
+                    desc=p("The carrier gains +2 on their next roll related to the device's purpose. The device is depleted."),
+                    costs=[cost("resource", 1, item_id=cid)], target={"type": "any", "amount": 1}),
+             action("craftsmanship.recharge", "Recharge Device", "effect", _id=SPECIAL["rechargeDevice"],
+                    img="icons/commodities/tech/cog-brass.webp",
                     desc=p("Spend a Hope while touching the device to recharge it."),
-                    costs=[cost("hope", 1)], target={"type": "self", "amount": None},
-                    roll_=roll(None), resources={"resource": res_heal("resource", "1", cid)}),
+                    costs=[cost("hope", 1)], target={"type": "self", "amount": None}),
          ])
 
     rid_inscribed = "effect:runicshot.inscribed"
@@ -271,7 +298,7 @@ def domain_cards():
            "Until your next long rest, when someone Helps an Ally they shared a dream with, the one helping may roll "
            "two advantage dice and take the highest result."),
          actions=[
-             action("sharedDreams.dream", "Share a Dream", "healing", img="icons/magic/control/sleep-bubble-purple.webp",
+             action("sharedDreams.dream", "Share a Dream", "healing", _id=SPECIAL["sharedDreams"], img="icons/magic/control/sleep-bubble-purple.webp",
                     desc=p("Downtime move: everyone who shared the dream gains a Hope."),
                     target={"type": "friendly", "amount": None}, roll_=roll(None),
                     resources={"hope": res_heal("hope", "1")}),
@@ -347,12 +374,11 @@ def domain_cards():
            "they gain clarity on their actions and may also clear a Stress. If they roll with Fear, they receive a "
            "disturbing vision instead, and the GM gains 1 additional Fear."),
          actions=[
-             action("dreamSignal.send", "Send Mind Image", "effect", img="icons/magic/perception/third-eye-blue-red.webp",
+             action("dreamSignal.send", "Send Mind Image", "effect", _id=SPECIAL["dreamSignal"],
+                    img="icons/magic/perception/third-eye-blue-red.webp",
+                    desc=p("The ally adds your Spellcast trait to their next action roll. With Hope they clear a Stress; with Fear the GM gains a Fear."),
                     action_type="reaction", costs=[cost("hope", 1)], use=uses(1, "shortRest"), rng="far",
                     target={"type": "friendly", "amount": 1}),
-             action("dreamSignal.clarity", "Clarity (clear Stress)", "healing", img="icons/magic/light/orbs-smoke-pink.webp",
-                    target={"type": "friendly", "amount": 1}, roll_=roll(None),
-                    resources={"stress": res_heal("stress", "1")}),
          ])
 
     card("fidgetyBolt", "Fidgety Bolt", 4, "spell", 1,
@@ -370,7 +396,8 @@ def domain_cards():
              action("fidgety.leap", "Leaping Bolt (half)", "damage", img="icons/magic/lightning/bolt-forked-teal.webp",
                     desc=p("Each additional target takes half the original damage — apply as half damage."),
                     damage=main_damage(dmg_value("d8", bonus=8)), target={"type": "any", "amount": 1}),
-         ])
+         ],
+         flags={MOD: {"fidgety": True}})
 
     # ---- Level 5 -----------------------------------------------------------
     card("aerialStrike", "Aerial Strike", 5, "spell", 1,
@@ -387,13 +414,19 @@ def domain_cards():
                     target={"type": "hostile", "amount": None}),
          ])
 
+    gem_eff = "effect:gemology.extra"
     card("gemology", "Gemology", 5, "spell", 0,
          p("<strong>Spend 2 Hope</strong> during a rest to allow you or an ally sharing the rest to take an additional "
            "downtime move."),
          actions=[
-             action("gemology.use", "Facet the Rest", "effect", img="icons/commodities/gems/gem-faceted-cushion-teal-black.webp",
-                    costs=[cost("hope", 2)], target={"type": "friendly", "amount": 1}),
-         ])
+             action("gemology.use", "Facet the Rest", "effect", _id=SPECIAL["gemology"],
+                    img="icons/commodities/gems/gem-faceted-cushion-teal-black.webp",
+                    costs=[cost("hope", 2)], target={"type": "friendly", "amount": 1}, effects=[rid(gem_eff)]),
+         ],
+         effects=[effect(gem_eff, "", "Gemology (+1 downtime move)", img="icons/commodities/gems/gem-faceted-cushion-teal-black.webp",
+                         duration="longRest", desc=p("Take one additional downtime move during this rest."),
+                         changes=[chg("system.bonuses.rest.shortRest.shortMoves", 1),
+                                  chg("system.bonuses.rest.longRest.longMoves", 1)])])
 
     # ---- Level 6 -----------------------------------------------------------
     ms_id = rid("item:card:moonShield")
@@ -408,17 +441,22 @@ def domain_cards():
            "spent. When the spell ends, clear all tokens on this card."),
          res=resource(0, None, "fa-solid fa-moon"),
          actions=[
-             action("moon.create", "Create Field", "healing", img="icons/magic/defensive/barrier-shield-dome-blue-purple.webp",
+             action("moon.create", "Create Field", "effect", _id=SPECIAL["moonCreate"],
+                    img="icons/magic/defensive/barrier-shield-dome-blue-purple.webp",
+                    desc=p("Creates the field (your Spellcast trait is added to your damage thresholds) and places 2 Lunar tokens on this card."),
                     costs=[cost("stress", 1)], rng="veryClose", target={"type": "self", "amount": None},
-                    roll_=roll(None), resources={"resource": res_heal("resource", "2", ms_id)},
                     effects=[rid(ms_field)]),
-             action("moon.tokens", "Add 2 Lunar Tokens", "healing", img="icons/commodities/currency/coin-engraved-moon-silver.webp",
-                    costs=[cost("hope", 1)], target={"type": "self", "amount": None}, roll_=roll(None),
-                    resources={"resource": res_heal("resource", "2", ms_id)}),
+             action("moon.tokens", "Add 2 Lunar Tokens", "effect", _id=SPECIAL["moonAdd"],
+                    img="icons/commodities/currency/coin-engraved-moon-silver.webp",
+                    costs=[cost("hope", 1)], target={"type": "self", "amount": None}),
              action("moon.reduce", "Spend Lunar Tokens", "effect", _id=SPECIAL["moonReduce"],
                     img="icons/creatures/birds/raptor-owl-flying-moon.webp", action_type="reaction",
                     desc=p("Choose how many Lunar tokens to spend; roll 1d6 per token to reduce the damage an ally takes."),
                     target={"type": "friendly", "amount": 1}),
+             action("moon.end", "End Field", "effect", _id=SPECIAL["moonEnd"],
+                    img="icons/magic/defensive/barrier-shield-dome-pink.webp",
+                    desc=p("The field ends (end of scene or Severe damage): clear all Lunar tokens."),
+                    target={"type": "self", "amount": None}),
          ],
          effects=[effect(ms_field, "", "Moon Shield Field", img="icons/magic/defensive/barrier-shield-dome-blue-purple.webp",
                          desc=p("You add your Spellcast trait to your damage thresholds."), duration="scene",
@@ -434,7 +472,9 @@ def domain_cards():
            "other.</li><li>Once for the duration of the spell, when one rolls a critical success, you may both gain a Hope "
            "and clear a Stress.</li></ul>",
          actions=[
-             action("twinned.sync", "Synchronize", "effect", img="icons/magic/perception/orb-eye-scrying.webp",
+             action("twinned.sync", "Synchronize", "effect", _id=SPECIAL["twinnedMinds"],
+                    img="icons/magic/perception/orb-eye-scrying.webp",
+                    desc=p("You and the targeted ally each mark a Stress and gain Twinned Minds until the end of the scene."),
                     costs=[cost("stress", 1)], use=uses(1, "shortRest"), rng="far",
                     target={"type": "friendly", "amount": 1}),
              action("twinned.crit", "Shared Triumph", "healing", img="icons/magic/light/explosion-star-small-teal.webp",
@@ -486,7 +526,8 @@ def domain_cards():
            "within Far range may recall a card from their vault without paying its Recall Cost.",
            "This card can only be recalled into your loadout during a rest."),
          actions=[
-             action("archive.open", "Open the Archive", "effect", img="icons/sundries/books/book-open-brown.webp",
+             action("archive.open", "Open the Archive", "effect", _id=SPECIAL["archive"],
+                    img="icons/sundries/books/book-open-brown.webp",
                     rng="far", target={"type": "friendly", "amount": None}),
          ])
 
@@ -499,7 +540,8 @@ def domain_cards():
            "loadout and cannot be exchanged for a card in their vault.",
            "After you successfully use this spell, place this card in your vault."),
          actions=[
-             action("breakthrough.cast", "Cast", "attack", img="icons/magic/light/explosion-star-glow-yellow.webp",
+             action("breakthrough.cast", "Cast", "attack", _id=SPECIAL["breakthrough"],
+                    img="icons/magic/light/explosion-star-glow-yellow.webp",
                     rng="far", roll_=roll("spellcast", difficulty=16), target={"type": "friendly", "amount": None}),
          ])
 
@@ -508,7 +550,9 @@ def domain_cards():
          p("When an ally within Far range fails an action roll or rolls with Fear, you may <strong>spend a Hope</strong> "
            "to allow the target to reroll using a <strong>d20</strong> as their Hope Die."),
          actions=[
-             action("cosmic.inspire", "Inspire", "effect", img="icons/magic/symbols/star-rising-purple.webp",
+             action("cosmic.inspire", "Inspire", "effect", _id=SPECIAL["cosmicInspire"],
+                    img="icons/magic/symbols/star-rising-purple.webp",
+                    desc=p("The ally rerolls with a d20 as their Hope Die (applied to their next duality roll)."),
                     action_type="reaction", costs=[cost("hope", 1)], rng="far", target={"type": "friendly", "amount": 1}),
          ])
 
@@ -540,6 +584,7 @@ def domain_cards():
                     costs=[cost("stress", 1, scalable=True, step=1)], target={"type": "self", "amount": None}),
          ])
 
+    paradox_eff = "effect:paradox.state"
     card("paradoxFlux", "Paradox Flux", 10, "spell", 1,
          p("Once per long rest, you may enter a state of entropic energy that lasts until the end of the scene. While in "
            "this state, you may spend the GM's Fear as if spending Hope, up to 3 per spotlight. In similar fashion, the "
@@ -548,8 +593,10 @@ def domain_cards():
            "The spell ends earlier if the GM has no Fear or if you have no Hope."),
          actions=[
              action("paradox.enter", "Enter Paradox", "effect", img="icons/magic/time/arrows-circling-pink.webp",
-                    use=uses(1, "longRest"), target={"type": "self", "amount": None}),
-         ])
+                    use=uses(1, "longRest"), target={"type": "self", "amount": None}, effects=[rid(paradox_eff)]),
+         ],
+         effects=[effect(paradox_eff, "", "Paradox Flux", img="icons/magic/time/arrows-circling-pink.webp", duration="scene",
+                         desc=p("You may spend the GM's Fear as if spending Hope (up to 3 per spotlight); the GM may spend your Hope as Fear once per adversary spotlight."))])
     return cards
 
 
@@ -620,7 +667,7 @@ def classes_and_subclasses():
                       "actions": {}, "attribution": ATTR, "gmNotes": ""}, folder=f_ench_items["_id"])
     cls_docs += [surge, magical, appraisal, pouch, wand]
 
-    enchanter = base_item("class.enchanter", "Enchanter", "class", "icons/magic/fire/dagger-rune-enchant-flame-strong-blue.webp", {
+    enchanter = base_item("class.enchanter", "Enchanter", "class", art("class-enchanter"), {
         "description": p("Enchanters are artisans who weave magic into objects with great insight. They study the "
                          "undertones of magic in traditional items and spells, creating innovative outcomes that empower "
                          "themselves and their allies. Guided by their unique perspective, enchanters shape the flow of "
@@ -691,12 +738,12 @@ def classes_and_subclasses():
                                       changes=[chg("system.bonuses.rest.longRest.longMoves", 1)])]))
     ap.append(feature("ap.harmonious", "Harmonious Magic", "icons/magic/symbols/ring-circle-smoke-blue.webp",
                       p("While within Close range of at least one object enchanted by you, gain a <strong>+1</strong> "
-                        "bonus to action rolls."), folder=fs_ench["_id"],
+                        "bonus to action rolls."), folder=fs_ench["_id"], flags={MOD: {"harmonious": True}},
                       effects=[effect("ap.harmonious.eff", "", "Harmonious Magic",
                                       img="icons/magic/symbols/ring-circle-smoke-blue.webp", transfer=True, duration="",
-                                      disabled=True, desc=p("Toggle on while within Close range of an object you enchanted."),
+                                      disabled=True, desc=p("Turned on automatically while you are within Close range of a creature holding an object you enchanted."),
                                       changes=[chg("system.bonuses.roll.bonus", 1)])]))
-    appraiser = base_item("sub.appraiser", "Appraiser", "subclass", "icons/commodities/gems/gem-faceted-diamond-blue.webp", {
+    appraiser = base_item("sub.appraiser", "Appraiser", "subclass", art("sub-appraiser-specialization"), {
         "description": p("Play the Appraiser if you want to craft items to aid your allies in and outside of battle."),
         "spellcastingTrait": "finesse",
         "features": [{"type": t, "item": uuid("wonder-subclasses", f["_id"])}
@@ -734,7 +781,7 @@ def classes_and_subclasses():
     sw.append(feature("sw.creativeFlow", "Creative Flow", "icons/magic/air/wind-vortex-swirl-blue-purple.webp",
                       p("Regain the use of your Spellweave feature when you place an enchantment on an object."),
                       folder=fs_ench["_id"], flags={MOD: {"creativeFlow": True}}))
-    spellweaver = base_item("sub.spellweaver", "Spellweaver", "subclass", "icons/magic/symbols/runes-triangle-magenta.webp", {
+    spellweaver = base_item("sub.spellweaver", "Spellweaver", "subclass", art("sub-spellweaver-specialization"), {
         "description": p("Play the Spellweaver if you want to mix, improve and experiment with your weapons and spells."),
         "spellcastingTrait": "knowledge",
         "features": [{"type": t, "item": uuid("wonder-subclasses", f["_id"])}
@@ -781,10 +828,12 @@ def classes_and_subclasses():
     motes = feature("star.motes", "Motes of Light", "icons/magic/light/orbs-firefly-hand-yellow.webp",
                     p("You can conjure star-like motes of light that hover in your hand or around a point of your choice "
                       "within Far range. They stay active while you remain within Far range of them."),
-                    folder=f_star["_id"],
+                    folder=f_star["_id"], form="action",
+                    actions=[action("star.motes.conjure", "Conjure Motes", "effect", img="icons/magic/light/orbs-firefly-hand-yellow.webp",
+                                    target={"type": "self", "amount": None}, rng="far", effects=[rid("star.motes.light")])],
                     effects=[effect("star.motes.light", "", "Motes of Light", img="icons/magic/light/orbs-firefly-hand-yellow.webp",
-                                    transfer=True, disabled=True, duration="",
-                                    desc=p("Toggle on to make your token shed starlight."),
+                                    transfer=False, duration="scene",
+                                    desc=p("Star-like motes of light hover around you."),
                                     changes=[chg("token.light.dim", 6, "override"), chg("token.light.bright", 2, "override"),
                                              chg("token.light.color", "#a9c8ff", "override")])])
     amap = base_item("star.map", "Astral Map of Someone Unknown", "loot", "icons/sundries/books/book-backed-wood-tan.webp",
@@ -796,7 +845,7 @@ def classes_and_subclasses():
                       "attribution": ATTR, "gmNotes": ""}, folder=f_star_items["_id"])
     cls_docs += [empyrean, chart, motes, amap, sext]
 
-    stargazer = base_item("class.stargazer", "Stargazer", "class", "icons/magic/symbols/runes-star-pentagon-blue.webp", {
+    stargazer = base_item("class.stargazer", "Stargazer", "class", art("class-stargazer"), {
         "description": p("Stargazers are mystics who study the stars to unlock their cosmic power, blending astronomy, "
                          "astrology, and arcane insight. They read celestial patterns in the stars and assume the form of "
                          "Constellations to aid allies in battle. They are known to channel the intricate energies of the "
@@ -853,7 +902,7 @@ def classes_and_subclasses():
                          "Whenever you use a feature, domain card or make an attack, you may consider your Binary Star's "
                          "current location as the point of origin of the effect."),
                        folder=fs_star["_id"], flags={MOD: {"outOfOrbit": True}}))
-    astrologer = base_item("sub.astrologer", "Astrologer", "subclass", "icons/magic/symbols/star-yellow.webp", {
+    astrologer = base_item("sub.astrologer", "Astrologer", "subclass", art("sub-astrologer-specialization"), {
         "description": p("Play the Astrologer if you want to support a chosen ally while channeling the cosmic forces "
                          "within yourself."),
         "spellcastingTrait": "knowledge",
@@ -906,7 +955,7 @@ def classes_and_subclasses():
                         "When you Help an Ally while in Constellation form and they roll with Fear, you may spend an "
                         "Astral token to change the result to a roll with Hope instead."),
                       folder=fs_star["_id"], flags={MOD: {"glimpseExtra": 1}}))
-    clair = base_item("sub.clairvoyant", "Clairvoyant", "subclass", "icons/magic/perception/orb-crystal-ball-scrying-blue.webp", {
+    clair = base_item("sub.clairvoyant", "Clairvoyant", "subclass", art("sub-clairvoyant-specialization"), {
         "description": p("Play the Clairvoyant if you want to use the stars as guidance to help your allies."),
         "spellcastingTrait": "instinct",
         "features": [{"type": t, "item": uuid("wonder-subclasses", f["_id"])}
@@ -957,6 +1006,8 @@ def macros():
          "game.modules.get('daggerheart-wonderdomain')?.api?.openTinkering(actor ?? game.user.character);"),
         ("glimpse", "Glimpse Dice", "icons/magic/perception/orb-crystal-ball-scrying-blue.webp",
          "game.modules.get('daggerheart-wonderdomain')?.api?.openGlimpse(actor ?? game.user.character);"),
+        ("installArt", "Install Wonder Card Art", "icons/sundries/books/book-embossed-gold-red.webp",
+         "game.modules.get('daggerheart-wonderdomain')?.api?.installArt();"),
         ("hub", "Wonder Hub", f"modules/{MOD}/assets/wonder.svg",
          "game.modules.get('daggerheart-wonderdomain')?.api?.openHub(actor ?? game.user.character);"),
     ]
@@ -994,6 +1045,7 @@ def journal(cards, cls_docs, sub_docs):
         for lvl in sorted(by_level))
 
     intro = (
+        f'<p><img src="{art("domain-wonder")}" style="width:100%;border:none" alt=""></p>'
         "<h2>Como usar este módulo</h2>"
         "<p>O módulo <strong>Wonder Domain</strong> adiciona o domínio <em>Wonder</em> (21 cartas), as classes "
         "<strong>Enchanter</strong> (Wonder &amp; Codex) e <strong>Stargazer</strong> (Wonder &amp; Splendor), suas "

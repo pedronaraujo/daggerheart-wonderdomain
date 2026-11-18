@@ -22,7 +22,8 @@
       "NoActor": "Selecione um token ou defina um personagem primeiro.",
       "NeedGM": "É preciso um GM conectado para alterar documentos que você não controla.",
       "NotEnoughHope": "Hope insuficiente ({have}/{need}).",
-      "WonderTouchedSwap": "Wonder-Touched: marcar {n} Stress no lugar da Hope que falta?"
+      "WonderTouchedSwap": "Wonder-Touched: marcar {n} Stress no lugar da Hope que falta?",
+      "NotYours": "Só o dono desse personagem pode usar isso."
     },
     "Hub": {
       "Title": "Central Wonder",
@@ -70,7 +71,8 @@
       "BinaryRefund": "Binary Star no alcance (devolver)",
       "AgainstOdds": "Falha com Hope — a Astral token volta.",
       "BinaryTitle": "Binary Star",
-      "BinaryHint": "Escolha um aliado em alcance Far para ser sua Binary Star."
+      "BinaryHint": "Escolha um aliado em alcance Far para ser sua Binary Star.",
+      "BinaryFree": "Ataque padrão no alcance da sua Binary Star — nenhuma Astral token gasta."
     },
     "Ench": {
       "Title": "Oficina de Encantamentos",
@@ -170,6 +172,31 @@
       "Progress": "Rolou {roll}: a Obra-Prima vale <strong>{value}</strong> punhados (um baú = 100). Ganhou uma Hope.",
       "Done": "A Obra-Prima está pronta!",
       "ChooseTrait": "Escolha um traço para ganhar +1 (a carta vai para o cofre permanentemente)."
+    },
+    "Auto": {
+      "NextRollHint": "Vale para a próxima action roll e depois termina.",
+      "DreamClarity": "{name} rolou com Hope: clareza — limpou um Stress.",
+      "DreamDisturbing": "{name} rolou com Fear: uma visão perturbadora — o GM ganha 1 Fear.",
+      "WonderTouchedSwapped": "Wonder-Touched: {n} Stress marcado(s) no lugar da Hope que faltava.",
+      "NeedAllyTarget": "Marque o aliado como alvo primeiro.",
+      "TwinnedHint": "{a} e {b} compartilham as cartas de nível 3 ou menos dos dois loadouts (Spellcast Rolls usam o traço de quem conjurou). Tag Team entre eles custa 2 Hope. Uma vez, num crítico, ambos ganham Hope e limpam Stress.",
+      "TwinnedBody": "{a} e {b} marcaram um Stress cada e sincronizaram os pensamentos até o fim da cena.",
+      "CosmicBody": "{name} pode rerrolar usando um d20 como Hope Die.",
+      "SharedDreamHint": "Ao ajudar (Help an Ally) quem sonhou com você ({names}), role dois dados de vantagem e fique com o maior.",
+      "ArchiveBody": "A carta vai para o cofre: você e os aliados em alcance Far podem trazer uma carta do cofre sem pagar o Recall Cost. Ela só volta ao loadout durante um descanso.",
+      "BreakthroughBody": "Sucesso! Cada aliado em alcance Far pode adicionar uma carta de nível 4 ou menor (marcando Stress igual ao Recall Cost) até o fim da cena. Breakthrough foi para o seu cofre.",
+      "DeviceUsed": "{name} usa o dispositivo: +2 na próxima rolagem. O dispositivo foi gasto.",
+      "GemologyBody": "{names} pode fazer um movimento de descanso adicional neste descanso.",
+      "FidgetyHope": "Hope die {n}: o raio salta para uma segunda criatura à sua escolha em alcance Close.",
+      "FidgetyFear": "Fear die {n}: o GM escolhe outra criatura em alcance Close para ser atingida.",
+      "FidgetyHalf": "Dano do salto {total} → cada alvo adicional sofre <strong>{half}</strong> de dano mágico.",
+      "BinaryHint": "+1 de Evasão enquanto estiver em alcance {range} de {name} na forma de Constelação.",
+      "GravityOffer": "Sua Binary Star {name} marcou {n} Hit Point(s). Gastar 2 Astral tokens para puxá-la e reduzir em 1?",
+      "GravityButton": "Gravity Pull (2 Astral tokens)",
+      "GravityNoTokens": "Astral tokens insuficientes.",
+      "DeviceCrafted": "Um novo dispositivo foi criado (carregado). O anterior desaparece.",
+      "TokensOnCard": "Colocou {n} token(s) na carta (agora {total}).",
+      "GravityDone": "Puxou {name} para alcance Melee: um Hit Point limpo."
     }
   }
 }

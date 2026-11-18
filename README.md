@@ -14,6 +14,14 @@ https://github.com/pedronaraujo/daggerheart-wonderdomain/releases/latest/downloa
 
 Ative o módulo no mundo de Daggerheart.
 
+### Arte das cartas
+
+A arte das cartas, subclasses e classes **não vem no módulo**: ela é extraída da sua própria cópia dos PDFs e fica só no seu servidor, na pasta `wonder-domain-art/` dos dados do Foundry.
+
+1. Gere as imagens (ou use o pacote `wonder-domain-art.zip` já gerado):
+   `python3 tools/build_art.py Wonder_Domain.pdf Enchanter_Class.pdf Stargazer_Class.pdf saida/`
+2. No Foundry, como GM, abra o compêndio **Wonder Macros** e execute **Install Wonder Card Art**; selecione todos os arquivos extraídos. Eles são enviados para `wonder-domain-art/`.
+
 ## O que vem no módulo
 
 | Compêndio | Conteúdo |
@@ -52,6 +60,14 @@ Fichas com uma classe ou cartas Wonder ganham um botão **✦ Wonder** no cabeç
 
 ### Appraiser — Bancada de Engenhocas
 - Escolha os punhados de ouro (até o Tier), role os d8 (+1 com Resourceful Craft) e escolha o loot das tabelas oficiais com número ≤ total; cria uma cópia temporária marcada.
+
+## Automação
+
+As ações usam o fluxo nativo do sistema (custos de Hope/Stress, usos por descanso, rolagens, dano, botões de aplicar no chat). Por cima disso o módulo aplica o que cada carta diz que acontece depois:
+
+- **Passivas:** Binary Stars (+1 Evasão na Binary Star dentro de Close/Far, ataque padrão sem gastar Astral token no alcance), Gravity Pull (cartão no chat quando a Binary Star marca HP), Out of Orbit, Wonder-Touched (Stress no lugar da Hope que faltar), Harmonious Magic (liga sozinho perto de um objeto encantado), Small Appreciation (Recall Cost −1 nas cartas de nível 1), Against the Odds, bênçãos da Carta Estelar.
+- **Cartas:** Dream Signal (+Spellcast na próxima rolagem do aliado; com Hope limpa Stress, com Fear o GM ganha Fear), Cosmic Inspiration (próxima rolagem com d20 de Hope), Twinned Minds (Stress dos dois + efeito), Shared Dreams, Fidgety Bolt (saltos pelos dados de Hope/Fear ≥ 8), Moon Shield (field + Lunar tokens + redução), Masterpiece, Craftsmanship (+2 na próxima rolagem), Archive/Breakthrough (vão para o cofre), Gemology, Paradox Flux.
+- Efeitos com alvo *self* são aplicados na hora; efeitos em outros alvos usam o botão **Apply Effects** do sistema (ou a automação do próprio sistema, se ligada).
 
 ## Configurações
 - Gastar Astral tokens automaticamente

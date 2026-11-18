@@ -2,7 +2,7 @@
   "_id": "H9bzLAI6qaOKUro8",
   "name": "Cosmic Inspiration",
   "type": "domainCard",
-  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "img": "wonder-domain-art/card-cosmicInspiration.webp",
   "folder": null,
   "system": {
     "description": "<p>When an ally within Far range fails an action roll or rolls with Fear, you may <strong>spend a Hope</strong> to allow the target to reroll using a <strong>d20</strong> as their Hope Die.</p>",
@@ -11,11 +11,11 @@
     "level": 9,
     "type": "ability",
     "actions": {
-      "nk12mP3cbhJfRlyT": {
+      "wndCosmicInspir0": {
         "type": "effect",
-        "_id": "nk12mP3cbhJfRlyT",
+        "_id": "wndCosmicInspir0",
         "systemPath": "actions",
-        "description": "",
+        "description": "<p>The ally rerolls with a d20 as their Hope Die (applied to their next duality roll).</p>",
         "chatDisplay": true,
         "actionType": "reaction",
         "cost": [
