@@ -1,0 +1,27 @@
+name: Release module
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Package
+        run: |
+          zip -qr module.zip module.json README.md LICENSE assets data lang packs scripts styles templates
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Wonder Domain ${{ github.ref_name }}
+          files: |
+            module.json
+            module.zip
+          make_latest: true
