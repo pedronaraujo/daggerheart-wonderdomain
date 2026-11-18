@@ -2,7 +2,7 @@
   "id": "daggerheart-wonderdomain",
   "title": "Daggerheart: Wonder Domain",
   "description": "Adds the Wonder domain (21 domain cards) with the Enchanter and Stargazer classes and their subclasses to the Foundryborne Daggerheart system — including an interactive Star Chart, Constellation form automation, an Enchanting Workshop, a Tinkering Bench and Glimpse dice.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "authors": [
     {
       "name": "Pedro Tostes",
@@ -126,7 +126,7 @@
   ],
   "url": "https://github.com/pedronaraujo/daggerheart-wonderdomain",
   "manifest": "https://github.com/pedronaraujo/daggerheart-wonderdomain/releases/latest/download/module.json",
-  "download": "https://github.com/pedronaraujo/daggerheart-wonderdomain/releases/download/v1.1.0/module.zip",
+  "download": "https://github.com/pedronaraujo/daggerheart-wonderdomain/releases/download/v1.1.1/module.zip",
   "readme": "https://github.com/pedronaraujo/daggerheart-wonderdomain#readme",
   "bugs": "https://github.com/pedronaraujo/daggerheart-wonderdomain/issues",
   "license": "DPCGL content; code MIT"
