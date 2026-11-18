@@ -1,0 +1,31 @@
+{
+  "_id": "5XJD8CSCvg163Zwb",
+  "name": "Animating Enchantment",
+  "type": "feature",
+  "img": "icons/magic/symbols/runes-etched-steel-blade.webp",
+  "folder": "KiA00THnfYFw6v9a",
+  "system": {
+    "description": "<p><em>Tier 3 enchantment — Any weapon</em></p><p>You may place this enchantment on any weapon. The weapon becomes sentient and no longer needs to be held. It floats around you or its original wielder and retains all of its features and properties. You may command the weapon to move within its Close range and attack a target within its attacking range.</p>",
+    "resource": null,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "passive",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 3016,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "enchantment": "animating",
+      "tier": 3
+    }
+  },
+  "_key": "!items!5XJD8CSCvg163Zwb"
+}

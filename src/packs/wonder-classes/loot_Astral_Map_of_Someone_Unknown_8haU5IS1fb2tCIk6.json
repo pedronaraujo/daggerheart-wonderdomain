@@ -1,0 +1,23 @@
+{
+  "_id": "8haU5IS1fb2tCIk6",
+  "name": "Astral Map of Someone Unknown",
+  "type": "loot",
+  "img": "icons/sundries/books/book-backed-wood-tan.webp",
+  "folder": "SmR8oM6DPLw3xmsx",
+  "system": {
+    "description": "<p>An astral map of someone unknown to you.</p>",
+    "quantity": 1,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": ""
+  },
+  "effects": [],
+  "sort": 0,
+  "flags": {},
+  "_key": "!items!8haU5IS1fb2tCIk6"
+}

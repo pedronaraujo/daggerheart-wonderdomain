@@ -1,0 +1,31 @@
+{
+  "_id": "LUeAUvKciINOXrmb",
+  "name": "Punishing Enchantment",
+  "type": "feature",
+  "img": "icons/magic/death/skull-energy-light-purple.webp",
+  "folder": "TdVSHGEnF9alRSd2",
+  "system": {
+    "description": "<p><em>Tier 4 enchantment — Object that can be held</em></p><p>You may place this enchantment on any object that can be held. While holding the object, the user must succeed on a Reaction Roll (15) when it is spotlighted or be forced to mark a Hit Point.</p>",
+    "resource": null,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "passive",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 4026,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "enchantment": "punishing",
+      "tier": 4
+    }
+  },
+  "_key": "!items!LUeAUvKciINOXrmb"
+}

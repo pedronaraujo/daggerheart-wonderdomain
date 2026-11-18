@@ -1,0 +1,16 @@
+{
+  "_id": "5kklPVHaZDKhUZLr",
+  "name": "Toggle Constellation Form",
+  "type": "script",
+  "img": "icons/magic/light/explosion-star-glow-blue-purple.webp",
+  "command": "game.modules.get('daggerheart-wonderdomain')?.api?.toggleConstellation(actor ?? game.user.character);",
+  "scope": "global",
+  "author": null,
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!macros!5kklPVHaZDKhUZLr"
+}

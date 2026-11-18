@@ -1,0 +1,30 @@
+{
+  "_id": "gkJaqtHMHNqJ0xi9",
+  "name": "Overcharged",
+  "type": "feature",
+  "img": "icons/magic/lightning/orb-ball-spiral-blue.webp",
+  "folder": "Vacru5iDk3BvcCbq",
+  "system": {
+    "description": "<p>You may now place enchantments on items that already have features. You are still limited to a single enchantment per object.</p>",
+    "resource": null,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "passive",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 0,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "overcharged": true
+    }
+  },
+  "_key": "!items!gkJaqtHMHNqJ0xi9"
+}

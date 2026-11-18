@@ -1,0 +1,56 @@
+{
+  "start": "s0",
+  "steps": {
+    "range": ["melee", "veryClose", "close", "far", "veryFar"],
+    "die": ["d6", "d8", "d10", "d12"]
+  },
+  "types": {
+    "start":       { "icon": "fa-solid fa-sun",            "short": "Start",          "text": "Your Constellation begins here." },
+    "rangeUp":     { "icon": "fa-solid fa-arrows-left-right", "short": "+Range",      "text": "Increase the range of your standard attack by one step." },
+    "dieUp":       { "icon": "fa-solid fa-dice-d20",       "short": "+Die",           "text": "Increase the damage die of your standard attack by one step." },
+    "dmg2":        { "icon": "fa-solid fa-burst",          "short": "+2 Damage",      "text": "Gain a +2 damage bonus to your standard attack." },
+    "evasion":     { "icon": "fa-solid fa-person-running", "short": "+1 Evasion",     "text": "Gain a +1 bonus to Evasion while in Constellation form." },
+    "healAlly":    { "icon": "fa-solid fa-hand-holding-heart", "short": "Astral Mend", "text": "You may spend 2 Astral tokens to clear a Hit Point of an ally within Very Close range." },
+    "armor":       { "icon": "fa-solid fa-shield-halved",  "short": "+1 Armor Slot",  "text": "Gain an additional Armor slot you can mark while in Constellation form." },
+    "teleport":    { "icon": "fa-solid fa-person-through-window", "short": "Star Step", "text": "You may spend an Astral token to teleport within Far range." },
+    "fly":         { "icon": "fa-solid fa-feather",        "short": "Flight",         "text": "You can fly while in Constellation form." },
+    "reliable":    { "icon": "fa-solid fa-crosshairs",     "short": "Reliable",       "text": "Your standard attack is Reliable (+1 to attack rolls)." },
+    "extraTarget": { "icon": "fa-solid fa-people-arrows",  "short": "Twin Strike",    "text": "You may spend an Astral token to attack an additional target with your standard attack." },
+    "vulnerable":  { "icon": "fa-solid fa-heart-crack",    "short": "Starbreak",      "text": "You may spend an Astral token to make the target of your standard attack temporarily Vulnerable." },
+    "hope":        { "icon": "fa-solid fa-hands-holding",        "short": "+1 Hope Slot",   "text": "Use this as an additional Hope slot you can mark while in Constellation form." },
+    "magicRes":    { "icon": "fa-solid fa-shield-virus",   "short": "Magic Resist.",  "text": "You have resistance to magic damage while in Constellation form." }
+  },
+  "nodes": [
+    { "id": "s0", "type": "start",       "x": 215, "y": 25 },
+    { "id": "a",  "type": "rangeUp",     "x": 126, "y": 49 },
+    { "id": "b",  "type": "dieUp",       "x": 317, "y": 46 },
+    { "id": "c",  "type": "dmg2",        "x": 219, "y": 104 },
+    { "id": "d",  "type": "evasion",     "x": 386, "y": 107 },
+    { "id": "e",  "type": "healAlly",    "x": 122, "y": 117 },
+    { "id": "f",  "type": "armor",       "x": 48,  "y": 209 },
+    { "id": "g",  "type": "teleport",    "x": 166, "y": 171 },
+    { "id": "h",  "type": "fly",         "x": 277, "y": 179 },
+    { "id": "i",  "type": "rangeUp",     "x": 376, "y": 227 },
+    { "id": "j",  "type": "reliable",    "x": 133, "y": 258 },
+    { "id": "k",  "type": "extraTarget", "x": 215, "y": 296 },
+    { "id": "l",  "type": "dieUp",       "x": 29,  "y": 308 },
+    { "id": "m",  "type": "vulnerable",  "x": 336, "y": 319 },
+    { "id": "n",  "type": "rangeUp",     "x": 134, "y": 353 },
+    { "id": "o",  "type": "dieUp",       "x": 292, "y": 407 },
+    { "id": "p",  "type": "dmg2",        "x": 395, "y": 398 },
+    { "id": "q",  "type": "dmg2",        "x": 70,  "y": 432 },
+    { "id": "r",  "type": "evasion",     "x": 200, "y": 474 },
+    { "id": "s",  "type": "hope",        "x": 84,  "y": 546 },
+    { "id": "t",  "type": "armor",       "x": 379, "y": 519 },
+    { "id": "u",  "type": "magicRes",    "x": 246, "y": 572 }
+  ],
+  "edges": [
+    ["s0", "a"], ["s0", "b"], ["a", "c"], ["a", "e"], ["b", "c"], ["b", "d"],
+    ["c", "g"], ["c", "h"], ["d", "h"], ["d", "i"], ["e", "f"], ["e", "g"],
+    ["f", "l"], ["g", "j"], ["h", "k"], ["h", "m"], ["i", "m"], ["j", "l"],
+    ["j", "k"], ["j", "n"], ["l", "q"], ["k", "n"], ["k", "o"], ["m", "o"],
+    ["m", "p"], ["n", "q"], ["n", "r"], ["o", "p"], ["o", "r"], ["o", "t"],
+    ["p", "t"], ["q", "s"], ["r", "s"], ["r", "u"], ["r", "t"], ["s", "u"],
+    ["u", "t"]
+  ]
+}

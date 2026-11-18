@@ -1,0 +1,31 @@
+{
+  "_id": "qGW6EjXAl3rYONEB",
+  "name": "Focusing Enchantment",
+  "type": "feature",
+  "img": "icons/magic/symbols/rune-sigil-horned-blue.webp",
+  "folder": "KiA00THnfYFw6v9a",
+  "system": {
+    "description": "<p><em>Tier 3 enchantment — Magic weapon without a feature</em></p><p>You may place this enchantment on a magic weapon that doesn't already have a feature. The weapon gains the Channeling feature.</p><p><strong>Channeling:</strong> +1 to Spellcast Rolls.</p>",
+    "resource": null,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "passive",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 3018,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "enchantment": "focusing",
+      "tier": 3
+    }
+  },
+  "_key": "!items!qGW6EjXAl3rYONEB"
+}

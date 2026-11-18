@@ -1,0 +1,16 @@
+{
+  "_id": "UYUFue8fG2Ctomjh",
+  "name": "Tinkering Bench",
+  "type": "script",
+  "img": "icons/commodities/tech/cog-brass.webp",
+  "command": "game.modules.get('daggerheart-wonderdomain')?.api?.openTinkering(actor ?? game.user.character);",
+  "scope": "global",
+  "author": null,
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!macros!UYUFue8fG2Ctomjh"
+}

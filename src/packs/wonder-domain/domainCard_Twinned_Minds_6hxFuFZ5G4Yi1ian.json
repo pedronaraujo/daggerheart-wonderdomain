@@ -1,0 +1,155 @@
+{
+  "_id": "6hxFuFZ5G4Yi1ian",
+  "name": "Twinned Minds",
+  "type": "domainCard",
+  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "folder": null,
+  "system": {
+    "description": "<p>Once per rest, you and an ally in Far range may both <strong>mark a Stress</strong> to synchronize your thoughts. Until the end of the scene or one of you mark their last Hit Point, you two gain the following benefits:</p><ul><li>You and the ally gain access to level 3 or lower domain cards from either loadout. If a card requires a Spellcast Roll, it uses your Spellcast trait.</li><li>It costs 2 Hope to initiate a Tag Team Roll with each other.</li><li>Once for the duration of the spell, when one rolls a critical success, you may both gain a Hope and clear a Stress.</li></ul>",
+    "domain": "wonder",
+    "recallCost": 2,
+    "level": 6,
+    "type": "spell",
+    "actions": {
+      "syRUEMV8DBR0Z9ye": {
+        "type": "effect",
+        "_id": "syRUEMV8DBR0Z9ye",
+        "systemPath": "actions",
+        "description": "",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [
+          {
+            "scalable": false,
+            "key": "stress",
+            "value": 1,
+            "step": null,
+            "itemId": null,
+            "consumeOnSuccess": false
+          }
+        ],
+        "uses": {
+          "value": null,
+          "max": "1",
+          "recovery": "shortRest",
+          "consumeOnSuccess": false
+        },
+        "name": "Synchronize",
+        "img": "icons/magic/perception/orb-eye-scrying.webp",
+        "range": "far",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "friendly",
+          "amount": 1
+        },
+        "effects": []
+      },
+      "hZTVC42Mc78f7XLJ": {
+        "type": "healing",
+        "_id": "hZTVC42Mc78f7XLJ",
+        "systemPath": "actions",
+        "description": "<p>Once per spell: on a critical success, you both gain a Hope and clear a Stress.</p>",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Shared Triumph",
+        "img": "icons/magic/light/explosion-star-small-teal.webp",
+        "range": "",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "friendly",
+          "amount": 2
+        },
+        "damage": {
+          "main": null,
+          "resources": {
+            "hope": {
+              "value": {
+                "custom": {
+                  "enabled": true,
+                  "formula": "1"
+                },
+                "multiplier": "flat",
+                "flatMultiplier": 1,
+                "dice": "d6",
+                "bonus": null
+              },
+              "applyTo": "hope",
+              "base": false,
+              "resultBased": false,
+              "valueAlt": null,
+              "fullRestore": false,
+              "itemId": null
+            },
+            "stress": {
+              "value": {
+                "custom": {
+                  "enabled": true,
+                  "formula": "1"
+                },
+                "multiplier": "flat",
+                "flatMultiplier": 1,
+                "dice": "d6",
+                "bonus": null
+              },
+              "applyTo": "stress",
+              "base": false,
+              "resultBased": false,
+              "valueAlt": null,
+              "fullRestore": false,
+              "itemId": null
+            }
+          }
+        },
+        "effects": [],
+        "roll": {
+          "type": null,
+          "trait": null,
+          "difficulty": null,
+          "bonus": null,
+          "advState": "neutral",
+          "diceRolling": {
+            "multiplier": "prof",
+            "flatMultiplier": 1,
+            "dice": "d6",
+            "compare": null,
+            "treshold": null
+          },
+          "useDefault": false
+        }
+      }
+    },
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "resource": null,
+    "inVault": false,
+    "vaultActive": false,
+    "loadoutIgnore": false,
+    "domainTouched": null
+  },
+  "sort": 600012,
+  "flags": {},
+  "_key": "!items!6hxFuFZ5G4Yi1ian",
+  "effects": []
+}

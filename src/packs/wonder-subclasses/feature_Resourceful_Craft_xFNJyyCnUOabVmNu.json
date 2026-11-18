@@ -1,0 +1,76 @@
+{
+  "_id": "xFNJyyCnUOabVmNu",
+  "name": "Resourceful Craft",
+  "type": "feature",
+  "img": "icons/commodities/tech/cog-brass.webp",
+  "folder": "Vacru5iDk3BvcCbq",
+  "system": {
+    "description": "<p>You may choose an additional downtime move during a long rest, which you must use to <em>Work on a Project</em> or <em>Prepare</em>. When using your Creative Tinkering feature, roll an additional d8 and add it to the total result.</p>",
+    "resource": null,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "passive",
+    "actorResources": []
+  },
+  "effects": [
+    {
+      "_id": "fgxyLqcuJLcCc4vZ",
+      "name": "Resourceful Craft",
+      "img": "icons/commodities/tech/cog-brass.webp",
+      "description": "",
+      "type": "base",
+      "disabled": false,
+      "transfer": true,
+      "statuses": [],
+      "system": {
+        "changes": [
+          {
+            "key": "system.bonuses.rest.longRest.longMoves",
+            "type": "add",
+            "value": 1,
+            "priority": null,
+            "phase": "initial"
+          }
+        ],
+        "duration": {
+          "description": "",
+          "type": ""
+        },
+        "rangeDependence": null,
+        "stacking": null,
+        "targetDispositions": [],
+        "conditionals": []
+      },
+      "start": null,
+      "duration": {
+        "value": null,
+        "units": "seconds",
+        "expiry": null,
+        "expired": false
+      },
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "folder": null,
+      "sort": 0,
+      "flags": {},
+      "_stats": {
+        "compendiumSource": null
+      },
+      "_key": "!items.effects!xFNJyyCnUOabVmNu.fgxyLqcuJLcCc4vZ"
+    }
+  ],
+  "sort": 0,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "tinkerExtraDie": 1
+    }
+  },
+  "_key": "!items!xFNJyyCnUOabVmNu"
+}

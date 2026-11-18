@@ -1,0 +1,30 @@
+{
+  "_id": "AZpnghf3uN27MGFo",
+  "name": "Against the Odds",
+  "type": "feature",
+  "img": "icons/magic/symbols/question-stone-yellow.webp",
+  "folder": "3glvHbPWSupgxxaw",
+  "system": {
+    "description": "<p>When you spend an Astral token to make an action roll and roll a failure with Hope, regain the spent Astral token.</p>",
+    "resource": null,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "passive",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 0,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "againstTheOdds": true
+    }
+  },
+  "_key": "!items!AZpnghf3uN27MGFo"
+}

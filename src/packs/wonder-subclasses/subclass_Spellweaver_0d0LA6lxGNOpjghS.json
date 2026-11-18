@@ -1,0 +1,51 @@
+{
+  "_id": "0d0LA6lxGNOpjghS",
+  "name": "Spellweaver",
+  "type": "subclass",
+  "img": "icons/magic/symbols/runes-triangle-magenta.webp",
+  "folder": "Vacru5iDk3BvcCbq",
+  "system": {
+    "description": "<p>Play the Spellweaver if you want to mix, improve and experiment with your weapons and spells.</p>",
+    "spellcastingTrait": "knowledge",
+    "features": [
+      {
+        "type": "foundation",
+        "item": "Compendium.daggerheart-wonderdomain.wonder-subclasses.Item.qUFQ4eRYv7v2fhFz"
+      },
+      {
+        "type": "foundation",
+        "item": "Compendium.daggerheart-wonderdomain.wonder-subclasses.Item.Z23UeytZeBT4KhUI"
+      },
+      {
+        "type": "specialization",
+        "item": "Compendium.daggerheart-wonderdomain.wonder-subclasses.Item.qDFTo1Y47nQR4Pi3"
+      },
+      {
+        "type": "specialization",
+        "item": "Compendium.daggerheart-wonderdomain.wonder-subclasses.Item.gkJaqtHMHNqJ0xi9"
+      },
+      {
+        "type": "mastery",
+        "item": "Compendium.daggerheart-wonderdomain.wonder-subclasses.Item.r0ZNIs1YGUQMZS1k"
+      },
+      {
+        "type": "mastery",
+        "item": "Compendium.daggerheart-wonderdomain.wonder-subclasses.Item.3tS9IG72Ug4y6JeT"
+      }
+    ],
+    "featureState": 1,
+    "isMulticlass": false,
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "linkedClass": "Compendium.daggerheart-wonderdomain.wonder-classes.Item.50he8UCJEgHJFiL3",
+    "gmNotes": ""
+  },
+  "effects": [],
+  "sort": 0,
+  "flags": {},
+  "_key": "!items!0d0LA6lxGNOpjghS"
+}

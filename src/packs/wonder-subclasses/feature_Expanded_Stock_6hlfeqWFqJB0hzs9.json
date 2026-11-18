@@ -1,0 +1,30 @@
+{
+  "_id": "6hlfeqWFqJB0hzs9",
+  "name": "Expanded Stock",
+  "type": "feature",
+  "img": "icons/containers/chest/chest-simple-box-gold-brown.webp",
+  "folder": "Vacru5iDk3BvcCbq",
+  "system": {
+    "description": "<p>You may now have two enchantments active at the same time, but only one per object. Also, you no longer need to touch an item to place an enchantment and can do so from within Close range of the object.</p>",
+    "resource": null,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "passive",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 0,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "enchantSlots": 2
+    }
+  },
+  "_key": "!items!6hlfeqWFqJB0hzs9"
+}

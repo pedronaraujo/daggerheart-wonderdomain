@@ -1,0 +1,31 @@
+{
+  "_id": "n0g1vy5M21C68Eqd",
+  "name": "Defensive Enchantment",
+  "type": "feature",
+  "img": "icons/magic/defensive/shield-barrier-glowing-blue.webp",
+  "folder": "hw2O1hAP0Xm24kBP",
+  "system": {
+    "description": "<p><em>Tier 1 enchantment — Armor without a feature</em></p><p>You may place this enchantment on an armor that doesn't already have a feature. The armor gains the Protective feature.</p><p><strong>Protective:</strong> +1 to Armor Score.</p>",
+    "resource": null,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "passive",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 1006,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "enchantment": "defensive",
+      "tier": 1
+    }
+  },
+  "_key": "!items!n0g1vy5M21C68Eqd"
+}

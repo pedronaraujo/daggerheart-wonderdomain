@@ -1,0 +1,56 @@
+{
+  "_id": "Fe2J8qnsWvEEPVjH",
+  "name": "Ingenious Surge",
+  "type": "feature",
+  "img": "icons/magic/light/hand-sparks-glow-yellow.webp",
+  "folder": "Ab7BCaZB3OjWSzs2",
+  "system": {
+    "description": "<p><strong>Spend 3 Hope</strong> to enchant an object without marking a Stress. When you do so, the enchantment doesn't count towards the limit of active enchantments you can have, but you're still limited to a single enchantment per object.</p>",
+    "resource": null,
+    "actions": {
+      "wndIngeniousSrg0": {
+        "type": "effect",
+        "_id": "wndIngeniousSrg0",
+        "systemPath": "actions",
+        "description": "<p>Opens the Enchanting Workshop paying 3 Hope instead of a Stress.</p>",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Ingenious Surge",
+        "img": "icons/magic/light/hand-sparks-glow-yellow.webp",
+        "range": "",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "self",
+          "amount": null
+        },
+        "effects": []
+      }
+    },
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "action",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 0,
+  "flags": {},
+  "_key": "!items!Fe2J8qnsWvEEPVjH"
+}

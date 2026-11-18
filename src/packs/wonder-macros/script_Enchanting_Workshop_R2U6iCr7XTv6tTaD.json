@@ -1,0 +1,16 @@
+{
+  "_id": "R2U6iCr7XTv6tTaD",
+  "name": "Enchanting Workshop",
+  "type": "script",
+  "img": "icons/magic/fire/dagger-rune-enchant-flame-strong-blue.webp",
+  "command": "game.modules.get('daggerheart-wonderdomain')?.api?.openWorkshop(actor ?? game.user.character);",
+  "scope": "global",
+  "author": null,
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!macros!R2U6iCr7XTv6tTaD"
+}

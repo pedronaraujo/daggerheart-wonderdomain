@@ -1,0 +1,30 @@
+{
+  "_id": "VP4jZ3Hffk0ji6oS",
+  "name": "Binary Stars",
+  "type": "feature",
+  "img": "icons/magic/light/projectiles-star-purple.webp",
+  "folder": "3glvHbPWSupgxxaw",
+  "system": {
+    "description": "<p>When you assume your Constellation form, you may choose an ally within Far range to be your Binary Star. While you are within Close range of your Binary Star, they add <strong>+1</strong> to their Evasion, you can use your standard attack without having to spend an Astral token and it costs one less Hope to initiate a Tag Team Roll between the two of you. You must still spend Astral tokens to activate any features related to your standard attack.</p>",
+    "resource": null,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "passive",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 0,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "binaryStars": true
+    }
+  },
+  "_key": "!items!VP4jZ3Hffk0ji6oS"
+}

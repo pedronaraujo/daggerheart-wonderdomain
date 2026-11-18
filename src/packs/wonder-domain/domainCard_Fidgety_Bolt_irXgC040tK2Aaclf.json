@@ -1,0 +1,171 @@
+{
+  "_id": "irXgC040tK2Aaclf",
+  "name": "Fidgety Bolt",
+  "type": "domainCard",
+  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "folder": null,
+  "system": {
+    "description": "<p>Make a <strong>Spellcast Roll</strong> against a target within Far range. On a success, <strong>mark a Stress</strong> to send a magic bolt that deals <strong>d8+8</strong> magic damage using your Proficiency.</p><p>If your Hope die rolls <strong>8 or more</strong>, the bolt leaps to a second creature of your choice within Close range of the first. If your Fear die rolls <strong>8 or more</strong>, the GM chooses yet another new creature within Close range of the first to also be affected by the spell. In both cases, each additional target takes half the original damage.</p>",
+    "domain": "wonder",
+    "recallCost": 1,
+    "level": 4,
+    "type": "spell",
+    "actions": {
+      "fJKJO90KGMB9dGAm": {
+        "type": "attack",
+        "_id": "fJKJO90KGMB9dGAm",
+        "systemPath": "actions",
+        "description": "",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [
+          {
+            "scalable": false,
+            "key": "stress",
+            "value": 1,
+            "step": null,
+            "itemId": null,
+            "consumeOnSuccess": true
+          }
+        ],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Cast",
+        "img": "icons/magic/lightning/bolt-strike-sparks-teal.webp",
+        "range": "far",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "any",
+          "amount": 1
+        },
+        "damage": {
+          "main": {
+            "resultBased": false,
+            "value": {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "multiplier": "prof",
+              "flatMultiplier": 1,
+              "dice": "d8",
+              "bonus": 8
+            },
+            "applyTo": "hitPoints",
+            "type": [
+              "magical"
+            ],
+            "base": false,
+            "valueAlt": null,
+            "includeBase": false,
+            "direct": false,
+            "fullRestore": false,
+            "itemId": null
+          },
+          "resources": {}
+        },
+        "effects": [],
+        "roll": {
+          "type": "spellcast",
+          "trait": null,
+          "difficulty": null,
+          "bonus": null,
+          "advState": "neutral",
+          "diceRolling": {
+            "multiplier": "prof",
+            "flatMultiplier": 1,
+            "dice": "d6",
+            "compare": null,
+            "treshold": null
+          },
+          "useDefault": false
+        },
+        "save": {
+          "trait": null,
+          "difficulty": null,
+          "damageMod": "none"
+        }
+      },
+      "L2oUQCg4LWIP5Xh5": {
+        "type": "damage",
+        "_id": "L2oUQCg4LWIP5Xh5",
+        "systemPath": "actions",
+        "description": "<p>Each additional target takes half the original damage — apply as half damage.</p>",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Leaping Bolt (half)",
+        "img": "icons/magic/lightning/bolt-forked-teal.webp",
+        "range": "",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "any",
+          "amount": 1
+        },
+        "damage": {
+          "main": {
+            "resultBased": false,
+            "value": {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "multiplier": "prof",
+              "flatMultiplier": 1,
+              "dice": "d8",
+              "bonus": 8
+            },
+            "applyTo": "hitPoints",
+            "type": [
+              "magical"
+            ],
+            "base": false,
+            "valueAlt": null,
+            "includeBase": false,
+            "direct": false,
+            "fullRestore": false,
+            "itemId": null
+          },
+          "resources": {}
+        },
+        "effects": []
+      }
+    },
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "resource": null,
+    "inVault": false,
+    "vaultActive": false,
+    "loadoutIgnore": false,
+    "domainTouched": null
+  },
+  "sort": 400008,
+  "flags": {},
+  "_key": "!items!irXgC040tK2Aaclf",
+  "effects": []
+}

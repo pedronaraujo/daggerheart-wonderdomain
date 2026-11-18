@@ -1,0 +1,69 @@
+{
+  "_id": "CVQW4GD55SEZzZjs",
+  "name": "Glimpse Beyond",
+  "type": "feature",
+  "img": "icons/magic/perception/orb-crystal-ball-scrying-blue.webp",
+  "folder": "3glvHbPWSupgxxaw",
+  "system": {
+    "description": "<p>In the beginning of a session, roll <strong>2d4</strong> and place them on this card. These are your <em>Glimpse dice</em>. When a target makes an action roll, you may spend one of your Glimpse dice to reduce or increase the final result equal to the die's value. Discard any unspent Glimpse dice at the end of a session.</p>",
+    "resource": {
+      "type": "diceValue",
+      "value": 0,
+      "max": "2",
+      "icon": "fa-solid fa-eye",
+      "recovery": "session",
+      "progression": "increasing",
+      "diceStates": {},
+      "dieFaces": "d4"
+    },
+    "actions": {
+      "wndGlimpseDice00": {
+        "type": "effect",
+        "_id": "wndGlimpseDice00",
+        "systemPath": "actions",
+        "description": "",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Glimpse Dice",
+        "img": "icons/magic/perception/orb-crystal-ball-scrying-blue.webp",
+        "range": "",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "any",
+          "amount": 1
+        },
+        "effects": []
+      }
+    },
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "action",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 0,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "glimpse": true
+    }
+  },
+  "_key": "!items!CVQW4GD55SEZzZjs"
+}

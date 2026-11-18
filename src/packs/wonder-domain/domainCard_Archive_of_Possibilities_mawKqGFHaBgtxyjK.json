@@ -1,0 +1,61 @@
+{
+  "_id": "mawKqGFHaBgtxyjK",
+  "name": "Archive of Possibilities",
+  "type": "domainCard",
+  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "folder": null,
+  "system": {
+    "description": "<p>Place this card in your vault to open a shimmering rift to an imagined archive of ideas. You and all allies within Far range may recall a card from their vault without paying its Recall Cost.</p><p>This card can only be recalled into your loadout during a rest.</p>",
+    "domain": "wonder",
+    "recallCost": 0,
+    "level": 8,
+    "type": "spell",
+    "actions": {
+      "64N1b89bhq7DID7b": {
+        "type": "effect",
+        "_id": "64N1b89bhq7DID7b",
+        "systemPath": "actions",
+        "description": "",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Open the Archive",
+        "img": "icons/sundries/books/book-open-brown.webp",
+        "range": "far",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "friendly",
+          "amount": null
+        },
+        "effects": []
+      }
+    },
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "resource": null,
+    "inVault": false,
+    "vaultActive": false,
+    "loadoutIgnore": false,
+    "domainTouched": null
+  },
+  "sort": 800015,
+  "flags": {},
+  "_key": "!items!mawKqGFHaBgtxyjK",
+  "effects": []
+}

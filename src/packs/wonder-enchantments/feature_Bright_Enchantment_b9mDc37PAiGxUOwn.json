@@ -1,0 +1,31 @@
+{
+  "_id": "b9mDc37PAiGxUOwn",
+  "name": "Bright Enchantment",
+  "type": "feature",
+  "img": "icons/magic/light/light-lantern-lit-white.webp",
+  "folder": "hw2O1hAP0Xm24kBP",
+  "system": {
+    "description": "<p><em>Tier 1 enchantment — Any object</em></p><p>You may place this enchantment on any object. The object emits bright light within Close range.</p>",
+    "resource": null,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "passive",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 1004,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "enchantment": "bright",
+      "tier": 1
+    }
+  },
+  "_key": "!items!b9mDc37PAiGxUOwn"
+}

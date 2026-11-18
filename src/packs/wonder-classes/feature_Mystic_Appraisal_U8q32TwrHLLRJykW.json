@@ -1,0 +1,56 @@
+{
+  "_id": "U8q32TwrHLLRJykW",
+  "name": "Mystic Appraisal",
+  "type": "feature",
+  "img": "icons/magic/perception/eye-ringed-glow-angry-small-teal.webp",
+  "folder": "Ab7BCaZB3OjWSzs2",
+  "system": {
+    "description": "<p>You can sense the rhythm of magic in ordinary items. You may examine an item or creature within Very Close range to uncover if it is magical. If it is an object, you can discern its properties and understand its functions. If it is linked to a specific spell such as Rune Ward, Create Construct or Shape Material, you also learn which spell it is.</p>",
+    "resource": null,
+    "actions": {
+      "wndAppraisal0000": {
+        "type": "effect",
+        "_id": "wndAppraisal0000",
+        "systemPath": "actions",
+        "description": "<p>Target a token (or select an item) to reveal its magical properties in chat.</p>",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Appraise",
+        "img": "icons/magic/perception/eye-ringed-glow-angry-small-teal.webp",
+        "range": "veryClose",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "any",
+          "amount": 1
+        },
+        "effects": []
+      }
+    },
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "action",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 0,
+  "flags": {},
+  "_key": "!items!U8q32TwrHLLRJykW"
+}

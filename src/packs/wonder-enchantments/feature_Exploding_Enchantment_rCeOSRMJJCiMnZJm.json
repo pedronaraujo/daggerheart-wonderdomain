@@ -1,0 +1,31 @@
+{
+  "_id": "rCeOSRMJJCiMnZJm",
+  "name": "Exploding Enchantment",
+  "type": "feature",
+  "img": "icons/magic/fire/explosion-fireball-large-red-orange.webp",
+  "folder": "TdVSHGEnF9alRSd2",
+  "system": {
+    "description": "<p><em>Tier 4 enchantment — Object no larger than you, not worn by a creature</em></p><p>You may place this enchantment on any object no larger than you, then place a d8 next to your character sheet with the 8 side up. This is your Explosion countdown die.<br>When any creature makes an action roll, reduce the number on your Explosion die by 1. You may also spend a Hope to either increase or reduce the number by 2.<br>When your Explosion die would reach 0 or lower, remove it instead and the object explodes, dealing 3d10+6 magic damage to all creatures within Close range of it who fail a Reaction Roll (13), or half as much on a success. The object is destroyed with the explosion.</p>",
+    "resource": null,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "passive",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 4024,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "enchantment": "exploding",
+      "tier": 4
+    }
+  },
+  "_key": "!items!rCeOSRMJJCiMnZJm"
+}

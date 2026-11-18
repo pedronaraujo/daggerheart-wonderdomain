@@ -1,0 +1,90 @@
+{
+  "_id": "50he8UCJEgHJFiL3",
+  "name": "Enchanter",
+  "type": "class",
+  "img": "icons/magic/fire/dagger-rune-enchant-flame-strong-blue.webp",
+  "folder": "Ab7BCaZB3OjWSzs2",
+  "system": {
+    "description": "<p>Enchanters are artisans who weave magic into objects with great insight. They study the undertones of magic in traditional items and spells, creating innovative outcomes that empower themselves and their allies. Guided by their unique perspective, enchanters shape the flow of magic into masterful creations.</p>",
+    "domains": [
+      "wonder",
+      "codex"
+    ],
+    "classItems": [],
+    "hitPoints": 5,
+    "evasion": 11,
+    "features": [
+      {
+        "type": "hope",
+        "item": "Compendium.daggerheart-wonderdomain.wonder-classes.Item.Fe2J8qnsWvEEPVjH"
+      },
+      {
+        "type": "class",
+        "item": "Compendium.daggerheart-wonderdomain.wonder-classes.Item.PBdfACfkAl12uEh1"
+      },
+      {
+        "type": "class",
+        "item": "Compendium.daggerheart-wonderdomain.wonder-classes.Item.U8q32TwrHLLRJykW"
+      }
+    ],
+    "inventory": {
+      "take": [
+        "Compendium.daggerheart.classes.Item.zqeXrJTd1geX73Pw",
+        "Compendium.daggerheart.classes.Item.hMST9iizQP1yz0MG",
+        "Compendium.daggerheart.classes.Item.uoG5iq09mxJPXfmk"
+      ],
+      "choiceA": [
+        "Compendium.daggerheart.consumables.Item.tPfKtKRRjv8qdSqy",
+        "Compendium.daggerheart.consumables.Item.b6vGSPFWOlzZZDLO"
+      ],
+      "choiceB": [
+        "Compendium.daggerheart-wonderdomain.wonder-classes.Item.K9sAfNR6rPi6coLI",
+        "Compendium.daggerheart-wonderdomain.wonder-classes.Item.9inbThrrKqFfpncU"
+      ]
+    },
+    "characterGuide": {
+      "suggestedTraits": {
+        "agility": 0,
+        "strength": -1,
+        "finesse": 2,
+        "instinct": 0,
+        "presence": 1,
+        "knowledge": 1
+      },
+      "suggestedPrimaryWeapon": "Compendium.daggerheart.weapons.Item.ItWisJFNGMNWeaCV",
+      "suggestedSecondaryWeapon": "Compendium.daggerheart.weapons.Item.zxKt6qXe7uZB6ljm",
+      "suggestedArmor": "Compendium.daggerheart.armors.Item.nibfdNtp2PtxvbVz"
+    },
+    "isMulticlass": false,
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "backgroundQuestions": [
+      "You learned your craft from someone. Who are they and what secrets have they shared with you?",
+      "You believe every creation carries a piece of its maker. What part of you do you think your creations hold?",
+      "You often talk to your creations when you work. What do you imagine they would say back?"
+    ],
+    "connections": [
+      "What magic do I sense on you, and why can I not identify its origin?",
+      "I've been trying to recreate something you no longer have. What was it, and why does it matter to you?",
+      "What object of mine do you secretly keep, and why have you not given it back?"
+    ],
+    "gmNotes": "",
+    "levelupOptionTiers": {
+      "2": {},
+      "3": {},
+      "4": {}
+    }
+  },
+  "effects": [],
+  "sort": 0,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "wonderClass": "enchanter"
+    }
+  },
+  "_key": "!items!50he8UCJEgHJFiL3"
+}

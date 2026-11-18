@@ -1,0 +1,109 @@
+{
+  "_id": "PBdfACfkAl12uEh1",
+  "name": "Magical Enchantments",
+  "type": "feature",
+  "img": "icons/magic/fire/dagger-rune-enchant-flame-strong-blue.webp",
+  "folder": "Ab7BCaZB3OjWSzs2",
+  "system": {
+    "description": "<p>You may touch an object within Melee range and <strong>mark a Stress</strong> to grant it the properties of a chosen enchantment of your Tier or lower. When attempting to place an enchantment on an item held or worn by an adversary, you must also make a <strong>Spellcast Roll</strong> against the target after marking a Stress. You can have only one enchantment active at a time, which last until the end of the scene, you enchant a different item or otherwise specified.</p><p><em>Use the action below (or the ✦ Wonder button on your sheet) to open the Enchanting Workshop.</em></p>",
+    "resource": null,
+    "actions": {
+      "wndWorkshopOpen0": {
+        "type": "effect",
+        "_id": "wndWorkshopOpen0",
+        "systemPath": "actions",
+        "description": "",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Enchanting Workshop",
+        "img": "icons/magic/fire/dagger-rune-enchant-flame-strong-blue.webp",
+        "range": "",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "self",
+          "amount": null
+        },
+        "effects": []
+      },
+      "BA1Z7ZlnqeHPdZPz": {
+        "type": "attack",
+        "_id": "BA1Z7ZlnqeHPdZPz",
+        "systemPath": "actions",
+        "description": "<p>Spellcast Roll against the adversary holding or wearing the item.</p>",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Enchant Adversary's Item",
+        "img": "icons/magic/symbols/rune-sigil-rough-white-teal.webp",
+        "range": "melee",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "hostile",
+          "amount": 1
+        },
+        "damage": {
+          "main": null,
+          "resources": {}
+        },
+        "effects": [],
+        "roll": {
+          "type": "spellcast",
+          "trait": null,
+          "difficulty": null,
+          "bonus": null,
+          "advState": "neutral",
+          "diceRolling": {
+            "multiplier": "prof",
+            "flatMultiplier": 1,
+            "dice": "d6",
+            "compare": null,
+            "treshold": null
+          },
+          "useDefault": false
+        },
+        "save": {
+          "trait": null,
+          "difficulty": null,
+          "damageMod": "none"
+        }
+      }
+    },
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "action",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 0,
+  "flags": {},
+  "_key": "!items!PBdfACfkAl12uEh1"
+}

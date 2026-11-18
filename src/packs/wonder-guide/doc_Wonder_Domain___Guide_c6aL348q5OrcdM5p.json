@@ -1,0 +1,149 @@
+{
+  "_id": "c6aL348q5OrcdM5p",
+  "name": "Wonder Domain — Guide",
+  "folder": null,
+  "categories": [],
+  "sort": 0,
+  "flags": {},
+  "pages": [
+    {
+      "_id": "IRb8sAEqxiMyebeB",
+      "name": "Wonder Domain",
+      "type": "text",
+      "sort": 100000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<h2>Como usar este módulo</h2><p>O módulo <strong>Wonder Domain</strong> adiciona o domínio <em>Wonder</em> (21 cartas), as classes <strong>Enchanter</strong> (Wonder &amp; Codex) e <strong>Stargazer</strong> (Wonder &amp; Splendor), suas subclasses e todas as mecânicas especiais.</p><ul><li><strong>Criação de personagem:</strong> as classes aparecem no navegador de compêndios do sistema. Arraste a classe, a subclasse e as cartas para a ficha normalmente.</li><li><strong>Botão ✦ Wonder:</strong> fichas com uma classe Wonder ganham um botão no cabeçalho que abre o <em>Wonder Hub</em> com atalhos para tudo.</li><li><strong>Enchanter:</strong> a <em>Oficina de Encantamentos</em> mostra os encantamentos do seu Tier como cartas, filtra os itens válidos, paga o custo (Stress ou 3 Hope com Ingenious Surge), controla o limite de encantamentos ativos e aplica os efeitos mecânicos ao item (Protective, Reliable, Quick, Powerful, limiares, Evasão etc.). O <em>Tinkering Bench</em> rola os d8 de Creative Tinkering e lista o loot disponível.</li><li><strong>Stargazer:</strong> a <em>Carta Estelar</em> é interativa: clique nas estrelas conectadas para marcá-las. O botão <em>Embody Constellation</em> marca 1 Stress, coloca as Astral tokens e aplica a forma (ataque padrão, Evasão, slots extras, voo, resistência). Cada action roll na forma gasta uma Astral token automaticamente.</li><li><strong>Clairvoyant:</strong> o painel de <em>Glimpse dice</em> rola os dados no início da sessão e permite gastá-los com um clique (+ ou −), anunciando no chat.</li></ul><h2>Wonder Domain</h2><p><em>The Wonder domain embodies the spark of imagination, the excitement of discovery, and the power of creativity. Those who draw from Wonder see the world as it could be: brighter, different, interesting and beautiful. They are known as artists, scholars, inventors, and dreamers. Wonder transforms the surroundings, creating new experiences while daring to ask ‘what if’.</em></p><table><thead><tr><th>Level</th><th>Cards</th></tr></thead><tbody><tr><td>1</td><td>@UUID[Compendium.daggerheart-wonderdomain.wonder-domain.Item.k5JwJ727r7YgrjzL]{Craftsmanship}, @UUID[Compendium.daggerheart-wonderdomain.wonder-domain.Item.Q9DVstcQh8PcTPzD]{Runic Shot}, @UUID[Compendium.daggerheart-wonderdomain.wonder-domain.Item.rLf2gIoisAVIoHBj]{Shared Dreams}</td></tr><tr><td>2</td><td>@UUID[Compendium.daggerheart-wonderdomain.wonder-domain.Item.Vsf7mN9iK5mf8r0v]{Runebound}, @UUID[Compendium.daggerheart-wonderdomain.wonder-domain.Item.pZEAANXSmkyQDvB8]{Winds of Change}</td></tr><tr><td>3</td><td>@UUID[Compendium.daggerheart-wonderdomain.wonder-domain.Item.OPkkO5aCwjtBHxPs]{Diverging Lens}, @UUID[Compendium.daggerheart-wonderdomain.wonder-domain.Item.FTL6QPfmjuTxlcv7]{Masterpiece}</td></tr><tr><td>4</td><td>@UUID[Compendium.daggerheart-wonderdomain.wonder-domain.Item.2or8Ib0Z5R3KAQVJ]{Dream Signal}, @UUID[Compendium.daggerheart-wonderdomain.wonder-domain.Item.irXgC040tK2Aaclf]{Fidgety Bolt}</td></tr><tr><td>5</td><td>@UUID[Compendium.daggerheart-wonderdomain.wonder-domain.Item.bkba2PXc8GxpI68p]{Aerial Strike}, @UUID[Compendium.daggerheart-wonderdomain.wonder-domain.Item.HozdlqgaFpPg2Tc5]{Gemology}</td></tr><tr><td>6</td><td>@UUID[Compendium.daggerheart-wonderdomain.wonder-domain.Item.W2Buozyzsaw0tWIz]{Moon Shield}, @UUID[Compendium.daggerheart-wonderdomain.wonder-domain.Item.6hxFuFZ5G4Yi1ian]{Twinned Minds}</td></tr><tr><td>7</td><td>@UUID[Compendium.daggerheart-wonderdomain.wonder-domain.Item.Sa20YWAdSxnyeDKB]{Aurora Blast}, @UUID[Compendium.daggerheart-wonderdomain.wonder-domain.Item.qfnmQuYcOjs2wdqo]{Wonder-Touched}</td></tr><tr><td>8</td><td>@UUID[Compendium.daggerheart-wonderdomain.wonder-domain.Item.mawKqGFHaBgtxyjK]{Archive of Possibilities}, @UUID[Compendium.daggerheart-wonderdomain.wonder-domain.Item.eGoQMW7309NoL6uO]{Breakthrough}</td></tr><tr><td>9</td><td>@UUID[Compendium.daggerheart-wonderdomain.wonder-domain.Item.H9bzLAI6qaOKUro8]{Cosmic Inspiration}, @UUID[Compendium.daggerheart-wonderdomain.wonder-domain.Item.Amyv3EFGDN6Dueo0]{Rule of Six}</td></tr><tr><td>10</td><td>@UUID[Compendium.daggerheart-wonderdomain.wonder-domain.Item.plpth3lghDePczsA]{Imaginarium}, @UUID[Compendium.daggerheart-wonderdomain.wonder-domain.Item.IZ6u0aSv5CtOKa4k]{Paradox Flux}</td></tr></tbody></table><hr><p><small>Design: Reno Reizakki. Revision: Martin Groene, Jere Lahtonen. This product includes materials from the Daggerheart System Reference Document 1.0, © Critical Role, LLC. under the terms of the Darrington Press Community Gaming (DPCGL) License. More information can be found at https://www.daggerheart.com.</small></p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_key": "!journal.pages!c6aL348q5OrcdM5p.IRb8sAEqxiMyebeB"
+    },
+    {
+      "_id": "VBPuzYoodRNtqBNn",
+      "name": "Enchanter",
+      "type": "text",
+      "sort": 200000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>@UUID[Compendium.daggerheart-wonderdomain.wonder-classes.Item.50he8UCJEgHJFiL3]{Enchanter}</p><p>Enchanters are artisans who weave magic into objects with great insight. They study the undertones of magic in traditional items and spells, creating innovative outcomes that empower themselves and their allies. Guided by their unique perspective, enchanters shape the flow of magic into masterful creations.</p><p><strong>Domains:</strong> Wonder &amp; Codex · <strong>Evasion:</strong> 11 · <strong>Hit Points:</strong> 5</p><h3>@UUID[Compendium.daggerheart-wonderdomain.wonder-subclasses.Item.G7dGAkK3SMWnxwHw]{Appraiser} <small>(Spellcast: Finesse)</small></h3><p>Play the Appraiser if you want to craft items to aid your allies in and outside of battle.</p><h3>@UUID[Compendium.daggerheart-wonderdomain.wonder-subclasses.Item.0d0LA6lxGNOpjghS]{Spellweaver} <small>(Spellcast: Knowledge)</small></h3><p>Play the Spellweaver if you want to mix, improve and experiment with your weapons and spells.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_key": "!journal.pages!c6aL348q5OrcdM5p.VBPuzYoodRNtqBNn"
+    },
+    {
+      "_id": "h48qrX4ammizJ15J",
+      "name": "Magical Enchantments",
+      "type": "text",
+      "sort": 300000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<h3>Tier 1</h3><ul><li><strong>Bright Enchantment</strong> — You may place this enchantment on any object. The object emits bright light within Close range.</li><li><strong>Clearing Enchantment</strong> — You may place this enchantment on any weapon or armor with a feature. The weapon's feature is ignored for the duration of the enchantment.</li><li><strong>Defensive Enchantment</strong> — You may place this enchantment on an armor that doesn't already have a feature. The armor gains the Protective feature. <em>Protective: +1 to Armor Score.</em></li><li><strong>Daring Enchantment</strong> — You may place this enchantment on a weapon that doesn't already have a feature. The weapon gains the Fearless feature. <em>Fearless: On a successful attack with Fear, roll 1d6. On a result of 6, the GM does not gain a Fear.</em></li><li><strong>Empowering Enchantment</strong> — You may place this enchantment on a primary weapon that doesn't already have a feature. The weapon gains the Reliable feature. <em>Reliable: +1 to attack rolls.</em></li><li><strong>Reversal Enchantment</strong> — You may place this enchantment on any footwear. Any tracks created by the object appear to go the opposite direction. Any attempts to track the wearer have disadvantage.</li></ul><h3>Tier 2</h3><ul><li><strong>Bulwark Enchantment</strong> — You may place this enchantment on a shield or armor. Any creature wielding or wearing the enchanted object increases their damage thresholds by your Spellcast trait.</li><li><strong>Growth Enchantment</strong> — You may place this enchantment on any object that is no larger than you and is not being worn by a creature. The object doubles in size.<br>If the object is a one-handed primary weapon, increase its damage by your Spellcast trait. Its burden becomes two-handed and it loses any features it had previously, then gains the Powerful feature.<br><em>Powerful:</em> On a successful attack, roll an additional damage die and discard the lowest result.<br>If the object is a two-handed weapon or a secondary weapon, it becomes too big to be held and the wielder must drop it.</li><li><strong>Searing Enchantment</strong> — You may place this enchantment on any object made of metal. The object starts to heat up. If currently being held or worn by a creature, they must mark a Stress when this enchantment is placed and whenever they are spotlighted until they spend their full spotlight to get rid of the item.</li><li><strong>Shrinking Enchantment</strong> — You may place this enchantment on any object that is no larger than you and is not being worn by a creature. The object size is halved.<br>If the object is a two-handed weapon, its burden becomes one-handed and it loses any features it had previously, then gains the Unreliable feature.<br><em>Unreliable:</em> -2 to attack and damage rolls.<br>If the object is a one-handed primary weapon or a secondary weapon, it becomes too small to be used as a weapon.</li><li><strong>Swift Enchantment</strong> — You may place this enchantment on a weapon that doesn't already have a feature. The weapon gains the Quick feature. <em>Quick: When you make an attack, you can mark a Stress to target another creature within range.</em></li><li><strong>Tailoring Enchantment</strong> — You may place this enchantment on any piece of clothing. It shifts its color, format or size as you desire, effectively changing the visual aspect of the clothing for the duration of the enchantment.</li></ul><h3>Tier 3</h3><ul><li><strong>Animating Enchantment</strong> — You may place this enchantment on any weapon. The weapon becomes sentient and no longer needs to be held. It floats around you or its original wielder and retains all of its features and properties. You may command the weapon to move within its Close range and attack a target within its attacking range.</li><li><strong>Credibility Enchantment</strong> — You may place this enchantment on any item or written document. Any creature attempting to identify the object as a fake or forgery will automatically fail and consider it as an authentic copy, as long as the contents are believable within reason.</li><li><strong>Focusing Enchantment</strong> — You may place this enchantment on a magic weapon that doesn't already have a feature. The weapon gains the Channeling feature. <em>Channeling: +1 to Spellcast Rolls.</em></li><li><strong>Rebutting Enchantment</strong> — You may place this enchantment on an armor that doesn't already have a feature. The armor gains the Repelling feature. <em>Repelling: When hit by an attack from a target within Melee range, push the attacker to Far range.</em></li><li><strong>Vanishing Enchantment</strong> — You may place this enchantment on any wearable object. When a creature has the object on themselves, they may spend a Hope to become Cloaked. While Cloaked, they remain unseen if they are stationary when an adversary moves to where they would normally see them. The effect ends when they end a move within line of sight of an adversary or when they make an attack, unless they spend an additional Hope to remain Cloaked.</li><li><strong>Weightsome Enchantment</strong> — You may place this enchantment on any object. The object's weight is greatly increased. If used on an object being held or worn, the target has their Difficulty (or Evasion) reduced by 2 while in possession of the item.</li></ul><h3>Tier 4</h3><ul><li><strong>Avoidance Enchantment</strong> — You may place this enchantment on any object that can be held. While holding the object, the user ignores the effects of the Vulnerable condition.</li><li><strong>Combining Enchantment</strong> — Choose two other enchantments of Tier 3 or lower. You may place both enchantments on the same object. This counts as a single enchantment and you can choose the order at which the enchantments take place. For example, you can place a Clearing Enchantment on a weapon with a feature first, so that it is eligible to receive a Swift Enchantment.</li><li><strong>Exploding Enchantment</strong> — You may place this enchantment on any object no larger than you, then place a d8 next to your character sheet with the 8 side up. This is your Explosion countdown die.<br>When any creature makes an action roll, reduce the number on your Explosion die by 1. You may also spend a Hope to either increase or reduce the number by 2.<br>When your Explosion die would reach 0 or lower, remove it instead and the object explodes, dealing 3d10+6 magic damage to all creatures within Close range of it who fail a Reaction Roll (13), or half as much on a success. The object is destroyed with the explosion.</li><li><strong>Nerve-Racking Enchantment</strong> — You may place this enchantment on any weapon. On a successful attack with the weapon, the target must mark Stress instead of Hit Points. Use damage thresholds and resistances as normal.</li><li><strong>Punishing Enchantment</strong> — You may place this enchantment on any object that can be held. While holding the object, the user must succeed on a Reaction Roll (15) when it is spotlighted or be forced to mark a Hit Point.</li><li><strong>Shackling Enchantment</strong> — You may place this enchantment on any object that can be held. While holding the object, the user is permanently Restrained.</li></ul>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_key": "!journal.pages!c6aL348q5OrcdM5p.h48qrX4ammizJ15J"
+    },
+    {
+      "_id": "tw2qYvMtUmBKDx5Q",
+      "name": "Stargazer",
+      "type": "text",
+      "sort": 400000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>@UUID[Compendium.daggerheart-wonderdomain.wonder-classes.Item.JdplYfLgr4OQT7cR]{Stargazer}</p><p>Stargazers are mystics who study the stars to unlock their cosmic power, blending astronomy, astrology, and arcane insight. They read celestial patterns in the stars and assume the form of Constellations to aid allies in battle. They are known to channel the intricate energies of the cosmos, bridging the mundane world and the skies above.</p><p><strong>Domains:</strong> Wonder &amp; Splendor · <strong>Evasion:</strong> 10 · <strong>Hit Points:</strong> 6</p><h3>@UUID[Compendium.daggerheart-wonderdomain.wonder-subclasses.Item.rOTO0yfWHXStgQOA]{Astrologer} <small>(Spellcast: Knowledge)</small></h3><p>Play the Astrologer if you want to support a chosen ally while channeling the cosmic forces within yourself.</p><h3>@UUID[Compendium.daggerheart-wonderdomain.wonder-subclasses.Item.CrdkTHSE6v6w97Wo]{Clairvoyant} <small>(Spellcast: Instinct)</small></h3><p>Play the Clairvoyant if you want to use the stars as guidance to help your allies.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_key": "!journal.pages!c6aL348q5OrcdM5p.tw2qYvMtUmBKDx5Q"
+    },
+    {
+      "_id": "eqkPJD2MuFsKJscr",
+      "name": "Star Chart",
+      "type": "text",
+      "sort": 500000,
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "image": {},
+      "text": {
+        "format": 1,
+        "content": "<p>Your Star Chart showcases the abilities you channel when you embody your Constellation. Any features granted by your Star Chart are active only while you are in Constellation form. When you gain a level, you unlock a new star in your Star Chart and mark it. You may only unlock a star that is connected with a dotted line to another star you already have marked.</p><p>If a Constellation feature grants you additional resources to mark such as Hope or Armor slots, Hope marked there is lost when you lose your Constellation form, but Armor slots remain marked even if you drop out of your Constellation form.</p><p><strong>Standard attack:</strong> Melee · Spellcast trait · d6 magic damage using your Proficiency. Range steps: Melee → Very Close → Close → Far → Very Far. Die steps: d6 → d8 → d10 → d12.</p><p>Abra a Carta Estelar pela ação <em>Open Star Chart</em> da feature Star Chart, pelo botão ✦ Wonder da ficha ou pela macro do compêndio.</p>"
+      },
+      "video": {
+        "controls": true,
+        "volume": 0.5
+      },
+      "src": null,
+      "system": {},
+      "category": null,
+      "ownership": {
+        "default": -1
+      },
+      "flags": {},
+      "_key": "!journal.pages!c6aL348q5OrcdM5p.eqkPJD2MuFsKJscr"
+    }
+  ],
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!journal!c6aL348q5OrcdM5p"
+}

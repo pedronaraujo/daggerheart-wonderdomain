@@ -1,0 +1,175 @@
+{
+  "WONDER": {
+    "Domain": {
+      "label": "Wonder",
+      "description": "O domínio Wonder (Maravilha) personifica a centelha da imaginação, a empolgação da descoberta e o poder da criatividade."
+    },
+    "Settings": {
+      "autoAstral": {
+        "name": "Gastar Astral tokens automaticamente",
+        "hint": "Cada action roll feita na forma de Constelação gasta uma Astral token (com botão de desfazer no chat)."
+      },
+      "autoExplosion": {
+        "name": "Reduzir o dado de Explosão automaticamente",
+        "hint": "Reduz o dado de contagem do Exploding Enchantment sempre que uma action roll aparece no chat."
+      },
+      "sheetButton": {
+        "name": "Botão Wonder nas fichas",
+        "hint": "Adiciona um botão ✦ Wonder no cabeçalho de personagens com classe ou cartas Wonder."
+      }
+    },
+    "Notify": {
+      "NoActor": "Selecione um token ou defina um personagem primeiro.",
+      "NeedGM": "É preciso um GM conectado para alterar documentos que você não controla.",
+      "NotEnoughHope": "Hope insuficiente ({have}/{need}).",
+      "WonderTouchedSwap": "Wonder-Touched: marcar {n} Stress no lugar da Hope que falta?"
+    },
+    "Hub": {
+      "Title": "Central Wonder",
+      "Stars": "{used}/{total} estrelas marcadas",
+      "Enchantments": "Encantamentos ativos: {used}/{slots}",
+      "Cards": "{n} cartas Wonder no loadout."
+    },
+    "Stars": {
+      "Title": "Carta Estelar",
+      "OpenChart": "Carta Estelar",
+      "DefaultName": "Constelação",
+      "ConstellationName": "Nome da Constelação",
+      "ClickHint": "Clique numa estrela conectada à sua Constelação para marcá-la · Botão direito desmarca.",
+      "Marked": "estrelas marcadas",
+      "BudgetDetail": "Nível {level} + Bênçãos {blessings} + Extra {extra}",
+      "StandardAttack": "Ataque Padrão",
+      "Range": "Alcance",
+      "Damage": "Dano",
+      "RollAttack": "Rolar ataque padrão",
+      "Astral": "Astral tokens",
+      "Embody": "Assumir a Constelação",
+      "EmbodyCost": "Marque 1 Stress · comece com {n} Astral tokens",
+      "Leave": "Sair da forma de Constelação",
+      "Abilities": "Habilidades da Constelação",
+      "AbilitiesHint": "Use pela feature ✦ Constelação na ficha — elas gastam Astral tokens.",
+      "Choose": "escolher",
+      "CosmicHelp": "próximo Empyrean Call custa 1 Hope a menos",
+      "WouldDisconnect": "Essa estrela liga outras à Constelação. Desmarque as estrelas externas primeiro.",
+      "NotConnected": "Você só pode marcar uma estrela conectada a outra já marcada.",
+      "NoBudget": "Você pode marcar {n} estrelas agora (nível + bênçãos). Peça estrelas extras ao GM.",
+      "FormEffect": "Forma de Constelação: {name}",
+      "FormEffectHint": "Bônus da Carta Estelar enquanto você assume a Constelação.",
+      "AstralHint": "Action rolls nessa forma gastam uma Astral token. Você sai da forma sem tokens ou ao marcar o último Hit Point.",
+      "EnterTitle": "{name} desperta",
+      "EnterBody": "Marcou 1 Stress e assumiu a Constelação com <strong>{n}</strong> Astral tokens.",
+      "LeaveTitle": "A Constelação se apaga",
+      "LeaveBody": "Saiu da forma de Constelação.",
+      "OutOfTokens": "Sem Astral tokens — a Constelação se apaga.",
+      "LastHitPoint": "Marcou o último Hit Point — saiu da forma de Constelação.",
+      "NeedForm": "Você precisa estar na forma de Constelação.",
+      "EmpyreanBody": "Gastou {cost} Hope e rolou <strong>{roll}</strong>: Astral tokens {before} → {after} (máx. 6).",
+      "TokenSpentTitle": "Astral token gasta",
+      "TokenSpent": "Action roll na forma de Constelação — restam <strong>{n}</strong> Astral tokens.",
+      "Refund": "Desfazer",
+      "BinaryRefund": "Binary Star no alcance (devolver)",
+      "AgainstOdds": "Falha com Hope — a Astral token volta.",
+      "BinaryTitle": "Binary Star",
+      "BinaryHint": "Escolha um aliado em alcance Far para ser sua Binary Star."
+    },
+    "Ench": {
+      "Title": "Oficina de Encantamentos",
+      "Active": "Ativos",
+      "None": "Nenhum encantamento ativo.",
+      "End": "Encerrar encantamento",
+      "EndScene": "Fim da cena",
+      "ExplosionDie": "Dado de Explosão",
+      "ChooseObject": "Escolha o objeto",
+      "OtherObject": "Outro objeto…",
+      "OtherObjectHint": "Algo fora da ficha (marque um token como alvo se alguém o segura)",
+      "ObjectName": "Descreva o objeto",
+      "Bearer": "Segurado/vestido por {name} (alvo).",
+      "BearerHint": "Marque um token como alvo se uma criatura o segura ou veste.",
+      "Adversary": "Segurado ou vestido por um adversário (Spellcast Roll)",
+      "UseSpellcast": "atacar com seu traço de Spellcast",
+      "Enchant": "Encantar",
+      "PickCard": "Escolha uma carta de encantamento para começar.",
+      "SomeObject": "um objeto",
+      "Placed": "Encantou <strong>{object}</strong>.",
+      "PaidStress": "Marcou 1 Stress.",
+      "PaidSurge": "Ingenious Surge: gastou 3 Hope (não conta para o limite).",
+      "Ended": "Encantamento anterior encerrado: {list}.",
+      "EndTitle": "{name} termina",
+      "EndBody": "O encantamento em <strong>{object}</strong> se desfaz.",
+      "EndAllTitle": "Encantamentos terminam",
+      "EndAllBody": "Todos os encantamentos da cena se desfazem.",
+      "EndAllConfirm": "Encerrar todos os encantamentos ativos?",
+      "RollSpellcast": "Faça uma Spellcast Roll contra o adversário.",
+      "BoomTitle": "Explosão!",
+      "BoomBody": "<strong>{object}</strong> explode: criaturas em alcance Close fazem Reaction Roll (13). Falha: <strong>{total}</strong> de dano mágico; sucesso: <strong>{half}</strong>. O objeto é destruído.",
+      "FearlessYes": "Tirou 6 — o GM <strong>não</strong> ganha Fear com essa rolagem.",
+      "FearlessNo": "Sem 6 — o GM ganha Fear normalmente.",
+      "AppraiseHint": "Marque um token como alvo para avaliar seus itens.",
+      "NothingMagical": "Nada mágico se manifesta.",
+      "Enchanted": "encantado",
+      "Reason": {
+        "Tier": "Requer Tier {tier}.",
+        "Kind": "Precisa ser: {kind}.",
+        "AlreadyEnchanted": "Já encantado (um encantamento por objeto).",
+        "NeedsFeature": "O item precisa ter uma feature.",
+        "HasFeature": "O item já tem uma feature.",
+        "CombineTwo": "Escolha dois encantamentos diferentes para combinar."
+      },
+      "Note": {
+        "FeaturesIgnored": "As features do item são ignoradas enquanto encantado.",
+        "Searing": "{name} marca um Stress pelo calor.",
+        "TooBig": "{name} fica grande demais para segurar e é largado (desequipado).",
+        "TooSmall": "{name} fica pequeno demais para ser usado como arma (desequipado).",
+        "Grown": "Duas mãos, +{n} de dano, features trocadas por Powerful.",
+        "Shrunk": "Uma mão, features trocadas por Unreliable (−2 ataque e dano).",
+        "Explosion": "Dado de Explosão em 8.",
+        "MagicWeapons": "Magic Weapons: esta arma ataca com seu traço de Spellcast.",
+        "SmallAppreciation": "Small Appreciation: +{n} de dano.",
+        "CreativeFlow": "Creative Flow: Spellweave está disponível de novo."
+      }
+    },
+    "Tinker": {
+      "Title": "Bancada de Engenhocas",
+      "Intro": "Gaste punhados de ouro até seu Tier e role um d8 para cada. Escolha um loot com número igual ou menor que o total — é uma cópia temporária até o próximo descanso longo.",
+      "Handfuls": "punhados",
+      "Available": "punhados disponíveis",
+      "Roll": "Gastar ouro e rolar",
+      "Rolled": "Gastou {gold} punhado(s) de ouro — total <strong>{total}</strong>.",
+      "NoGold": "Você precisa de {n} punhado(s) de ouro.",
+      "Nothing": "Nenhum loot até esse número.",
+      "CopyNote": "Cópia temporária (Creative Tinkering) — dura até o próximo descanso longo ou até ser usada. Reaction Roll (10) identifica a cópia.",
+      "Crafted": "Engenhoca criada",
+      "CraftedBody": "Criou uma cópia temporária de <strong>{name}</strong>.",
+      "Temps": "Cópias temporárias",
+      "LongRest": "Descanso longo: remover cópias"
+    },
+    "Glimpse": {
+      "Intro": "Quando um alvo faz uma action roll, gaste um Glimpse die para aumentar ou reduzir o resultado final pelo seu valor.",
+      "Empty": "Role {count}{faces} no início da sessão.",
+      "Roll": "Rolar {count}{faces}",
+      "Rolled": "Glimpse dice: <strong>{dice}</strong>",
+      "Rerolled": "Rerrolou os Glimpse dice restantes: <strong>{dice}</strong>",
+      "Raise": "Aumentar o resultado",
+      "Lower": "Reduzir o resultado",
+      "Raised": "As estrelas favorecem {target}: <strong>+{n}</strong> no resultado final.",
+      "Lowered": "As estrelas se voltam contra {target}: <strong>−{n}</strong> no resultado final.",
+      "TheRoll": "a rolagem",
+      "Target": "Alvo: {name}",
+      "NoTarget": "Sem alvo — a mensagem vai se referir à última rolagem.",
+      "Discard": "Descartar (fim da sessão)",
+      "NoFeature": "Este personagem não tem Glimpse Beyond.",
+      "Open": "Glimpse dice"
+    },
+    "Moon": {
+      "Title": "Moon Shield",
+      "Prompt": "Gastar quantas Lunar tokens? (você tem {n})",
+      "NoTokens": "Sem Lunar tokens no Moon Shield.",
+      "Reduced": "Gastou {n} Lunar token(s): reduza o dano em <strong>{total}</strong>."
+    },
+    "Masterpiece": {
+      "Progress": "Rolou {roll}: a Obra-Prima vale <strong>{value}</strong> punhados (um baú = 100). Ganhou uma Hope.",
+      "Done": "A Obra-Prima está pronta!",
+      "ChooseTrait": "Escolha um traço para ganhar +1 (a carta vai para o cofre permanentemente)."
+    }
+  }
+}

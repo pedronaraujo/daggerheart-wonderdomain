@@ -1,0 +1,85 @@
+{
+  "_id": "HQ8Wv2deZVsASchx",
+  "name": "Star Chart",
+  "type": "feature",
+  "img": "icons/magic/symbols/runes-star-pentagon-blue.webp",
+  "folder": "ROUT3ivDaKVieiUG",
+  "system": {
+    "description": "<p>You have a whimsical Star Chart of the skies above representing the different stars, planets and constellations. Describe what it looks like and how you activate it.</p><p><strong>Mark a Stress</strong> to activate your Star Chart and embody your Constellation form. You gain access to a standard attack and additional features according to the stars you have marked in your Star Chart. When you obtain a Foundation card for this class or gain a level, choose a new star to mark in your Chart.</p><p>When you transform, place a number of tokens on your character sheet equal to your Spellcast trait (minimum 1). These are your <em>Astral tokens</em>, and you may have a maximum of 6. When you make an action roll while in Constellation form, you must spend an Astral token. You can remain in this form until you have no Astral tokens left. You also drop out of your Constellation form if you mark your last Hit Point.</p><p><em>Standard attack: Melee, uses your Spellcast trait, d6 magic damage using your Proficiency.</em></p>",
+    "resource": null,
+    "actions": {
+      "wndStarChartOpen": {
+        "type": "effect",
+        "_id": "wndStarChartOpen",
+        "systemPath": "actions",
+        "description": "",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Open Star Chart",
+        "img": "icons/magic/symbols/runes-star-pentagon-blue.webp",
+        "range": "",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "self",
+          "amount": null
+        },
+        "effects": []
+      },
+      "wndConstellation": {
+        "type": "effect",
+        "_id": "wndConstellation",
+        "systemPath": "actions",
+        "description": "<p>Mark a Stress to enter (or leave) your Constellation form.</p>",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Embody Constellation",
+        "img": "icons/magic/light/explosion-star-glow-blue-purple.webp",
+        "range": "",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "self",
+          "amount": null
+        },
+        "effects": []
+      }
+    },
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "action",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 0,
+  "flags": {},
+  "_key": "!items!HQ8Wv2deZVsASchx"
+}

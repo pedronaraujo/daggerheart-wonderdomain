@@ -1,0 +1,31 @@
+{
+  "_id": "GsFEu6WCWFzsYf2E",
+  "name": "Empowering Enchantment",
+  "type": "feature",
+  "img": "icons/magic/fire/dagger-rune-enchant-flame-strong-blue.webp",
+  "folder": "hw2O1hAP0Xm24kBP",
+  "system": {
+    "description": "<p><em>Tier 1 enchantment — Primary weapon without a feature</em></p><p>You may place this enchantment on a primary weapon that doesn't already have a feature. The weapon gains the Reliable feature.</p><p><strong>Reliable:</strong> +1 to attack rolls.</p>",
+    "resource": null,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "passive",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 1008,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "enchantment": "empowering",
+      "tier": 1
+    }
+  },
+  "_key": "!items!GsFEu6WCWFzsYf2E"
+}

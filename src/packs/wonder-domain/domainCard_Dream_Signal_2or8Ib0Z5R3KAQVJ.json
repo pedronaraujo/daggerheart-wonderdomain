@@ -1,0 +1,137 @@
+{
+  "_id": "2or8Ib0Z5R3KAQVJ",
+  "name": "Dream Signal",
+  "type": "domainCard",
+  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "folder": null,
+  "system": {
+    "description": "<p>Once per rest, <strong>spend a Hope</strong> to send a mind image to an ally within Far range when they attempt to make an action roll, giving them a bonus equal to your Spellcast trait. If they roll with Hope, they gain clarity on their actions and may also clear a Stress. If they roll with Fear, they receive a disturbing vision instead, and the GM gains 1 additional Fear.</p>",
+    "domain": "wonder",
+    "recallCost": 0,
+    "level": 4,
+    "type": "spell",
+    "actions": {
+      "GVgJOwWEukIESDxX": {
+        "type": "effect",
+        "_id": "GVgJOwWEukIESDxX",
+        "systemPath": "actions",
+        "description": "",
+        "chatDisplay": true,
+        "actionType": "reaction",
+        "cost": [
+          {
+            "scalable": false,
+            "key": "hope",
+            "value": 1,
+            "step": null,
+            "itemId": null,
+            "consumeOnSuccess": false
+          }
+        ],
+        "uses": {
+          "value": null,
+          "max": "1",
+          "recovery": "shortRest",
+          "consumeOnSuccess": false
+        },
+        "name": "Send Mind Image",
+        "img": "icons/magic/perception/third-eye-blue-red.webp",
+        "range": "far",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "friendly",
+          "amount": 1
+        },
+        "effects": []
+      },
+      "fFFZ5EeA8Z36OxOa": {
+        "type": "healing",
+        "_id": "fFFZ5EeA8Z36OxOa",
+        "systemPath": "actions",
+        "description": "",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Clarity (clear Stress)",
+        "img": "icons/magic/light/orbs-smoke-pink.webp",
+        "range": "",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "friendly",
+          "amount": 1
+        },
+        "damage": {
+          "main": null,
+          "resources": {
+            "stress": {
+              "value": {
+                "custom": {
+                  "enabled": true,
+                  "formula": "1"
+                },
+                "multiplier": "flat",
+                "flatMultiplier": 1,
+                "dice": "d6",
+                "bonus": null
+              },
+              "applyTo": "stress",
+              "base": false,
+              "resultBased": false,
+              "valueAlt": null,
+              "fullRestore": false,
+              "itemId": null
+            }
+          }
+        },
+        "effects": [],
+        "roll": {
+          "type": null,
+          "trait": null,
+          "difficulty": null,
+          "bonus": null,
+          "advState": "neutral",
+          "diceRolling": {
+            "multiplier": "prof",
+            "flatMultiplier": 1,
+            "dice": "d6",
+            "compare": null,
+            "treshold": null
+          },
+          "useDefault": false
+        }
+      }
+    },
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "resource": null,
+    "inVault": false,
+    "vaultActive": false,
+    "loadoutIgnore": false,
+    "domainTouched": null
+  },
+  "sort": 400007,
+  "flags": {},
+  "_key": "!items!2or8Ib0Z5R3KAQVJ",
+  "effects": []
+}

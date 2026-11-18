@@ -1,0 +1,145 @@
+{
+  "_id": "OPkkO5aCwjtBHxPs",
+  "name": "Diverging Lens",
+  "type": "domainCard",
+  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "folder": null,
+  "system": {
+    "description": "<p><strong>Mark a Stress</strong> to conjure a magical object within Far range. It remains in place until the end of the scene or you take Severe damage. When an ally within Close range of the object is hit by a creature in their Melee range, the attacker must make a <strong>Reaction Roll (14)</strong>. On a failure, they take <strong>2d4+4</strong> magic damage and are pushed just outside Close range of the ally they attacked. A creature may only be targeted by one object per attack, prioritizing the closest one.</p>",
+    "domain": "wonder",
+    "recallCost": 2,
+    "level": 3,
+    "type": "spell",
+    "actions": {
+      "5vl7RGybWT6PbRjI": {
+        "type": "effect",
+        "_id": "5vl7RGybWT6PbRjI",
+        "systemPath": "actions",
+        "description": "",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [
+          {
+            "scalable": false,
+            "key": "stress",
+            "value": 1,
+            "step": null,
+            "itemId": null,
+            "consumeOnSuccess": false
+          }
+        ],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Conjure Lens",
+        "img": "icons/commodities/materials/glass-orb-blue-gold.webp",
+        "range": "far",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "self",
+          "amount": null
+        },
+        "effects": []
+      },
+      "3QyqVMgDYRilqDNq": {
+        "type": "attack",
+        "_id": "3QyqVMgDYRilqDNq",
+        "systemPath": "actions",
+        "description": "",
+        "chatDisplay": true,
+        "actionType": "reaction",
+        "cost": [],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Lens Retaliation",
+        "img": "icons/magic/light/beam-impact-deflect-teal.webp",
+        "range": "",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "hostile",
+          "amount": 1
+        },
+        "damage": {
+          "main": {
+            "resultBased": false,
+            "value": {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "multiplier": "flat",
+              "flatMultiplier": 2,
+              "dice": "d4",
+              "bonus": 4
+            },
+            "applyTo": "hitPoints",
+            "type": [
+              "magical"
+            ],
+            "base": false,
+            "valueAlt": null,
+            "includeBase": false,
+            "direct": false,
+            "fullRestore": false,
+            "itemId": null
+          },
+          "resources": {}
+        },
+        "effects": [],
+        "roll": {
+          "type": null,
+          "trait": null,
+          "difficulty": null,
+          "bonus": null,
+          "advState": "neutral",
+          "diceRolling": {
+            "multiplier": "prof",
+            "flatMultiplier": 1,
+            "dice": "d6",
+            "compare": null,
+            "treshold": null
+          },
+          "useDefault": false
+        },
+        "save": {
+          "trait": null,
+          "difficulty": 14,
+          "damageMod": "none"
+        }
+      }
+    },
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "resource": null,
+    "inVault": false,
+    "vaultActive": false,
+    "loadoutIgnore": false,
+    "domainTouched": null
+  },
+  "sort": 300005,
+  "flags": {},
+  "_key": "!items!OPkkO5aCwjtBHxPs",
+  "effects": []
+}

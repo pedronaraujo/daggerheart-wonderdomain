@@ -1,0 +1,116 @@
+{
+  "_id": "Amyv3EFGDN6Dueo0",
+  "name": "Rule of Six",
+  "type": "domainCard",
+  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "folder": null,
+  "system": {
+    "description": "<p>Make a <strong>Spellcast Roll</strong> against up to six targets within Close range. On a success, <strong>mark any number of Stress</strong> to deal <strong>6d6</strong> magic damage for each Stress marked, divided equally among all targets. For each 6 rolled on a damage die for this spell, roll an additional d6.</p>",
+    "domain": "wonder",
+    "recallCost": 2,
+    "level": 9,
+    "type": "spell",
+    "actions": {
+      "zctCAeCIUHuKgT7r": {
+        "type": "attack",
+        "_id": "zctCAeCIUHuKgT7r",
+        "systemPath": "actions",
+        "description": "",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [
+          {
+            "scalable": true,
+            "key": "stress",
+            "value": 1,
+            "step": 1,
+            "itemId": null,
+            "consumeOnSuccess": true
+          }
+        ],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Cast",
+        "img": "icons/magic/symbols/squares-3d-green.webp",
+        "range": "close",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "any",
+          "amount": 6
+        },
+        "damage": {
+          "main": {
+            "resultBased": false,
+            "value": {
+              "custom": {
+                "enabled": true,
+                "formula": "(@scale*6)d6x6"
+              },
+              "multiplier": "prof",
+              "flatMultiplier": 1,
+              "dice": "d6",
+              "bonus": null
+            },
+            "applyTo": "hitPoints",
+            "type": [
+              "magical"
+            ],
+            "base": false,
+            "valueAlt": null,
+            "includeBase": false,
+            "direct": false,
+            "fullRestore": false,
+            "itemId": null
+          },
+          "resources": {}
+        },
+        "effects": [],
+        "roll": {
+          "type": "spellcast",
+          "trait": null,
+          "difficulty": null,
+          "bonus": null,
+          "advState": "neutral",
+          "diceRolling": {
+            "multiplier": "prof",
+            "flatMultiplier": 1,
+            "dice": "d6",
+            "compare": null,
+            "treshold": null
+          },
+          "useDefault": false
+        },
+        "save": {
+          "trait": null,
+          "difficulty": null,
+          "damageMod": "none"
+        }
+      }
+    },
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "resource": null,
+    "inVault": false,
+    "vaultActive": false,
+    "loadoutIgnore": false,
+    "domainTouched": null
+  },
+  "sort": 900018,
+  "flags": {},
+  "_key": "!items!Amyv3EFGDN6Dueo0",
+  "effects": []
+}

@@ -1,0 +1,30 @@
+{
+  "_id": "qUFQ4eRYv7v2fhFz",
+  "name": "Magic Weapons",
+  "type": "feature",
+  "img": "icons/magic/fire/dagger-rune-enchant-flame-strong-red.webp",
+  "folder": "Vacru5iDk3BvcCbq",
+  "system": {
+    "description": "<p>You may use your Spellcast trait when attacking with weapons enchanted by you.</p>",
+    "resource": null,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "passive",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 0,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "magicWeapons": true
+    }
+  },
+  "_key": "!items!qUFQ4eRYv7v2fhFz"
+}

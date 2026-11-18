@@ -1,0 +1,29 @@
+<div class="wonder-glimpse-body">
+  {{#if hasFeature}}
+    <p class="wonder-intro">{{localize "WONDER.Glimpse.Intro"}}</p>
+    <div class="wonder-glimpse-dice">
+      {{#each dice}}
+        <div class="glimpse-die {{#if used}}used{{/if}}">
+          <span class="face {{../faces}}">{{value}}</span>
+          {{#unless used}}
+            <div class="spend">
+              <button type="button" data-action="spend" data-key="{{key}}" data-sign="-1" data-tooltip="{{localize 'WONDER.Glimpse.Lower'}}">−</button>
+              <button type="button" data-action="spend" data-key="{{key}}" data-sign="1" data-tooltip="{{localize 'WONDER.Glimpse.Raise'}}">+</button>
+            </div>
+          {{/unless}}
+        </div>
+      {{else}}
+        <p class="wonder-hint">{{localize "WONDER.Glimpse.Empty" count=count faces=faces}}</p>
+      {{/each}}
+    </div>
+    <p class="wonder-hint"><i class="fa-solid fa-bullseye"></i>
+      {{#if target}}{{localize "WONDER.Glimpse.Target" name=target}}{{else}}{{localize "WONDER.Glimpse.NoTarget"}}{{/if}}</p>
+    <div class="wonder-row">
+      <button type="button" class="wonder-btn hero" data-action="roll"><i class="fa-solid fa-dice"></i> {{localize "WONDER.Glimpse.Roll" count=count faces=faces}}</button>
+      {{#if canReroll}}<button type="button" class="wonder-btn ghost" data-action="reroll" data-tooltip="Written in the Stars — Tag Team"><i class="fa-solid fa-rotate"></i></button>{{/if}}
+      <button type="button" class="wonder-btn ghost" data-action="discard" data-tooltip="{{localize 'WONDER.Glimpse.Discard'}}"><i class="fa-solid fa-trash"></i></button>
+    </div>
+  {{else}}
+    <p class="wonder-hint">{{localize "WONDER.Glimpse.NoFeature"}}</p>
+  {{/if}}
+</div>

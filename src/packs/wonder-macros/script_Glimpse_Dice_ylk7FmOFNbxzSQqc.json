@@ -1,0 +1,16 @@
+{
+  "_id": "ylk7FmOFNbxzSQqc",
+  "name": "Glimpse Dice",
+  "type": "script",
+  "img": "icons/magic/perception/orb-crystal-ball-scrying-blue.webp",
+  "command": "game.modules.get('daggerheart-wonderdomain')?.api?.openGlimpse(actor ?? game.user.character);",
+  "scope": "global",
+  "author": null,
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "ownership": {
+    "default": 2
+  },
+  "_key": "!macros!ylk7FmOFNbxzSQqc"
+}

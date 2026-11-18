@@ -1,0 +1,103 @@
+{
+  "_id": "qfnmQuYcOjs2wdqo",
+  "name": "Wonder-Touched",
+  "type": "domainCard",
+  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "folder": null,
+  "system": {
+    "description": "<p>When 4 or more of the domain cards in your loadout are from the Wonder domain, gain the following benefits:</p><ul><li>You can mark a Stress instead of spending a Hope.</li><li>Once per long rest, when you would mark your last Stress, clear Stress equal to your Spellcast trait instead. You must still mark any remaining Stress.</li></ul>",
+    "domain": "wonder",
+    "recallCost": 1,
+    "level": 7,
+    "type": "ability",
+    "actions": {
+      "o4rsBRoMK37o55Y0": {
+        "type": "healing",
+        "_id": "o4rsBRoMK37o55Y0",
+        "systemPath": "actions",
+        "description": "",
+        "chatDisplay": true,
+        "actionType": "reaction",
+        "cost": [],
+        "uses": {
+          "value": null,
+          "max": "1",
+          "recovery": "longRest",
+          "consumeOnSuccess": false
+        },
+        "name": "Wondrous Recovery",
+        "img": "icons/magic/light/hand-sparks-smoke-teal.webp",
+        "range": "",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "self",
+          "amount": null
+        },
+        "damage": {
+          "main": null,
+          "resources": {
+            "stress": {
+              "value": {
+                "custom": {
+                  "enabled": true,
+                  "formula": "@cast"
+                },
+                "multiplier": "flat",
+                "flatMultiplier": 1,
+                "dice": "d6",
+                "bonus": null
+              },
+              "applyTo": "stress",
+              "base": false,
+              "resultBased": false,
+              "valueAlt": null,
+              "fullRestore": false,
+              "itemId": null
+            }
+          }
+        },
+        "effects": [],
+        "roll": {
+          "type": null,
+          "trait": null,
+          "difficulty": null,
+          "bonus": null,
+          "advState": "neutral",
+          "diceRolling": {
+            "multiplier": "prof",
+            "flatMultiplier": 1,
+            "dice": "d6",
+            "compare": null,
+            "treshold": null
+          },
+          "useDefault": false
+        }
+      }
+    },
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "resource": null,
+    "inVault": false,
+    "vaultActive": false,
+    "loadoutIgnore": false,
+    "domainTouched": null
+  },
+  "sort": 700014,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "wonderTouched": true
+    }
+  },
+  "_key": "!items!qfnmQuYcOjs2wdqo",
+  "effects": []
+}

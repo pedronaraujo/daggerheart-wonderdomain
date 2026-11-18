@@ -1,0 +1,56 @@
+{
+  "_id": "ZOdFX0Odj045h6nN",
+  "name": "Empyrean Call",
+  "type": "feature",
+  "img": "icons/magic/light/explosion-star-large-blue-yellow.webp",
+  "folder": "ROUT3ivDaKVieiUG",
+  "system": {
+    "description": "<p><strong>Spend 3 Hope</strong> while in Constellation form to gain <strong>1d4</strong> Astral tokens.</p>",
+    "resource": null,
+    "actions": {
+      "wndEmpyreanCall0": {
+        "type": "effect",
+        "_id": "wndEmpyreanCall0",
+        "systemPath": "actions",
+        "description": "<p>Spend 3 Hope (less with Cosmic Help) to gain 1d4 Astral tokens.</p>",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Empyrean Call",
+        "img": "icons/magic/light/explosion-star-large-blue-yellow.webp",
+        "range": "",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "self",
+          "amount": null
+        },
+        "effects": []
+      }
+    },
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "action",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 0,
+  "flags": {},
+  "_key": "!items!ZOdFX0Odj045h6nN"
+}

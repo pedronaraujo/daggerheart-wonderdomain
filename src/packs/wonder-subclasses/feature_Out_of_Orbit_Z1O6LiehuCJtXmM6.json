@@ -1,0 +1,30 @@
+{
+  "_id": "Z1O6LiehuCJtXmM6",
+  "name": "Out of Orbit",
+  "type": "feature",
+  "img": "icons/magic/symbols/circle-ouroboros.webp",
+  "folder": "3glvHbPWSupgxxaw",
+  "system": {
+    "description": "<p>You and your Binary Star now gain the feature's benefits while within Far range of each other. Whenever you use a feature, domain card or make an attack, you may consider your Binary Star's current location as the point of origin of the effect.</p>",
+    "resource": null,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "passive",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 0,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "outOfOrbit": true
+    }
+  },
+  "_key": "!items!Z1O6LiehuCJtXmM6"
+}

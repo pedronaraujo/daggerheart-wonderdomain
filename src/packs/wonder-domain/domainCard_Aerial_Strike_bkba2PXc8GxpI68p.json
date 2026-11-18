@@ -1,0 +1,145 @@
+{
+  "_id": "bkba2PXc8GxpI68p",
+  "name": "Aerial Strike",
+  "type": "domainCard",
+  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "folder": null,
+  "system": {
+    "description": "<p>You conjure a magical pattern within Far range that floats above the ground. It lasts until the end of the scene or you conjure another pattern. While it is active, you may <strong>mark a Stress</strong> to move it within its Close range and make a <strong>Spellcast Roll</strong>. Each adversary within Very Close range of the pattern you succeed against takes <strong>1d10+10</strong> magic damage.</p>",
+    "domain": "wonder",
+    "recallCost": 1,
+    "level": 5,
+    "type": "spell",
+    "actions": {
+      "eHZ46jmSKAONBZis": {
+        "type": "effect",
+        "_id": "eHZ46jmSKAONBZis",
+        "systemPath": "actions",
+        "description": "",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Conjure Pattern",
+        "img": "icons/magic/symbols/runes-star-pentagon-blue.webp",
+        "range": "far",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "self",
+          "amount": null
+        },
+        "effects": []
+      },
+      "MjnsgKVRWvvDWCG2": {
+        "type": "attack",
+        "_id": "MjnsgKVRWvvDWCG2",
+        "systemPath": "actions",
+        "description": "",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [
+          {
+            "scalable": false,
+            "key": "stress",
+            "value": 1,
+            "step": null,
+            "itemId": null,
+            "consumeOnSuccess": false
+          }
+        ],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Strike",
+        "img": "icons/magic/light/beam-rays-teal-large.webp",
+        "range": "",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "hostile",
+          "amount": null
+        },
+        "damage": {
+          "main": {
+            "resultBased": false,
+            "value": {
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "multiplier": "flat",
+              "flatMultiplier": 1,
+              "dice": "d10",
+              "bonus": 10
+            },
+            "applyTo": "hitPoints",
+            "type": [
+              "magical"
+            ],
+            "base": false,
+            "valueAlt": null,
+            "includeBase": false,
+            "direct": false,
+            "fullRestore": false,
+            "itemId": null
+          },
+          "resources": {}
+        },
+        "effects": [],
+        "roll": {
+          "type": "spellcast",
+          "trait": null,
+          "difficulty": null,
+          "bonus": null,
+          "advState": "neutral",
+          "diceRolling": {
+            "multiplier": "prof",
+            "flatMultiplier": 1,
+            "dice": "d6",
+            "compare": null,
+            "treshold": null
+          },
+          "useDefault": false
+        },
+        "save": {
+          "trait": null,
+          "difficulty": null,
+          "damageMod": "none"
+        }
+      }
+    },
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "resource": null,
+    "inVault": false,
+    "vaultActive": false,
+    "loadoutIgnore": false,
+    "domainTouched": null
+  },
+  "sort": 500009,
+  "flags": {},
+  "_key": "!items!bkba2PXc8GxpI68p",
+  "effects": []
+}

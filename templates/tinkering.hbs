@@ -1,0 +1,38 @@
+<div class="wonder-tinkering-body">
+  <p class="wonder-intro">{{localize "WONDER.Tinker.Intro"}}</p>
+  <div class="wonder-tinker-controls">
+    <div class="stepper">
+      <button type="button" data-action="step" data-delta="-1" {{#if (wonderEq handfuls 1)}}disabled{{/if}}><i class="fa-solid fa-minus"></i></button>
+      <div class="value"><span>{{handfuls}}</span><small>{{localize "WONDER.Tinker.Handfuls"}}</small></div>
+      <button type="button" data-action="step" data-delta="1" {{#if (wonderEq handfuls tier)}}disabled{{/if}}><i class="fa-solid fa-plus"></i></button>
+    </div>
+    <div class="dice"><i class="fa-solid fa-dice-d6"></i> {{dice}}d8 {{#if extra}}<small>(+{{extra}} Resourceful Craft)</small>{{/if}}</div>
+    <div class="gold"><i class="fa-solid fa-coins"></i> {{gold}} {{localize "WONDER.Tinker.Available"}}</div>
+    <button type="button" class="wonder-btn hero" data-action="roll"><i class="fa-solid fa-gears"></i> {{localize "WONDER.Tinker.Roll"}}</button>
+  </div>
+
+  {{#if result}}
+    <div class="wonder-tinker-result">
+      <span class="total">{{result.total}}</span>
+      <span class="dice">{{#each result.dice}}<span class="die">{{this}}</span>{{/each}}</span>
+    </div>
+    <ul class="wonder-loot">
+      {{#each loot}}
+        <li data-action="craft" data-uuid="{{uuid}}" data-tooltip="{{table}}">
+          <span class="n">{{n}}</span><img src="{{img}}" alt=""><span class="name">{{name}}</span>
+          <i class="fa-solid fa-hammer"></i>
+        </li>
+      {{else}}
+        <li class="empty">{{localize "WONDER.Tinker.Nothing"}}</li>
+      {{/each}}
+    </ul>
+  {{/if}}
+
+  {{#if temps.length}}
+    <div class="wonder-temps">
+      <div class="title">{{localize "WONDER.Tinker.Temps"}}</div>
+      {{#each temps}}<span class="wonder-chip"><img src="{{img}}" alt=""> {{name}}</span>{{/each}}
+      <button type="button" class="wonder-btn ghost small" data-action="reset"><i class="fa-solid fa-bed"></i> {{localize "WONDER.Tinker.LongRest"}}</button>
+    </div>
+  {{/if}}
+</div>

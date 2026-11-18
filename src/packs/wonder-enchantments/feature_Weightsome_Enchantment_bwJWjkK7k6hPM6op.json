@@ -1,0 +1,31 @@
+{
+  "_id": "bwJWjkK7k6hPM6op",
+  "name": "Weightsome Enchantment",
+  "type": "feature",
+  "img": "icons/magic/earth/strike-fist-stone-light.webp",
+  "folder": "KiA00THnfYFw6v9a",
+  "system": {
+    "description": "<p><em>Tier 3 enchantment — Any object</em></p><p>You may place this enchantment on any object. The object's weight is greatly increased. If used on an object being held or worn, the target has their Difficulty (or Evasion) reduced by 2 while in possession of the item.</p>",
+    "resource": null,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "passive",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 3021,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "enchantment": "weightsome",
+      "tier": 3
+    }
+  },
+  "_key": "!items!bwJWjkK7k6hPM6op"
+}

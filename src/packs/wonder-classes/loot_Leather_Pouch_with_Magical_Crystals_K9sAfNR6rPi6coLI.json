@@ -1,0 +1,23 @@
+{
+  "_id": "K9sAfNR6rPi6coLI",
+  "name": "Leather Pouch with Magical Crystals",
+  "type": "loot",
+  "img": "icons/containers/bags/pouch-leather-pink.webp",
+  "folder": "tAHAsv0frKtnnYHf",
+  "system": {
+    "description": "<p>A leather pouch with magical crystals.</p>",
+    "quantity": 1,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": ""
+  },
+  "effects": [],
+  "sort": 0,
+  "flags": {},
+  "_key": "!items!K9sAfNR6rPi6coLI"
+}

@@ -1,0 +1,31 @@
+{
+  "_id": "IZq7ctgLoR7sgJav",
+  "name": "Vanishing Enchantment",
+  "type": "feature",
+  "img": "icons/magic/perception/silhouette-stealth-shadow.webp",
+  "folder": "KiA00THnfYFw6v9a",
+  "system": {
+    "description": "<p><em>Tier 3 enchantment — Wearable object</em></p><p>You may place this enchantment on any wearable object. When a creature has the object on themselves, they may spend a Hope to become Cloaked. While Cloaked, they remain unseen if they are stationary when an adversary moves to where they would normally see them. The effect ends when they end a move within line of sight of an adversary or when they make an attack, unless they spend an additional Hope to remain Cloaked.</p>",
+    "resource": null,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "passive",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 3020,
+  "flags": {
+    "daggerheart-wonderdomain": {
+      "enchantment": "vanishing",
+      "tier": 3
+    }
+  },
+  "_key": "!items!IZq7ctgLoR7sgJav"
+}

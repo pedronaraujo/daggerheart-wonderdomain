@@ -1,0 +1,85 @@
+{
+  "_id": "eGoQMW7309NoL6uO",
+  "name": "Breakthrough",
+  "type": "domainCard",
+  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "folder": null,
+  "system": {
+    "description": "<p>Make a <strong>Spellcast Roll (16)</strong>. On a success, you inspire a breakthrough discovery for you and every ally within Far range.</p><p>Every target may select a card of level 4 or lower from a domain they have access to and mark Stress equal to the card's Recall Cost. The chosen card is then placed in their loadout until the end of the scene or this spell is cast again. The selected card do not count towards the maximum number of cards in their loadout and cannot be exchanged for a card in their vault.</p><p>After you successfully use this spell, place this card in your vault.</p>",
+    "domain": "wonder",
+    "recallCost": 2,
+    "level": 8,
+    "type": "spell",
+    "actions": {
+      "t5o9wfVO71tFqUiF": {
+        "type": "attack",
+        "_id": "t5o9wfVO71tFqUiF",
+        "systemPath": "actions",
+        "description": "",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Cast",
+        "img": "icons/magic/light/explosion-star-glow-yellow.webp",
+        "range": "far",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "friendly",
+          "amount": null
+        },
+        "damage": {
+          "main": null,
+          "resources": {}
+        },
+        "effects": [],
+        "roll": {
+          "type": "spellcast",
+          "trait": null,
+          "difficulty": 16,
+          "bonus": null,
+          "advState": "neutral",
+          "diceRolling": {
+            "multiplier": "prof",
+            "flatMultiplier": 1,
+            "dice": "d6",
+            "compare": null,
+            "treshold": null
+          },
+          "useDefault": false
+        },
+        "save": {
+          "trait": null,
+          "difficulty": null,
+          "damageMod": "none"
+        }
+      }
+    },
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "resource": null,
+    "inVault": false,
+    "vaultActive": false,
+    "loadoutIgnore": false,
+    "domainTouched": null
+  },
+  "sort": 800016,
+  "flags": {},
+  "_key": "!items!eGoQMW7309NoL6uO",
+  "effects": []
+}

@@ -1,0 +1,99 @@
+{
+  "_id": "rLf2gIoisAVIoHBj",
+  "name": "Shared Dreams",
+  "type": "domainCard",
+  "img": "modules/daggerheart-wonderdomain/assets/wonder-card.svg",
+  "folder": null,
+  "system": {
+    "description": "<p>You and any number of allies may share a dream during a long rest as a downtime move. Work together to describe what happens in the dream. All creatures that shared the dream <strong>gain a Hope</strong>.</p><p>Until your next long rest, when someone Helps an Ally they shared a dream with, the one helping may roll two advantage dice and take the highest result.</p>",
+    "domain": "wonder",
+    "recallCost": 0,
+    "level": 1,
+    "type": "ability",
+    "actions": {
+      "ZHJkKD39UbvLjXZ9": {
+        "type": "healing",
+        "_id": "ZHJkKD39UbvLjXZ9",
+        "systemPath": "actions",
+        "description": "<p>Downtime move: everyone who shared the dream gains a Hope.</p>",
+        "chatDisplay": true,
+        "actionType": "action",
+        "cost": [],
+        "uses": {
+          "value": null,
+          "max": "",
+          "recovery": null,
+          "consumeOnSuccess": false
+        },
+        "name": "Share a Dream",
+        "img": "icons/magic/control/sleep-bubble-purple.webp",
+        "range": "",
+        "baseAction": false,
+        "originItem": {
+          "type": "itemCollection"
+        },
+        "triggers": [],
+        "areas": [],
+        "target": {
+          "type": "friendly",
+          "amount": null
+        },
+        "damage": {
+          "main": null,
+          "resources": {
+            "hope": {
+              "value": {
+                "custom": {
+                  "enabled": true,
+                  "formula": "1"
+                },
+                "multiplier": "flat",
+                "flatMultiplier": 1,
+                "dice": "d6",
+                "bonus": null
+              },
+              "applyTo": "hope",
+              "base": false,
+              "resultBased": false,
+              "valueAlt": null,
+              "fullRestore": false,
+              "itemId": null
+            }
+          }
+        },
+        "effects": [],
+        "roll": {
+          "type": null,
+          "trait": null,
+          "difficulty": null,
+          "bonus": null,
+          "advState": "neutral",
+          "diceRolling": {
+            "multiplier": "prof",
+            "flatMultiplier": 1,
+            "dice": "d6",
+            "compare": null,
+            "treshold": null
+          },
+          "useDefault": false
+        }
+      }
+    },
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "resource": null,
+    "inVault": false,
+    "vaultActive": false,
+    "loadoutIgnore": false,
+    "domainTouched": null
+  },
+  "sort": 100002,
+  "flags": {},
+  "_key": "!items!rLf2gIoisAVIoHBj",
+  "effects": []
+}

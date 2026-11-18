@@ -1,0 +1,26 @@
+{
+  "_id": "qDFTo1Y47nQR4Pi3",
+  "name": "Adaptative Learning",
+  "type": "feature",
+  "img": "icons/sundries/books/book-tooled-blue-yellow.webp",
+  "folder": "Vacru5iDk3BvcCbq",
+  "system": {
+    "description": "<p>Take an additional level 1 spell or grimoire card from a domain you normally cannot access. You may change this choice when you gain a level.</p>",
+    "resource": null,
+    "actions": {},
+    "attribution": {
+      "source": "Wonder Domain (Reno Reizakki) — DPCGL",
+      "page": null,
+      "artist": "",
+      "srd": false
+    },
+    "gmNotes": "",
+    "granter": null,
+    "featureForm": "passive",
+    "actorResources": []
+  },
+  "effects": [],
+  "sort": 0,
+  "flags": {},
+  "_key": "!items!qDFTo1Y47nQR4Pi3"
+}
