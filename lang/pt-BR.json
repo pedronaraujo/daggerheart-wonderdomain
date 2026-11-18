@@ -107,6 +107,8 @@
       "FearlessYes": "Tirou 6 — o GM <strong>não</strong> ganha Fear com essa rolagem.",
       "FearlessNo": "Sem 6 — o GM ganha Fear normalmente.",
       "AppraiseHint": "Marque um token como alvo para avaliar seus itens.",
+      "MagicAttack": "Os ataques dessa criatura carregam magia.",
+      "CreatureFeatures": "Você sente o ritmo dos poderes dela:",
       "NothingMagical": "Nada mágico se manifesta.",
       "Enchanted": "encantado",
       "Reason": {
@@ -196,6 +198,7 @@
       "GravityNoTokens": "Astral tokens insuficientes.",
       "DeviceCrafted": "Um novo dispositivo foi criado (carregado). O anterior desaparece.",
       "TokensOnCard": "Colocou {n} token(s) na carta (agora {total}).",
+      "WonderTouchedRecover": "Você marcaria seu último Stress: em vez disso limpa {n} Stress (uma vez por descanso longo).",
       "GravityDone": "Puxou {name} para alcance Melee: um Hit Point limpo."
     }
   }

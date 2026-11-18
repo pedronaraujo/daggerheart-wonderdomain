@@ -121,6 +121,28 @@ export function wonderTouchedCosts(action, config) {
     if (swapped) ui.notifications.info(loc('Auto.WonderTouchedSwapped', { n: swapped }));
 }
 
+/** Wonder-Touched: once per long rest, marking your last Stress clears Stress equal to your Spellcast trait instead. */
+export async function wonderTouchedLastStress(actor, changes) {
+    const value = foundry.utils.getProperty(changes, 'system.resources.stress.value');
+    if (value === undefined || actor.type !== 'character' || !actor.isOwner) return;
+    const max = actor.system.resources.stress.max;
+    if (value < max || !wonderTouchedActive(actor)) return;
+    const card = actor.items.find(i => i.getFlag(MOD, 'wonderTouched') && !i.system.inVault);
+    const action = card?.system.actions?.find(a => a.type === 'healing');
+    if (!action) return;
+    const used = Number(action.uses?.value ?? 0);
+    const maxUses = Number(action.uses?.max || 1);
+    if (used >= maxUses) return;
+    const n = Math.max(1, spellcast(actor));
+    await action.update({ 'uses.value': used + 1 });
+    await actor.update({ 'system.resources.stress.value': Math.max(0, value - n) });
+    await chatCard(actor, {
+        title: 'Wonder-Touched',
+        img: card.img,
+        body: `<p>${loc('Auto.WonderTouchedRecover', { n })}</p>`
+    });
+}
+
 /* -------------------------------------------- */
 /*  After a native action resolves              */
 /* -------------------------------------------- */

@@ -702,6 +702,10 @@ export async function appraise(actor) {
                 Object.keys(i.system.itemFeatures ?? {}).length ||
                 i.effects.size
         );
+        const creature = target.type === 'adversary' || target.type === 'environment'
+            ? target.items.filter(i => i.type === 'feature').map(i => `<li><em>${escape(i.name)}</em></li>`).join('')
+            : '';
+        const magicAttack = [...(target.system.attack?.damage?.main?.type ?? [])].includes('magical');
         const list = magical
             .map(i => {
                 const feats = Object.keys(i.system.itemFeatures ?? {}).join(', ');
@@ -712,7 +716,9 @@ export async function appraise(actor) {
         await chatCard(actor, {
             title: `Mystic Appraisal — ${escape(target.name)}`,
             img: 'icons/magic/perception/eye-ringed-glow-angry-small-teal.webp',
-            body: list ? `<ul>${list}</ul>` : `<p>${loc('Ench.NothingMagical')}</p>`
+            body: (list ? `<ul>${list}</ul>` : `<p>${loc('Ench.NothingMagical')}</p>`) +
+                (magicAttack ? `<p>✦ ${loc('Ench.MagicAttack')}</p>` : '') +
+                (creature ? `<p>${loc('Ench.CreatureFeatures')}</p><ul>${creature}</ul>` : '')
         });
     }
 }

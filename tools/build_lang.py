@@ -92,6 +92,8 @@ T = {
  "Ench.FearlessYes": ("Rolled a 6 — the GM does <strong>not</strong> gain a Fear from this roll.", "Tirou 6 — o GM <strong>não</strong> ganha Fear com essa rolagem."),
  "Ench.FearlessNo": ("No 6 — the GM gains Fear as usual.", "Sem 6 — o GM ganha Fear normalmente."),
  "Ench.AppraiseHint": ("Target a token to appraise its items.", "Marque um token como alvo para avaliar seus itens."),
+ "Ench.MagicAttack": ("Its attacks carry magic.", "Os ataques dessa criatura carregam magia."),
+ "Ench.CreatureFeatures": ("You sense the rhythm of its powers:", "Você sente o ritmo dos poderes dela:"),
  "Ench.NothingMagical": ("Nothing magical stirs.", "Nada mágico se manifesta."),
  "Ench.Enchanted": ("enchanted", "encantado"),
  "Ench.Reason.Tier": ("Requires Tier {tier}.", "Requer Tier {tier}."),
@@ -169,6 +171,7 @@ T = {
  "Auto.GravityNoTokens": ("Not enough Astral tokens.", "Astral tokens insuficientes."),
  "Auto.DeviceCrafted": ("A new device is crafted (charged). Any previous device disappears.", "Um novo dispositivo foi criado (carregado). O anterior desaparece."),
  "Auto.TokensOnCard": ("Placed {n} token(s) on the card ({total} now).", "Colocou {n} token(s) na carta (agora {total})."),
+ "Auto.WonderTouchedRecover": ("You would mark your last Stress: instead you clear {n} Stress (once per long rest).", "Você marcaria seu último Stress: em vez disso limpa {n} Stress (uma vez por descanso longo)."),
  "Auto.GravityDone": ("Pulled {name} into Melee range: one Hit Point cleared.", "Puxou {name} para alcance Melee: um Hit Point limpo."),
 }
 for lang, idx in (("en", 0), ("pt-BR", 1)):

@@ -158,6 +158,7 @@ function registerHooks() {
 
     on('updateActor', (actor, changes) => {
         Stars.onActorUpdate(actor, changes).catch(report);
+        if (isResponsible(actor)) Auto.wonderTouchedLastStress(actor, changes).catch(report);
         if (foundry.utils.hasProperty(changes, `flags.${MOD}.stars`) && isResponsible(actor)) Auto.syncBinaryStar(actor).catch(report);
         if (foundry.utils.hasProperty(changes, `flags.${MOD}.enchantments`) && isResponsible(actor)) Auto.syncHarmonious(actor).catch(report);
         rerender(actor);
