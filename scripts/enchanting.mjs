@@ -435,8 +435,12 @@ async function detonate(enchanter, state) {
 /** Called for every new chat message on the responsible client: tick the Explosion die on action rolls. */
 export async function onChatRoll(message) {
     if (!['dualityRoll', 'adversaryRoll'].includes(message.type)) return;
-    const opts = message.system?.roll?.options ?? message.rolls?.[0]?.options ?? {};
-    if (opts?.roll?.type === 'reaction' || opts?.actionType === 'reaction') return;
+    // Ability messages without a roll share these types: only real d20/duality action rolls count
+    const D20 = game.system.api?.dice?.D20Roll;
+    const roll = message.rolls?.find(r => (D20 ? r instanceof D20 : /d20|d12/.test(r.formula)) && r.dice?.length);
+    if (!roll) return;
+    const opts = roll.options ?? {};
+    if (opts.roll?.type === 'reaction' || opts.actionType === 'reaction' || message.system?.roll?.options?.roll?.type === 'reaction') return;
     const holders = game.actors.filter(a => a.getFlag(MOD, 'explosion'));
     for (const actor of holders) {
         const responsible = game.users.activeGM ?? game.users.find(u => u.active && actor.testUserPermission(u, 'OWNER'));
