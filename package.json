@@ -1,7 +1,7 @@
 {
   "name": "daggerheart-wonderdomain",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
     "data": "python3 tools/build_data.py && python3 tools/build_lang.py",
     "pack": "node tools/pack.mjs",

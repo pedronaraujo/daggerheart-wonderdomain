@@ -2,44 +2,131 @@
   "id": "daggerheart-wonderdomain",
   "title": "Daggerheart: Wonder Domain",
   "description": "Adds the Wonder domain (21 domain cards) with the Enchanter and Stargazer classes and their subclasses to the Foundryborne Daggerheart system — including an interactive Star Chart, Constellation form automation, an Enchanting Workshop, a Tinkering Bench and Glimpse dice.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "authors": [
-    { "name": "Pedro Tostes", "url": "https://github.com/pedronaraujo" }
+    {
+      "name": "Pedro Tostes",
+      "url": "https://github.com/pedronaraujo"
+    }
   ],
-  "compatibility": { "minimum": "14", "verified": "14.369" },
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14.369"
+  },
   "relationships": {
     "systems": [
-      { "id": "daggerheart", "type": "system", "compatibility": { "minimum": "2.12.0" } }
+      {
+        "id": "daggerheart",
+        "type": "system",
+        "compatibility": {
+          "minimum": "2.12.0"
+        }
+      }
     ]
   },
-  "esmodules": ["scripts/main.mjs"],
-  "styles": ["styles/wonder.css"],
+  "esmodules": [
+    "scripts/main.mjs"
+  ],
+  "styles": [
+    "styles/wonder.css"
+  ],
   "languages": [
-    { "lang": "en", "name": "English", "path": "lang/en.json" },
-    { "lang": "pt-BR", "name": "Português (Brasil)", "path": "lang/pt-BR.json" }
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-BR.json"
+    }
   ],
   "socket": true,
   "packs": [
-    { "name": "wonder-domain", "label": "Wonder Domain Cards", "path": "packs/wonder-domain", "type": "Item", "system": "daggerheart",
-      "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
-    { "name": "wonder-classes", "label": "Wonder Classes", "path": "packs/wonder-classes", "type": "Item", "system": "daggerheart",
-      "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
-    { "name": "wonder-subclasses", "label": "Wonder Subclasses", "path": "packs/wonder-subclasses", "type": "Item", "system": "daggerheart",
-      "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
-    { "name": "wonder-enchantments", "label": "Magical Enchantments", "path": "packs/wonder-enchantments", "type": "Item", "system": "daggerheart",
-      "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
-    { "name": "wonder-macros", "label": "Wonder Macros", "path": "packs/wonder-macros", "type": "Macro",
-      "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } },
-    { "name": "wonder-guide", "label": "Wonder Domain Guide", "path": "packs/wonder-guide", "type": "JournalEntry",
-      "ownership": { "PLAYER": "OBSERVER", "ASSISTANT": "OWNER" } }
+    {
+      "name": "wonder-domain",
+      "label": "Wonder Domain Cards",
+      "path": "packs/wonder-domain",
+      "type": "Item",
+      "system": "daggerheart",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "wonder-classes",
+      "label": "Wonder Classes",
+      "path": "packs/wonder-classes",
+      "type": "Item",
+      "system": "daggerheart",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "wonder-subclasses",
+      "label": "Wonder Subclasses",
+      "path": "packs/wonder-subclasses",
+      "type": "Item",
+      "system": "daggerheart",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "wonder-enchantments",
+      "label": "Magical Enchantments",
+      "path": "packs/wonder-enchantments",
+      "type": "Item",
+      "system": "daggerheart",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "wonder-macros",
+      "label": "Wonder Macros",
+      "path": "packs/wonder-macros",
+      "type": "Macro",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "wonder-guide",
+      "label": "Wonder Domain Guide",
+      "path": "packs/wonder-guide",
+      "type": "JournalEntry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
   ],
   "packFolders": [
-    { "name": "Wonder Domain", "color": "#1d6b74", "sorting": "m",
-      "packs": ["wonder-guide", "wonder-domain", "wonder-classes", "wonder-subclasses", "wonder-enchantments", "wonder-macros"] }
+    {
+      "name": "Wonder Domain",
+      "color": "#1d6b74",
+      "sorting": "m",
+      "packs": [
+        "wonder-guide",
+        "wonder-domain",
+        "wonder-classes",
+        "wonder-subclasses",
+        "wonder-enchantments",
+        "wonder-macros"
+      ]
+    }
   ],
   "url": "https://github.com/pedronaraujo/daggerheart-wonderdomain",
   "manifest": "https://github.com/pedronaraujo/daggerheart-wonderdomain/releases/latest/download/module.json",
-  "download": "https://github.com/pedronaraujo/daggerheart-wonderdomain/releases/download/v1.0.0/module.zip",
+  "download": "https://github.com/pedronaraujo/daggerheart-wonderdomain/releases/download/v1.1.0/module.zip",
   "readme": "https://github.com/pedronaraujo/daggerheart-wonderdomain#readme",
   "bugs": "https://github.com/pedronaraujo/daggerheart-wonderdomain/issues",
   "license": "DPCGL content; code MIT"
